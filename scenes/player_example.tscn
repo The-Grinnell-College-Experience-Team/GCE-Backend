@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c6jugsafmapo3"]
+[gd_scene load_steps=21 format=3 uid="uid://djwke5gqyl8mt"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Texture2D" uid="uid://c06j3e8iveqik" path="res://assets/textures/characters/animated/sprite_03.png" id="1_37030"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://crt7hqpx18p00" path="res://assets/textures/characters/animated/sprite_06.png" id="7_6qcwu"]
 [ext_resource type="Texture2D" uid="uid://dan3c4v80q4b6" path="res://assets/textures/characters/animated/sprite_07.png" id="8_77wxr"]
 [ext_resource type="Script" path="res://scripts/AnimatedSprite2D.gd" id="13_ry33a"]
+[ext_resource type="PackedScene" uid="uid://ck5qnw6wteqgr" path="res://scripts/npc.tscn" id="16_3re4b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01o70"]
 texture = ExtResource("1_8vt3i")
@@ -104,6 +105,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_mi7n7"]
+radius = 9.21954
+
 [node name="Player" type="Area2D"]
 script = ExtResource("1_s4xu2")
 
@@ -119,3 +123,12 @@ script = ExtResource("13_ry33a")
 position = Vector2(646, 370)
 sprite_frames = SubResource("SpriteFrames_oirre")
 animation = &"left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(648, 369)
+shape = SubResource("CircleShape2D_mi7n7")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("16_3re4b")]
+position = Vector2(655, 257)
+collision_layer = 1
+collision_mask = 1

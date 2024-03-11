@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://ck5qnw6wteqgr"]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_jkpds"]
+[ext_resource type="PackedScene" uid="uid://cbdj5187kmli1" path="res://actionable.tscn" id="3_kl5d7"]
+[ext_resource type="Resource" uid="uid://cgn36nfr5rw8w" path="res://dialogues/example.dialogue" id="4_gtklb"]
+[ext_resource type="Texture2D" uid="uid://c06j3e8iveqik" path="res://assets/textures/characters/animated/sprite_03.png" id="4_scva6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oijxr"]
+radius = 9.05539
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g34o4"]
+radius = 5.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 12
+collision_mask = 0
+script = ExtResource("1_jkpds")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_scva6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oijxr")
+
+[node name="Actionable" parent="." instance=ExtResource("3_kl5d7")]
+dialogue_resource = ExtResource("4_gtklb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_g34o4")

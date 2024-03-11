@@ -22,6 +22,10 @@ var isMoved = false
 func _ready():
 	pass # Replace with function body.
 
+func interacted(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		DialogueManager.show_example_dialogue_ballloon(load("res://dialogues/example.dialogue"), "start")
+		return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
