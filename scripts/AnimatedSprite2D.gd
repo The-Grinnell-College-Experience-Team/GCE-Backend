@@ -86,10 +86,8 @@ func _input(event):
 	if event.is_action_pressed("ui_interact"):
 		var target = ray_cast.get_collider()
 		if target != null:
-			print('blah1')
 			if target.is_in_group("NPC"):
 				# Talk to NPC
-				print('blah2')
 				target.dialog()
 	else:
 		pass
