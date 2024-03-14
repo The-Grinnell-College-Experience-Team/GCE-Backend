@@ -15,6 +15,9 @@ Date: Mar 12, 2024
     - created a NPC object with the sample sprite.
     - implemented NPC interaction (pop-up windows and a simple conversation).
     - designed pixel arts (main character, trees, etc.) for the game scenes.
+    - built test-automation infrastructure by using GitHub Actions and added some sample tests.
+        (We pushed the sprint review before its deadline 
+        but added the last one since it was mentioned to do in milestone 6)
 
 # Sprint Review 2
 Date: Mar 05, 2024
