@@ -56,9 +56,7 @@ func dialog():
 	dialog_state = 1
 	
 	# Show dialog popup
-	dialog_popup.message = "Howdy Partner. 
-							I haven't seen anybody round these parts in quite a while. 
-							How's it going these days?"
+	dialog_popup.message = "Howdy Partner. I haven't seen anybody round these parts in quite a while. How's it going these days?"
 	dialog_popup.response = "[A] Pretty Good  [B] Bad"
 	dialog_popup.open() #re-open to show next dialog
 	fakeprocess()

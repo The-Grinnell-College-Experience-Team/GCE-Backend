@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://wshnstio01ae" path="res://assets/textures/characters/animated/sprite_08.png" id="14_jjjpa"]
 [ext_resource type="Texture2D" uid="uid://6cc2kftyk0vs" path="res://assets/textures/characters/animated/sprite_09.png" id="15_l0h5t"]
 [ext_resource type="Script" path="res://scripts/DialogPopup.gd" id="16_x5ruq"]
-[ext_resource type="PackedScene" uid="uid://dg0q6s158wmul" path="res://scenes/npc_example.tscn" id="17_lkpne"]
+[ext_resource type="PackedScene" uid="uid://d345ul3s1c7le" path="res://scenes/npc_example.tscn" id="17_lkpne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01o70"]
 texture = ExtResource("1_8vt3i")
