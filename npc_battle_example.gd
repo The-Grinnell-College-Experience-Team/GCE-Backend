@@ -56,10 +56,9 @@ func dialog():
 	dialog_state = 1
 	
 	# Show dialog popup
-	dialog_popup.message = "Howdy Partner. I haven't seen anybody round these parts in quite a while. How's it going these days?"
-	dialog_popup.response = "[C] Pretty Good  [B] Bad"
+	dialog_popup.message = "BAAAAAAAAAKAAAAAAAAAAA! You dare battle a sugoi otaku like me?!?!?!?"
+	dialog_popup.response = "[A] yea  [B] No I'm too scared"
 	dialog_popup.open() #re-open to show next dialog
-	await get_tree().create_timer(0.5).timeout
 	fakeprocess()
 
 var aPressed = false
@@ -67,12 +66,13 @@ var bPressed = false
 
 func fakeprocess():
 	while true:
-		if dialog_state == 1 and Input.is_action_pressed('KEY_C'):
+		if dialog_state == 1 and Input.is_action_pressed('KEY_A'):
 			# Update dialog tree state
 			dialog_state = 2
 			# Show dialog popup
 			dialog_popup.message = "Great! Hope you enjoy the days!"
 			dialog_popup.response = "[A] Bye"
+			await get_tree().create_timer(0.5).timeout
 			fakeprocess()
 			break
 		elif dialog_state == 1 and Input.is_action_pressed('KEY_B'):
@@ -81,22 +81,25 @@ func fakeprocess():
 			# Show dialog popup
 			dialog_popup.message = "Hope you find a good memory today."
 			dialog_popup.response = "[A] Bye"
+			await get_tree().create_timer(0.5).timeout
 			fakeprocess()
 			break
 		elif dialog_state == 2 and Input.is_action_pressed('KEY_A'):
 			# Update dialog tree state
-			dialog_state = 1
+			dialog_state = 0
 			# Close dialog popup
 			dialog_popup.close()
 			# Set NPC's animation back to "idle"
 			animation_sprite.play("idle_down")
+			await get_tree().create_timer(0.5).timeout
 		elif dialog_state == 3 and Input.is_action_pressed('KEY_A'):
 			# Update dialog tree state
-			dialog_state = 1
+			dialog_state = 0
 			# Close dialog popup
 			dialog_popup.close()
 			# Set NPC's animation back to "idle"
 			animation_sprite.play("idle_down")
+			await get_tree().create_timer(0.5).timeout
 			break
 		await get_tree().create_timer(0.01).timeout
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://d345ul3s1c7le"]
+[gd_scene load_steps=43 format=3 uid="uid://cysjpiccetx3r"]
 
 [ext_resource type="Script" path="res://scripts/npc_example.gd" id="1_2spvi"]
 [ext_resource type="Texture2D" uid="uid://bbv6yh5y5oaeq" path="res://assets/textures/characters/NPCs/Fox Sprite Sheet.png" id="2_fbtnj"]
