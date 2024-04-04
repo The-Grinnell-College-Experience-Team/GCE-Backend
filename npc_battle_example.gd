@@ -57,23 +57,56 @@ func dialog():
 	
 	# Show dialog popup
 	dialog_popup.message = "BAAAAAAAAAKAAAAAAAAAAA! You dare battle a sugoi otaku like me?!?!?!?"
-	dialog_popup.response = "[A] yea  [B] No I'm too scared"
+	dialog_popup.response = "[C] yea  [B] No I'm too scared"
 	dialog_popup.open() #re-open to show next dialog
 	fakeprocess()
 
 var aPressed = false
 var bPressed = false
 
+
+func saveScene():
+	var file = FileAccess.open("res://scenes/saved_scene.tscn", FileAccess.WRITE)
+	var packed_scene = PackedScene.new()
+	packed_scene.pack(get_tree().get_current_scene())
+	file.store_line(packed_scene.to_string())
+	file.close()
+
 func fakeprocess():
 	while true:
-		if dialog_state == 1 and Input.is_action_pressed('KEY_A'):
+		if dialog_state == 1 and Input.is_action_pressed('KEY_C'):
 			# Update dialog tree state
-			dialog_state = 2
+			dialog_state = 0
+			dialog_popup.close()
 			# Show dialog popup
-			dialog_popup.message = "Great! Hope you enjoy the days!"
-			dialog_popup.response = "[A] Bye"
-			await get_tree().create_timer(0.5).timeout
-			fakeprocess()
+			#var next_scene = preload("res://scenes/battle_0.tscn").instantiate()
+			#get_tree().root.add_child(next_scene)
+			#get_tree().change_scene("res://scenes/battle_0.tscn")
+			saveScene()
+			
+			'''
+			# preload the next scene
+			var next_scene = preload("res://scenes/battle_0.tscn").instantiate()
+			
+			# remove the current scene
+			if get_tree().current_scene:
+				get_tree().current_scene.queue_free()
+			
+			# add the next scene to the tree
+			get_tree().root.add_child(next_scene)
+			get_tree().current_scene = next_scene
+			'''
+			get_tree().change_scene_to_file("res://scenes/battle_0.tscn")
+
+			
+			print("onto the next one")
+			
+			#get_tree().change_scene("res://scenes/battle_0.tscn")
+			
+			#dialog_popup.message = "Great! Hope you enjoy the days!"
+			#dialog_popup.response = "[A] Bye"
+			
+			#fakeprocess()
 			break
 		elif dialog_state == 1 and Input.is_action_pressed('KEY_B'):
 			# Update dialog tree state
