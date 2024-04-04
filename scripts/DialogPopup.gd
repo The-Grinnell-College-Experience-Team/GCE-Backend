@@ -37,7 +37,6 @@ func _ready():
 func open():
 	get_tree().paused = true
 	self.visible = true
-	animation_player.play("typewriter")
 
 #closes the dialog  
 func close():

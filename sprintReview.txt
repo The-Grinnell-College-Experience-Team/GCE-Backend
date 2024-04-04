@@ -7,6 +7,18 @@ Each sprint review answers to the questions below:
     1. How has your product improved or progressed from a customer perspective?
     2. What progress have you made that is not visible to a common user?
 
+# Sprint Review 3
+Date: Mar 12, 2024
+1. After this sprint, the customers now can ...
+    - meet the NPC and have a simple conversation with it.
+2. In this sprint, we ...
+    - created a NPC object with the sample sprite.
+    - implemented NPC interaction (pop-up windows and a simple conversation).
+    - designed pixel arts (main character, trees, etc.) for the game scenes.
+    - built test-automation infrastructure by using GitHub Actions and added some sample tests.
+        (We pushed the sprint review before its deadline 
+        but added the last one since it was mentioned to do in milestone 6)
+
 # Sprint Review 2
 Date: Mar 05, 2024
 1. In this sprint, we ...

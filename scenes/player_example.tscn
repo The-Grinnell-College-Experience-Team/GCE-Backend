@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c6jugsafmapo3"]
+[gd_scene load_steps=25 format=3 uid="uid://c6jugsafmapo3"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_s4xu2"]
@@ -16,7 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://wshnstio01ae" path="res://assets/textures/characters/animated/sprite_08.png" id="14_jjjpa"]
 [ext_resource type="Texture2D" uid="uid://6cc2kftyk0vs" path="res://assets/textures/characters/animated/sprite_09.png" id="15_l0h5t"]
 [ext_resource type="Script" path="res://scripts/DialogPopup.gd" id="16_x5ruq"]
-[ext_resource type="PackedScene" uid="uid://dg0q6s158wmul" path="res://scenes/npc_example.tscn" id="17_lkpne"]
+[ext_resource type="PackedScene" uid="uid://cysjpiccetx3r" path="res://scenes/npc_example.tscn" id="17_lkpne"]
+[ext_resource type="Script" path="res://npc_battle_example.gd" id="18_82x2m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01o70"]
 texture = ExtResource("1_8vt3i")
@@ -210,5 +211,11 @@ vertical_alignment = 1
 [node name="SpawnedNPC" type="Node2D" parent="."]
 
 [node name="NPC" parent="SpawnedNPC" instance=ExtResource("17_lkpne")]
+
+[node name="SpawnedNPC2" type="Node2D" parent="."]
+position = Vector2(425, 371)
+
+[node name="NPC" parent="SpawnedNPC2" instance=ExtResource("17_lkpne")]
+script = ExtResource("18_82x2m")
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]

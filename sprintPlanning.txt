@@ -8,32 +8,41 @@ Each sprint planning answers to the questions below:
 	4. Assignment: What will each team member do this sprint?
 	5. Issue Tracker: How can your instructor view the results of your sprint planning using your issue tracker?
 
-# Sprint Planning 3
-Date: Mar 06, 2024
+# Sprint Planning 4
+Date: Mar 15, 2024
 1. Capacity
-	- Moiz: The same as last sprint; 5 hrs ~
-	- Alex: The same as last sprint; 5 hrs ~
-	- Jasper: More than last sprint; 12 hrs
+	- Moiz: More than last sprint; 10 hrs
+	- Alex: The same as last sprint; 5 hrs
+	- Jasper: The same as last sprint; 12 hrs
 	- Autumn: The same as last sprint; 5 hrs
 2. Goals
-	- Create Prototype Scene for Characters Creation
-	- Finish NPC Interaction System and NPC Art
-	- Tile Map Art
-	- Basic Combat System
+	- Build basic combat system 
+	- Add more content to NPC Dialog 
+	- NPC Art 
+	- Map Design - Grinnell Landmarks 
 3. Task Breakdown
-	- Create Prototype Scene for Characters Creation: Create UI for player character creation.
-	- Finish NPC Interaction System and NPC Art: Finish NPC dialog system (pop-ups, interaction, NPC character, etc.)
-												 Sketch NPC characters in pixel art.
-	- Tile Map Art: Finish JRC and 6th Ave map design.
-	- Basic Combat System: Create basic combat scene.
+	a. Build basic combat system (6 hrs): 
+		- Create a new screen for the combat scene
+		- Allow the main character and combat NPCs to give and/or receive damage to each other
+		- Contruct a function that switchs to the combat screen after finishing the interaction with combat NPCs
+	b. Add more content to NPC Dialog (5 hrs): 
+		- Add diverse dialog content to NPCs
+		- More dialogs will provide more useful info about Grinnell and/or more fun to the player
+	c. NPC Art (4 hrs):
+		- Design pixel art for multiple NPC characters
+	d. Map Design - Grinnell Landmarks (7 hrs):
+		- Design Grinnell College's landmarks such as Gates Tower, dorms, and academic buildings
 4. Assignment
-	- Moiz: Basic Combat System
-	- Alex: NPC interaction, NPC character design
-	- Jasper: Map art, prototype scene for character creation
-	- Autumn: NPC dialog system, NPC character design 
+	- Moiz: Build basic combat system
+	- Alex: NPC Art
+	- Jasper: Map Design - Grinnell Landmarks
+	- Autumn: Add more content to NPC Dialog
 5. Issue Tracker
 	- We will store everything in our Github Team backlog:
-	  https://github.com/orgs/The-Grinnell-College-Experience-Team/projects/7/views/1
+	  https://github.com/orgs/The-Grinnell-College-Experience-Team/projects/6
+	  The issues for this sprint are in the "Sprint 4 To Do" board
+	  and will be moved to "In Progress" board if we start to work on the issue.
+	  More details can be found in our repo's README file.
 
 
 # Sprint Planning 2
