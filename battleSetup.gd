@@ -23,7 +23,7 @@ func _input(event):
 	#interact with world        
 	if event.is_action_pressed("KEY_A"):
 		print("yeehaw2")
-		get_tree().change_scene_to_file("res://scenes/saved_scene.tscn")
+		get_tree().change_scene_to_file("res://scenes/player_example.tscn")
 		
 		pass
 	else:
