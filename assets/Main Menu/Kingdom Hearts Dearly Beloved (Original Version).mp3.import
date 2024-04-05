@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvwdeh2r4mhqw"
+path="res://.godot/imported/Kingdom Hearts Dearly Beloved (Original Version).mp3-312e61071d6d0a9a74b22881cc7bbcc1.mp3str"
+
+[deps]
+
+source_file="res://assets/Main Menu/Kingdom Hearts Dearly Beloved (Original Version).mp3"
+dest_files=["res://.godot/imported/Kingdom Hearts Dearly Beloved (Original Version).mp3-312e61071d6d0a9a74b22881cc7bbcc1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
