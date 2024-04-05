@@ -161,6 +161,7 @@ offset_bottom = 647.0
 script = ExtResource("1_jl0vj")
 
 [node name="RunButton" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 1054.0
 offset_top = 24.0
 offset_right = 1295.0
@@ -169,6 +170,7 @@ theme = SubResource("Theme_dyy3a")
 text = "Run :("
 
 [node name="AttackButton" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 104.0
 offset_top = 26.0
 offset_right = 345.0
