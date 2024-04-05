@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=190 format=3 uid="uid://c6jugsafmapo3"]
+=======
+[gd_scene load_steps=26 format=3 uid="uid://c6jugsafmapo3"]
+>>>>>>> bc354da3a838c39c976569a83dcbb79f867a01cb
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_s4xu2"]
@@ -30,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://6cc2kftyk0vs" path="res://assets/textures/characters/animated/sprite_09.png" id="15_l0h5t"]
 [ext_resource type="Texture2D" uid="uid://dbuuk1okg0t7w" path="res://assets/MapTiles/JRCSTR2BR.png" id="16_75hec"]
 [ext_resource type="Script" path="res://scripts/DialogPopup.gd" id="16_x5ruq"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://cysjpiccetx3r" path="res://scenes/npc_example.tscn" id="17_lkpne"]
 [ext_resource type="Texture2D" uid="uid://b3cesils5sluq" path="res://assets/MapTiles/JRCSTR2UL.png" id="17_opwtj"]
 [ext_resource type="Script" path="res://npc_battle_example.gd" id="18_82x2m"]
@@ -100,6 +105,11 @@
 texture = ExtResource("2_uc8eq")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+=======
+[ext_resource type="PackedScene" uid="uid://d345ul3s1c7le" path="res://scenes/npc_interact_1.tscn" id="17_lkpne"]
+[ext_resource type="Script" path="res://npc_battle_example.gd" id="18_82x2m"]
+[ext_resource type="PackedScene" uid="uid://brvha0kahamw8" path="res://scenes/npc_interact_2.tscn" id="19_tg5cn"]
+>>>>>>> bc354da3a838c39c976569a83dcbb79f867a01cb
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01o70"]
 texture = ExtResource("1_8vt3i")
@@ -821,8 +831,9 @@ text = "Answer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpawnedNPC" type="Node2D" parent="."]
+[node name="InteractNPC1" type="Node2D" parent="."]
 
+<<<<<<< HEAD
 [node name="NPC" parent="SpawnedNPC" instance=ExtResource("17_lkpne")]
 position = Vector2(341, 76)
 
@@ -831,6 +842,21 @@ position = Vector2(135, 374)
 
 [node name="NPC" parent="SpawnedNPC2" instance=ExtResource("17_lkpne")]
 position = Vector2(160, -135)
+=======
+[node name="NPC" parent="InteractNPC1" instance=ExtResource("17_lkpne")]
+
+[node name="BattleNPC1" type="Node2D" parent="."]
+position = Vector2(425, 371)
+
+[node name="NPC" parent="BattleNPC1" instance=ExtResource("17_lkpne")]
+position = Vector2(397, -237)
+>>>>>>> bc354da3a838c39c976569a83dcbb79f867a01cb
 script = ExtResource("18_82x2m")
+
+[node name="InteractNPC2" type="Node2D" parent="."]
+position = Vector2(822, 127)
+
+[node name="NPC" parent="InteractNPC2" instance=ExtResource("19_tg5cn")]
+position = Vector2(-224, -216)
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]

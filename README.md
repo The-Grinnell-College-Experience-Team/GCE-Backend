@@ -36,3 +36,13 @@ The weekly sprint planning report is updated between Wednesday and Friday.
 ### Sprint Review Reports
 Each sprint review report can be found in `sprintReview.txt` in this repository. <br>
 The weekly sprint planning report is updated every Tuesday.
+
+### Operational Use Cases
+So far, Salif's use case (seeing Grinnell in a pixelated style) is somewhat operational, as the first demo recreates 8th Avenue with pixel art, but more of the map will be created soon. Nick's use case (wanting to battle against hypothetical people in college) is also mostly operational since there is a simple battle system implemented, but it will be further fleshed out and developed with more features (status effects, items, skills, etc.). Jerry's use case (interacting with funny hypothetical people and objects throughout the map) is also almost fully operational. We have NPC interactions ready to go, but we'll need to add more Grinnell-themed easter eggs and characters throughout the map as development continues. Finally, Lucie's use case (wanting an intuitive control system for movement) is operational. The player can move up, down, left, and right using the common, default inputs (the classic arrow keys with this demo). The walk-cycle is animated, providing a sense of flow within character movement.   
+
+### Building and Testing and Running
+To Build the project, open Godot 4.2.1 (.NET Version). Select the `import` tab, then open the folder that leads to this project. Next, select this project (labelled  `TheGrinnellCollegeExperience`), then choose the `edit` tab on the right side. Once the project loads, choose the hammer icon on the top right corner to build the project.
+
+For Testing, we originally planned on using Unit testing, but we quickly realized that Unit testing isn't very feasible for the vast majority of our project. We plan on using Manual Testing and generally this is the common practice for testing most video games in the industry (see https://en.wikipedia.org/wiki/Game_testing). In our case, we do not have a QA team we can use to help us, so we will need to do testing ourselves. This will likely be difficult and time-consuming, but necessary for the type of project we have. We may end up with a few bugs, but our largest goal is to have no major or game-breaking glitches. Automation is heavily limited for this kind of project, but this is a necessary trade-off that we'll manually account for.
+
+To Run the project, open Godot 4.2.1 (.NET Version). Once, you've built the project, select this project (labelled  `TheGrinnellCollegeExperience`), then choose the `run` tab on the right side. Alternatively, if you're already in the `edit` mode for Godot, click the play icon next to the hammer to run the project.
