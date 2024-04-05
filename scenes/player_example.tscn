@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://6cc2kftyk0vs" path="res://assets/textures/characters/animated/sprite_09.png" id="15_l0h5t"]
 [ext_resource type="Script" path="res://scripts/DialogPopup.gd" id="16_x5ruq"]
 [ext_resource type="PackedScene" uid="uid://d345ul3s1c7le" path="res://scenes/npc_interact_1.tscn" id="17_lkpne"]
-[ext_resource type="Script" path="res://npc_battle_example.gd" id="18_82x2m"]
+[ext_resource type="Script" path="res://scripts/npc_battle_example.gd" id="18_82x2m"]
 [ext_resource type="PackedScene" uid="uid://brvha0kahamw8" path="res://scenes/npc_interact_2.tscn" id="19_tg5cn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01o70"]

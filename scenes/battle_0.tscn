@@ -1,6 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://dslcjp4bl3jjb"]
+[gd_scene load_steps=27 format=3 uid="uid://dslcjp4bl3jjb"]
 
-[ext_resource type="Script" path="res://battleSetup.gd" id="1_jl0vj"]
+[ext_resource type="Script" path="res://scripts/battleSetup0.gd" id="1_jl0vj"]
 [ext_resource type="Texture2D" uid="uid://cr16n37mgo3mx" path="res://assets/textures/characters/NPCs/sample_battle_npc.png" id="2_novav"]
 [ext_resource type="Texture2D" uid="uid://cfffuw4vbo7w7" path="res://assets/textures/characters/animated/sprite_01.png" id="3_dwaik"]
 [ext_resource type="Texture2D" uid="uid://b07ms6rm6yl4j" path="res://assets/textures/characters/animated/sprite_00.png" id="4_k4usr"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://wshnstio01ae" path="res://assets/textures/characters/animated/sprite_08.png" id="12_mrgg3"]
 [ext_resource type="Texture2D" uid="uid://6cc2kftyk0vs" path="res://assets/textures/characters/animated/sprite_09.png" id="13_vri1x"]
 [ext_resource type="StyleBox" uid="uid://cnag1n833vuvt" path="res://assets/StyleBoxes/attackButtonRed.tres" id="14_u33py"]
+[ext_resource type="Script" path="res://scripts/battleHealth0.gd" id="15_2t05x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_43u4b"]
 radius = 23.0
@@ -112,11 +113,26 @@ bg_color = Color(0.278431, 0.317647, 0.376471, 1)
 [sub_resource type="Theme" id="Theme_dyy3a"]
 Button/styles/normal = SubResource("StyleBoxFlat_fllgp")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7sam"]
+bg_color = Color(0.592157, 0, 0.12549, 1)
+
 [sub_resource type="Theme" id="Theme_plkh3"]
 Button/colors/font_color = Color(1, 1, 1, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_a7sam")
 Button/styles/normal = ExtResource("14_u33py")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41dfq"]
+bg_color = Color(0.117647, 0.117647, 0.117647, 0.815686)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulsyo"]
+bg_color = Color(0.584314, 1, 0.623529, 1)
+
+[sub_resource type="Theme" id="Theme_fa8bx"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_41dfq")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_ulsyo")
+
 [node name="Battle0" type="Node2D"]
+script = ExtResource("15_2t05x")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(413, 359)
@@ -178,5 +194,27 @@ offset_bottom = 155.0
 theme = SubResource("Theme_plkh3")
 text = "Attack!"
 
+[node name="PlayerHealth" type="ProgressBar" parent="."]
+offset_left = 502.0
+offset_top = 408.0
+offset_right = 1284.0
+offset_bottom = 435.0
+theme = SubResource("Theme_fa8bx")
+max_value = 354.0
+value = 354.0
+show_percentage = false
+
+[node name="EnemyHealth" type="ProgressBar" parent="."]
+offset_left = 39.0
+offset_top = 60.0
+offset_right = 821.0
+offset_bottom = 87.0
+theme = SubResource("Theme_fa8bx")
+max_value = 354.0
+value = 354.0
+show_percentage = false
+
+[connection signal="npc_attack" from="." to="." method="_on_npc_attack"]
 [connection signal="pressed" from="Panel/RunButton" to="Panel" method="_on_run_button_pressed"]
+[connection signal="pressed" from="Panel/AttackButton" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Panel/AttackButton" to="Panel" method="_on_attack_button_pressed"]
