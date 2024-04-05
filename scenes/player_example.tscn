@@ -935,18 +935,19 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="InteractNPC1" type="Node2D" parent="."]
+position = Vector2(-139, 436)
 
 [node name="NPC" parent="InteractNPC1" instance=ExtResource("17_lkpne")]
 
 [node name="BattleNPC1" type="Node2D" parent="."]
-position = Vector2(425, 371)
+position = Vector2(430, 506)
 
 [node name="NPC" parent="BattleNPC1" instance=ExtResource("17_lkpne")]
 position = Vector2(397, -237)
 script = ExtResource("18_82x2m")
 
 [node name="InteractNPC2" type="Node2D" parent="."]
-position = Vector2(822, 127)
+position = Vector2(168, 432)
 
 [node name="NPC" parent="InteractNPC2" instance=ExtResource("19_tg5cn")]
 position = Vector2(-224, -216)
