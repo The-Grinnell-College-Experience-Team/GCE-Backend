@@ -36,3 +36,11 @@ The weekly sprint planning report is updated between Wednesday and Friday.
 ### Sprint Review Reports
 Each sprint review report can be found in `sprintReview.txt` in this repository. <br>
 The weekly sprint planning report is updated every Tuesday.
+
+
+### Building and Testing and Running
+To Build the project, open Godot 4.2.1 (.NET Version). Select the `import` tab, then open the folder that leads to this project. Next, select this project (labelled  `TheGrinnellCollegeExperience`), then choose the `edit` tab on the right side. Once the project loads, choose the hammer icon on the top right corner to build the project.
+
+For Testing, we originally planned on using Unit testing, but we quickly realized that Unit testing isn't very feasible for the vast majority of our project. We plan on using Manual Testing and generally this is the common practice for testing most video games in the industry (see https://en.wikipedia.org/wiki/Game_testing). In our case, we do not have a QA team we can use to help us, so we will need to do testing ourselves. This will likely be difficult and time-consuming, but necessary for the type of project we have. We may end up with a few bugs, but our largest goal is to have no major or game-breaking glitches. Automation is heavily limited for this kind of project, but this is a necessary trade-off that we'll manually account for.
+
+To Run the project, open Godot 4.2.1 (.NET Version). Once, you've built the project, select this project (labelled  `TheGrinnellCollegeExperience`), then choose the `run` tab on the right side. Alternatively, if you're already in the `edit` mode for Godot, click the play icon next to the hammer to run the project.
