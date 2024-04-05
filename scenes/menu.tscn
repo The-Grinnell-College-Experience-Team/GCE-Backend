@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c221hjwikjcps"]
 
-[ext_resource type="Script" path="res://scenes/menu.gd" id="1_3suh0"]
+[ext_resource type="Script" path="res://menu.gd" id="1_3suh0"]
 [ext_resource type="Texture2D" uid="uid://c3vfebjjwg7yf" path="res://assets/Main Menu/pxArt.png" id="2_f8vhg"]
 [ext_resource type="FontFile" uid="uid://bw6w243ojwjn6" path="res://assets/Main Menu/pixelmix.ttf" id="3_g51kt"]
 [ext_resource type="AudioStream" uid="uid://cvwdeh2r4mhqw" path="res://assets/Main Menu/Kingdom Hearts Dearly Beloved (Original Version).mp3" id="4_5mn8m"]
