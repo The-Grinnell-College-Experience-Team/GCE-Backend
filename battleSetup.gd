@@ -1,8 +1,16 @@
-extends CharacterBody2D
+extends Panel
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
+
+func _on_attack_button_pressed():
+	print("Attack selected")
+
+func _on_run_button_pressed():
+	print("Run selected")
+	print("yeehaw2")
+	get_tree().change_scene_to_file("res://scenes/player_example.tscn")
+
 
 func loadScene():
 	var file = FileAccess.open("res://saved_scene.tscn", FileAccess.READ)
@@ -18,13 +26,3 @@ func loadScene():
 func _process(delta):
 	pass
 
-
-func _input(event):
-	#interact with world        
-	if event.is_action_pressed("KEY_A"):
-		print("yeehaw2")
-		get_tree().change_scene_to_file("res://scenes/player_example.tscn")
-		
-		pass
-	else:
-		pass
