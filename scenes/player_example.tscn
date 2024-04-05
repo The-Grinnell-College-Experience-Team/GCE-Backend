@@ -32,13 +32,9 @@
 [ext_resource type="Script" path="res://scripts/DialogPopup.gd" id="16_x5ruq"]
 [ext_resource type="Texture2D" uid="uid://ckucpm5iovgr" path="res://assets/MapTiles/BrickPath1ToSidewalk.png" id="17_e6ye8"]
 [ext_resource type="PackedScene" uid="uid://d345ul3s1c7le" path="res://scenes/npc_interact_1.tscn" id="17_lkpne"]
-<<<<<<< HEAD
-[ext_resource type="Script" path="res://npc_battle_example.gd" id="18_82x2m"]
+[ext_resource type="Script" path="res://scripts/npc_battle_example.gd" id="18_82x2m"]
 [ext_resource type="Texture2D" uid="uid://bmuh1rdrel7ut" path="res://assets/MapTiles/CrackedPath.png" id="18_ktbav"]
 [ext_resource type="Texture2D" uid="uid://d0qhqk1nanyye" path="res://assets/MapTiles/CrackedPathCornerGrass.png" id="19_omrml"]
-=======
-[ext_resource type="Script" path="res://scripts/npc_battle_example.gd" id="18_82x2m"]
->>>>>>> 73257ba147a5b7daa995430b7d0171a7807adae7
 [ext_resource type="PackedScene" uid="uid://brvha0kahamw8" path="res://scenes/npc_interact_2.tscn" id="19_tg5cn"]
 [ext_resource type="Texture2D" uid="uid://d0u4agmkjwswt" path="res://assets/MapTiles/CrackedPathCornerToGrass.png" id="20_wqbij"]
 [ext_resource type="Texture2D" uid="uid://bavg02d2m2pq2" path="res://assets/MapTiles/CrackedPathInCorner.png" id="21_j5ju3"]
