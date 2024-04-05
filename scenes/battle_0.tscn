@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dslcjp4bl3jjb"]
+[gd_scene load_steps=28 format=3 uid="uid://dslcjp4bl3jjb"]
 
 [ext_resource type="Script" path="res://scripts/battleSetup0.gd" id="1_jl0vj"]
 [ext_resource type="Texture2D" uid="uid://cr16n37mgo3mx" path="res://assets/textures/characters/NPCs/sample_battle_npc.png" id="2_novav"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://6cc2kftyk0vs" path="res://assets/textures/characters/animated/sprite_09.png" id="13_vri1x"]
 [ext_resource type="StyleBox" uid="uid://cnag1n833vuvt" path="res://assets/StyleBoxes/attackButtonRed.tres" id="14_u33py"]
 [ext_resource type="Script" path="res://scripts/battleHealth0.gd" id="15_2t05x"]
+[ext_resource type="Texture2D" uid="uid://bp4dktbimyaw7" path="res://assets/Maps/BattleSceneForest.png" id="16_xty1h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_43u4b"]
 radius = 23.0
@@ -107,12 +108,6 @@ _data = {
 "typewriter": SubResource("Animation_5gcso")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fllgp"]
-bg_color = Color(0.278431, 0.317647, 0.376471, 1)
-
-[sub_resource type="Theme" id="Theme_dyy3a"]
-Button/styles/normal = SubResource("StyleBoxFlat_fllgp")
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7sam"]
 bg_color = Color(0.592157, 0, 0.12549, 1)
 
@@ -120,6 +115,12 @@ bg_color = Color(0.592157, 0, 0.12549, 1)
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/styles/hover = SubResource("StyleBoxFlat_a7sam")
 Button/styles/normal = ExtResource("14_u33py")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fllgp"]
+bg_color = Color(0.278431, 0.317647, 0.376471, 1)
+
+[sub_resource type="Theme" id="Theme_dyy3a"]
+Button/styles/normal = SubResource("StyleBoxFlat_fllgp")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41dfq"]
 bg_color = Color(0.117647, 0.117647, 0.117647, 0.815686)
@@ -134,15 +135,23 @@ ProgressBar/styles/fill = SubResource("StyleBoxFlat_ulsyo")
 [node name="Battle0" type="Node2D"]
 script = ExtResource("15_2t05x")
 
+[node name="BattleSceneForest" type="Sprite2D" parent="."]
+position = Vector2(702, 343)
+scale = Vector2(3.9858, 3.57292)
+texture = ExtResource("16_xty1h")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(413, 359)
+position = Vector2(613, 341)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-294, 45)
 shape = SubResource("CapsuleShape2D_43u4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-294, 29)
+scale = Vector2(7.89158, 6.32894)
 sprite_frames = SubResource("SpriteFrames_r3rmo")
-animation = &"walk_up"
+animation = &"walk_down"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 libraries = {
@@ -150,15 +159,19 @@ libraries = {
 }
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(-292, 47)
 target_position = Vector2(0, 23)
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
-position = Vector2(886, 160)
+position = Vector2(789, 268)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(261, -87)
 shape = SubResource("CapsuleShape2D_43u4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
+position = Vector2(272, -95)
+scale = Vector2(4.4375, 3.53125)
 sprite_frames = SubResource("SpriteFrames_r3rmo")
 animation = &"down"
 
@@ -168,53 +181,56 @@ libraries = {
 }
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D2"]
+position = Vector2(257, -92)
 target_position = Vector2(0, 23)
 
 [node name="Panel" type="Panel" parent="."]
-offset_top = 465.0
-offset_right = 1404.0
-offset_bottom = 647.0
+offset_left = 222.0
+offset_top = -375.0
+offset_right = 1606.0
+offset_bottom = -135.0
 script = ExtResource("1_jl0vj")
-
-[node name="RunButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 1054.0
-offset_top = 24.0
-offset_right = 1295.0
-offset_bottom = 153.0
-theme = SubResource("Theme_dyy3a")
-text = "Run :("
 
 [node name="AttackButton" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 104.0
-offset_top = 26.0
-offset_right = 345.0
-offset_bottom = 155.0
+offset_left = -197.0
+offset_top = 855.0
+offset_right = -57.0
+offset_bottom = 890.0
 theme = SubResource("Theme_plkh3")
 text = "Attack!"
 
+[node name="RunButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1012.0
+offset_top = 982.0
+offset_right = 1153.0
+offset_bottom = 1017.0
+theme = SubResource("Theme_dyy3a")
+text = "Run :("
+
 [node name="PlayerHealth" type="ProgressBar" parent="."]
-offset_left = 502.0
-offset_top = 408.0
-offset_right = 1284.0
-offset_bottom = 435.0
+offset_left = 191.0
+offset_top = 278.0
+offset_right = 413.0
+offset_bottom = 301.0
+scale = Vector2(1.25099, 1.11615)
 theme = SubResource("Theme_fa8bx")
 max_value = 354.0
 value = 354.0
 show_percentage = false
 
 [node name="EnemyHealth" type="ProgressBar" parent="."]
-offset_left = 39.0
-offset_top = 60.0
-offset_right = 821.0
-offset_bottom = 87.0
+offset_left = 908.0
+offset_top = 75.0
+offset_right = 1212.0
+offset_bottom = 105.0
 theme = SubResource("Theme_fa8bx")
 max_value = 354.0
 value = 354.0
 show_percentage = false
 
 [connection signal="npc_attack" from="." to="." method="_on_npc_attack"]
-[connection signal="pressed" from="Panel/RunButton" to="Panel" method="_on_run_button_pressed"]
 [connection signal="pressed" from="Panel/AttackButton" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Panel/AttackButton" to="Panel" method="_on_attack_button_pressed"]
+[connection signal="pressed" from="Panel/RunButton" to="Panel" method="_on_run_button_pressed"]
