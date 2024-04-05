@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-[gd_scene load_steps=190 format=3 uid="uid://c6jugsafmapo3"]
-=======
 [gd_scene load_steps=26 format=3 uid="uid://c6jugsafmapo3"]
->>>>>>> bc354da3a838c39c976569a83dcbb79f867a01cb
-=======
-[gd_scene load_steps=26 format=3 uid="uid://c6jugsafmapo3"]
->>>>>>> 2f187c008feece74a7a390d5d01b070d8544b756
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_s4xu2"]
@@ -24,88 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://wshnstio01ae" path="res://assets/textures/characters/animated/sprite_08.png" id="14_jjjpa"]
 [ext_resource type="Texture2D" uid="uid://6cc2kftyk0vs" path="res://assets/textures/characters/animated/sprite_09.png" id="15_l0h5t"]
 [ext_resource type="Script" path="res://scripts/DialogPopup.gd" id="16_x5ruq"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://cysjpiccetx3r" path="res://scenes/npc_example.tscn" id="17_lkpne"]
-[ext_resource type="Texture2D" uid="uid://b3cesils5sluq" path="res://assets/MapTiles/JRCSTR2UL.png" id="17_opwtj"]
-[ext_resource type="Script" path="res://npc_battle_example.gd" id="18_82x2m"]
-[ext_resource type="Texture2D" uid="uid://k7r67wixftwf" path="res://assets/MapTiles/JRCSTR2UR.png" id="18_rf6q5"]
-[ext_resource type="Texture2D" uid="uid://5a617kff8pmk" path="res://assets/MapTiles/JRCSTR3BL.png" id="19_hsu4e"]
-[ext_resource type="Texture2D" uid="uid://cc1xblbvradnp" path="res://assets/MapTiles/JRCSTR3BM.png" id="20_7glcp"]
-[ext_resource type="Texture2D" uid="uid://bdt32ecxbrrcl" path="res://assets/MapTiles/JRCSTR3BR.png" id="21_s5j0d"]
-[ext_resource type="Texture2D" uid="uid://bcrw1hequ3gxf" path="res://assets/MapTiles/JRCSTR3UL.png" id="22_gxv0e"]
-[ext_resource type="Texture2D" uid="uid://bmokab8rxjcj4" path="res://assets/MapTiles/JRCSTR3UM.png" id="23_jh3hf"]
-[ext_resource type="Texture2D" uid="uid://bhsbk28uma7hv" path="res://assets/MapTiles/JRCSTR3UR.png" id="24_p1p6j"]
-[ext_resource type="Texture2D" uid="uid://0vnk0xp3woo1" path="res://assets/MapTiles/BSTR1.png" id="25_3sj0t"]
-[ext_resource type="Texture2D" uid="uid://bm2d6eubfo1py" path="res://assets/MapTiles/JRCWALL2.png" id="26_xqni3"]
-[ext_resource type="Texture2D" uid="uid://cpa1mgsna55iy" path="res://assets/MapTiles/JRCWall.png" id="27_y1t5h"]
-[ext_resource type="Texture2D" uid="uid://b8a5l4xoaighs" path="res://assets/MapTiles/JRCWallCornerR.png" id="28_eutxi"]
-[ext_resource type="Texture2D" uid="uid://le2kdh204hk" path="res://assets/MapTiles/JRC_STAIRUL.png" id="29_40khf"]
-[ext_resource type="Texture2D" uid="uid://dnj6bmn1s4my7" path="res://assets/MapTiles/OverhangBottom.png" id="30_0iap7"]
-[ext_resource type="Texture2D" uid="uid://dy1w8vmrno8l2" path="res://assets/MapTiles/OverHangEdge.png" id="31_8e1dd"]
-[ext_resource type="Texture2D" uid="uid://b2ec5rpn1nel4" path="res://assets/MapTiles/OverHangTop.png" id="32_f4iap"]
-[ext_resource type="Texture2D" uid="uid://bpdp3tvvimqse" path="res://assets/MapTiles/PATHYLW.png" id="33_nm2vu"]
-[ext_resource type="Texture2D" uid="uid://ugcwl7qkiepa" path="res://assets/MapTiles/Piller.png" id="34_lubci"]
-[ext_resource type="Texture2D" uid="uid://4seaopo8wiua" path="res://assets/MapTiles/PillerToOverhang.png" id="35_3l1ee"]
-[ext_resource type="Texture2D" uid="uid://bs385wstg1t4e" path="res://assets/MapTiles/BSTR2.png" id="36_igoh0"]
-[ext_resource type="Texture2D" uid="uid://chovuxk1ypd7y" path="res://assets/MapTiles/PillerTop.png" id="37_i7oe7"]
-[ext_resource type="Texture2D" uid="uid://bcjsfi2uccmc1" path="res://assets/MapTiles/ROAD.png" id="38_0cc3w"]
-[ext_resource type="Texture2D" uid="uid://ui703pffdwwb" path="res://assets/MapTiles/ROADL.png" id="39_yqxmi"]
-[ext_resource type="Texture2D" uid="uid://clb6s52fad1ce" path="res://assets/MapTiles/ROADR.png" id="40_ge0wk"]
-[ext_resource type="Texture2D" uid="uid://0qv3dswmbqw3" path="res://assets/MapTiles/ShadedBrickWall.png" id="41_c00c8"]
-[ext_resource type="Texture2D" uid="uid://cxw41yk214itj" path="res://assets/MapTiles/Stairs.png" id="42_1fhg4"]
-[ext_resource type="Texture2D" uid="uid://sl0in1yqb4en" path="res://assets/MapTiles/Stump1.png" id="43_6y2sc"]
-[ext_resource type="Texture2D" uid="uid://c4ipx16w0isnb" path="res://assets/MapTiles/Tree1b.png" id="44_w2bho"]
-[ext_resource type="Texture2D" uid="uid://y47xlbck1v8s" path="res://assets/MapTiles/Tree1bl.png" id="45_oxde5"]
-[ext_resource type="Texture2D" uid="uid://cc3dh85r3jpaa" path="res://assets/MapTiles/Tree1br.png" id="46_vrj4u"]
-[ext_resource type="Texture2D" uid="uid://k6fym8am3g6h" path="res://assets/MapTiles/BSTRBL.png" id="47_4t1ab"]
-[ext_resource type="Texture2D" uid="uid://b3d5bgcoo2m26" path="res://assets/MapTiles/Tree1u.png" id="48_qgvy1"]
-[ext_resource type="Texture2D" uid="uid://diryxbk5qk537" path="res://assets/MapTiles/Tree1ul.png" id="49_i23en"]
-[ext_resource type="Texture2D" uid="uid://dlpbetppu3ksg" path="res://assets/MapTiles/Tree1ur.png" id="50_nit4v"]
-[ext_resource type="Texture2D" uid="uid://snhjpc5dlqkj" path="res://assets/MapTiles/WallToGrass.png" id="51_xaxtx"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/BrickWallBottom.png" id="52_bc00q"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/BrickWallTop.png" id="53_7g10r"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/CleanPath.png" id="54_um2k3"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/CleanPathCornerGrass.png" id="55_fpnvh"]
-[ext_resource type="Texture2D" uid="uid://dn2bd57hp71oq" path="res://assets/MapTiles/BSTRBR.png" id="56_7vk6b"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/CleanPathCornerToGrass.png" id="57_gak5t"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/CleanPathSideGrass.png" id="58_qx4o4"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/CrackedPath.png" id="59_sxqj0"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/CrackedPathCornerGrass.png" id="60_7q7dq"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/CrackedPathCornerToGrass.png" id="61_kvah7"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/CrackedPathInCorner.png" id="62_alw2j"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/CrackedPathSideGrass.png" id="63_wbvif"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/CrackedPathVertGrass.png" id="64_3kq2r"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/Grass.png" id="65_elpic"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/GrasstoBrickWall.png" id="66_80iye"]
-[ext_resource type="Texture2D" uid="uid://swpiogc20rp1" path="res://assets/MapTiles/BSTRUL.png" id="67_bs1vf"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/BrickPath1.png" id="68_8nqi6"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/BrickPath1ToSidewalk.png" id="69_t715w"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/BrickPath2.png" id="70_p6pf7"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/BrickPath3.png" id="71_ujgm3"]
-[ext_resource type="Texture2D" path="res://assets/MapTiles/BrickPath4.png" id="72_nvpwo"]
-[ext_resource type="Texture2D" uid="uid://dnegweqtmmf0j" path="res://assets/MapTiles/Window.png" id="73_q5qjs"]
-[ext_resource type="Texture2D" uid="uid://73l368emtnce" path="res://assets/MapTiles/BSTRUR.png" id="74_0psox"]
-[ext_resource type="Texture2D" uid="uid://cfmwis80kuff3" path="res://assets/MapTiles/WindowSmall.png" id="75_ovw86"]
-[ext_resource type="Texture2D" uid="uid://ce45t1h8sfoml" path="res://assets/MapTiles/WindowTall.png" id="76_pn8tq"]
-[ext_resource type="Texture2D" uid="uid://ccr2rs15t27et" path="res://assets/MapTiles/JRCSTAIRUL.png" id="77_3vdex"]
-[ext_resource type="Texture2D" uid="uid://c51x15s7ng1fu" path="res://assets/MapTiles/DIVIDERUL.png" id="78_dinm7"]
-[ext_resource type="Texture2D" uid="uid://be0mqdvdstn84" path="res://assets/MapTiles/DIVIDERBR.png" id="79_y7h43"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dq6gf"]
-texture = ExtResource("2_uc8eq")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-=======
 [ext_resource type="PackedScene" uid="uid://d345ul3s1c7le" path="res://scenes/npc_interact_1.tscn" id="17_lkpne"]
 [ext_resource type="Script" path="res://npc_battle_example.gd" id="18_82x2m"]
 [ext_resource type="PackedScene" uid="uid://brvha0kahamw8" path="res://scenes/npc_interact_2.tscn" id="19_tg5cn"]
->>>>>>> bc354da3a838c39c976569a83dcbb79f867a01cb
-=======
-[ext_resource type="PackedScene" uid="uid://d345ul3s1c7le" path="res://scenes/npc_interact_1.tscn" id="17_lkpne"]
-[ext_resource type="Script" path="res://npc_battle_example.gd" id="18_82x2m"]
-[ext_resource type="PackedScene" uid="uid://brvha0kahamw8" path="res://scenes/npc_interact_2.tscn" id="19_tg5cn"]
->>>>>>> 2f187c008feece74a7a390d5d01b070d8544b756
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01o70"]
 texture = ExtResource("1_8vt3i")
@@ -298,19 +211,6 @@ vertical_alignment = 1
 
 [node name="InteractNPC1" type="Node2D" parent="."]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[node name="NPC" parent="SpawnedNPC" instance=ExtResource("17_lkpne")]
-position = Vector2(341, 76)
-
-[node name="SpawnedNPC2" type="Node2D" parent="."]
-position = Vector2(135, 374)
-
-[node name="NPC" parent="SpawnedNPC2" instance=ExtResource("17_lkpne")]
-position = Vector2(160, -135)
-=======
-=======
->>>>>>> 2f187c008feece74a7a390d5d01b070d8544b756
 [node name="NPC" parent="InteractNPC1" instance=ExtResource("17_lkpne")]
 
 [node name="BattleNPC1" type="Node2D" parent="."]
@@ -318,10 +218,6 @@ position = Vector2(425, 371)
 
 [node name="NPC" parent="BattleNPC1" instance=ExtResource("17_lkpne")]
 position = Vector2(397, -237)
-<<<<<<< HEAD
->>>>>>> bc354da3a838c39c976569a83dcbb79f867a01cb
-=======
->>>>>>> 2f187c008feece74a7a390d5d01b070d8544b756
 script = ExtResource("18_82x2m")
 
 [node name="InteractNPC2" type="Node2D" parent="."]
