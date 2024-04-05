@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://dslcjp4bl3jjb"]
+[gd_scene load_steps=22 format=3 uid="uid://dslcjp4bl3jjb"]
 
-[ext_resource type="Script" path="res://scripts/AnimatedSprite2D.gd" id="1_weixm"]
-[ext_resource type="Texture2D" uid="uid://c06j3e8iveqik" path="res://assets/textures/characters/animated/sprite_03.png" id="2_xy4br"]
+[ext_resource type="Script" path="res://battleSetup.gd" id="1_jl0vj"]
+[ext_resource type="Texture2D" uid="uid://cr16n37mgo3mx" path="res://assets/textures/characters/NPCs/sample_battle_npc.png" id="2_novav"]
 [ext_resource type="Texture2D" uid="uid://cfffuw4vbo7w7" path="res://assets/textures/characters/animated/sprite_01.png" id="3_dwaik"]
 [ext_resource type="Texture2D" uid="uid://b07ms6rm6yl4j" path="res://assets/textures/characters/animated/sprite_00.png" id="4_k4usr"]
 [ext_resource type="Texture2D" uid="uid://bh8eo7t60d1k6" path="res://assets/textures/characters/animated/sprite_02.png" id="5_kaywl"]
@@ -13,15 +13,17 @@
 [ext_resource type="Texture2D" uid="uid://cry0adchexxjs" path="res://assets/textures/characters/animated/sprite_05.png" id="11_jv5sj"]
 [ext_resource type="Texture2D" uid="uid://wshnstio01ae" path="res://assets/textures/characters/animated/sprite_08.png" id="12_mrgg3"]
 [ext_resource type="Texture2D" uid="uid://6cc2kftyk0vs" path="res://assets/textures/characters/animated/sprite_09.png" id="13_vri1x"]
-[ext_resource type="Script" path="res://scripts/DialogPopup.gd" id="14_j2af1"]
+[ext_resource type="StyleBox" uid="uid://cnag1n833vuvt" path="res://assets/StyleBoxes/attackButtonRed.tres" id="14_u33py"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_43u4b"]
+radius = 23.0
+height = 50.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r3rmo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_xy4br")
+"texture": ExtResource("2_novav")
 }],
 "loop": true,
 "name": &"down",
@@ -98,29 +100,26 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_5gcso"]
 resource_name = "typewriter"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("UI/DialogPopup/Dialog/Message:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8ert8"]
 _data = {
 "typewriter": SubResource("Animation_5gcso")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fllgp"]
+bg_color = Color(0.278431, 0.317647, 0.376471, 1)
+
+[sub_resource type="Theme" id="Theme_dyy3a"]
+Button/styles/normal = SubResource("StyleBoxFlat_fllgp")
+
+[sub_resource type="Theme" id="Theme_plkh3"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/styles/normal = ExtResource("14_u33py")
+
 [node name="Battle0" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(250, 516)
-script = ExtResource("1_weixm")
+position = Vector2(413, 359)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_43u4b")
@@ -137,56 +136,45 @@ libraries = {
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
 target_position = Vector2(0, 23)
 
-[node name="UI" type="CanvasLayer" parent="CharacterBody2D"]
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+position = Vector2(886, 160)
 
-[node name="DialogPopup" type="CanvasLayer" parent="CharacterBody2D/UI"]
-visible = false
-script = ExtResource("14_j2af1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+shape = SubResource("CapsuleShape2D_43u4b")
 
-[node name="Dialog" type="ColorRect" parent="CharacterBody2D/UI/DialogPopup"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -212.0
-offset_top = -493.0
-offset_right = 98.0
-offset_bottom = -399.0
-grow_horizontal = 2
-grow_vertical = 0
-color = Color(0.345098, 0.0980392, 0.160784, 1)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
+sprite_frames = SubResource("SpriteFrames_r3rmo")
+animation = &"down"
 
-[node name="NPC" type="Label" parent="CharacterBody2D/UI/DialogPopup/Dialog"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 295.0
-offset_bottom = 28.0
-theme_override_colors/font_color = Color(0.698039, 0.384314, 0.270588, 1)
-theme_override_font_sizes/font_size = 10
-text = "Name"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2"]
+libraries = {
+"": SubResource("AnimationLibrary_8ert8")
+}
 
-[node name="Message" type="Label" parent="CharacterBody2D/UI/DialogPopup/Dialog"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 15.0
-offset_right = 295.0
-offset_bottom = 45.0
-theme_override_font_sizes/font_size = 10
-text = "Hello there!!!! Can you see meee"
-autowrap_mode = 2
+[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D2"]
+target_position = Vector2(0, 23)
 
-[node name="Response" type="Label" parent="CharacterBody2D/UI/DialogPopup/Dialog"]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 74.0
-offset_right = 301.0
-offset_bottom = 90.0
-theme_override_colors/font_color = Color(0.839216, 0.764706, 0.462745, 1)
-theme_override_font_sizes/font_size = 10
-text = "Answer"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Panel" type="Panel" parent="."]
+offset_top = 465.0
+offset_right = 1404.0
+offset_bottom = 647.0
+script = ExtResource("1_jl0vj")
 
-[connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]
+[node name="RunButton" type="Button" parent="Panel"]
+offset_left = 1054.0
+offset_top = 24.0
+offset_right = 1295.0
+offset_bottom = 153.0
+theme = SubResource("Theme_dyy3a")
+text = "Run :("
+
+[node name="AttackButton" type="Button" parent="Panel"]
+offset_left = 104.0
+offset_top = 26.0
+offset_right = 345.0
+offset_bottom = 155.0
+theme = SubResource("Theme_plkh3")
+text = "Attack!"
+
+[connection signal="pressed" from="Panel/RunButton" to="Panel" method="_on_run_button_pressed"]
+[connection signal="pressed" from="Panel/AttackButton" to="Panel" method="_on_attack_button_pressed"]
