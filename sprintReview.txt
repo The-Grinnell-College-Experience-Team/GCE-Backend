@@ -1,6 +1,6 @@
 # Sprint Review
 
-Git tag for the commit containing our demo code:  v0.5.1 
+Git tag for the commit containing our demo code:  first_demo
 
 The purpose of this sprint review is to record what our team has completed in each sprint 
 in terms of experimentation, setup, and product development.
