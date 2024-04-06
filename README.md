@@ -9,25 +9,25 @@ As of right now, our repository layout consists mostly of the Godot Engine files
 We currently plan on utilizing a 43x20 grid system displayed on the phone, consisting of 32x32 textures.
 
 ### 3. Issue Tracker
-We have our backlog at the following link: https://github.com/orgs/The-Grinnell-College-Experience-Team/projects/6 <br>
+You can check our entire issues from `Issues` tab. Click [here](https://github.com/The-Grinnell-College-Experience-Team/GCE-Backend/issues) to go to the page directly. <br>
+We organized the same backlogs in `Project` tab. Click [here](https://github.com/orgs/The-Grinnell-College-Experience-Team/projects/6) to go to the page directly. <br>
 Thanks to GitHub Issues, here we will be able to communicate and track any issues that may arise.
 
-Below is the brief description for each board in our issue tracker:
+Below is the brief description for each board in our issue tracker in `Project` tab:
 
-**Remaining Issues** <br>
-This board contains the remaining issues for our project. More issues may be added.
-
-**Sprint N To Do** <br>
+**Sprint To Do** <br>
 This board contains the issues that are assigned to the current sprint. <br>
-Issues are moved from the *Remaining Issues* board and you can check the assigned member(s) to each sprint. <br>
+Issues are moved from the *To Do* board and you can check the assigned sprint and member(s). <br>
 The first bubble in each issue means the estimated effort (hours) and the second bubble means the period (sprint dates).
 
 **In Progress** <br>
 The issues will be moved to this board if any team member starts assigned issue(s).
 
-**Sprint N Done** <br>
-These boards contain the issues done in each sprint.
+**Done** <br>
+These boards contain the issues done so far.
 
+**To Do** <br>
+This board contains the remaining issues for our project. More issues may be added.
 
 ### 4. Sprint Reports
 **4-1. Spring Planning Reports** <br>
