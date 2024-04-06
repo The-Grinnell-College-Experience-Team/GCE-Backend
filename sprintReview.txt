@@ -11,6 +11,7 @@ Each sprint review answers to the questions below:
 
 # Sprint Review 4
 Date: Apr 05, 2024
+0. Git tag for the first demo: first_demo
 1. After this sprint, the customers now can ...
     - start the game from the main menu. (For now, only Start Game and Quit buttons are available.)
     - walk around the part of the campus (JRC) and experience the Grinnell campus.
