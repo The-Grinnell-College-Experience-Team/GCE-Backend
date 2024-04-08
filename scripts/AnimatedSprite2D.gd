@@ -18,7 +18,6 @@ var animation_walk_left = "walk_left"
 var animation_walk_up = "walk_up"
 var animation_walk_down = "walk_down"
 
-
 enum idle_state {RIGHT, LEFT, UP, DOWN}
 var movedDir = idle_state.DOWN
 var isMoved = false
@@ -30,31 +29,38 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var motion = Vector2()
+	
+	# define our inputs
 	var moveRight = Input.is_action_pressed('move_right')
 	var moveLeft = Input.is_action_pressed('move_left')
 	var moveUp = Input.is_action_pressed('move_up')
 	var moveDown = Input.is_action_pressed('move_down')
 	
+	# apply movement and appropriate animation
 	if moveRight:
 		motion.x += 100
+		# determine if we choose an animation or if we're already animated
 		if not (moveUp or moveDown):
 			$AnimatedSprite2D.play(animation_walk_right)
 		movedDir = idle_state.RIGHT
 		isMoved = true
 	if moveLeft:
 		motion.x -= 100
+		# determine if we choose an animation or if we're already animated
 		if not (moveUp or moveDown):
 			$AnimatedSprite2D.play(animation_walk_left)
 		movedDir = idle_state.LEFT
 		isMoved = true
 	if moveUp:
 		motion.y -= 100
+		# determine if we choose an animation or if we're already animated
 		if not (moveRight or moveLeft):
 			$AnimatedSprite2D.play(animation_walk_up)
 		movedDir = idle_state.UP
 		isMoved = true
 	if moveDown:
 		motion.y += 100
+		# determine if we choose an animation or if we're already animated
 		if not (moveRight or moveLeft):
 			$AnimatedSprite2D.play(animation_walk_down)
 		movedDir = idle_state.DOWN
@@ -63,6 +69,7 @@ func _process(delta):
 	if motion != Vector2.ZERO:
 		ray_cast.target_position = motion.normalized() * 50
 	
+	# determine whether we need to put the character into an idle animation
 	match isMoved:
 		false:
 			match movedDir:
@@ -75,9 +82,11 @@ func _process(delta):
 				idle_state.DOWN:
 					$AnimatedSprite2D.play(animation_down)
 					
+	# this normalizes the motion vector and multiplies it by the speed we want
 	motion = motion.normalized() * speed
 	position += motion * delta	
 	
+	# reset our animation boolean for the next iteration of _process
 	isMoved = false
 	pass
 
