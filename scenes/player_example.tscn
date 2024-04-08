@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=234 format=3 uid="uid://c6jugsafmapo3"]
+=======
+[gd_scene load_steps=230 format=3 uid="uid://dl4brwf0w8duv"]
+>>>>>>> d7f33696b595c4fb742d51b9778021bc01f4db06
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_s4xu2"]
