@@ -17,6 +17,7 @@ var dialog_state = 0
 # npc name
 @export var npc_name = ""
 
+# initial state of npc
 const SPEED = 300.0
 const JUMP_VELOCITY = -40.0
 
@@ -31,7 +32,6 @@ func _ready():
 
 
 func _physics_process(delta):
-
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		# get it moving upward
@@ -44,14 +44,14 @@ func _physics_process(delta):
 		await get_tree().create_timer(0.5).timeout
 		# make it stop moving
 		velocity.y = 0
-		
-		
-
+	
+	# moves the npc if it collides with the main character.
 	move_and_slide()
 
+# update the dialog status
 var runDialog = false
 
-#dialog tree    
+# dialog tree    
 func dialog():
 	runDialog = true
 	# Set our NPC's animation to "talk"
@@ -71,6 +71,8 @@ func dialog():
 var aPressed = false
 var bPressed = false
 
+# unique dialog content tree for each npc
+# this tree is for npc_interact_1
 func fakeprocess():
 	while true:
 		if dialog_state == 1 and Input.is_action_pressed('KEY_C'):
