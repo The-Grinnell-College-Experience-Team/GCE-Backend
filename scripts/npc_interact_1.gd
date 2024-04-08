@@ -1,4 +1,10 @@
 extends CharacterBody2D
+## npc_interact_1 is attached to npc_interact_1 scene 
+## and handles its object status.
+##
+## It handles the general npc_interact_1 object status (e.g. idle)
+## and calls DialogPopUp to show the interaction between tha main character and NPC.
+## Every NPC objects show different dialog content depending on @fakeprocess()
 
 # Node references
 @onready var dialog_popup = get_node("/root/Player/CharacterBody2D/UI/DialogPopup")
