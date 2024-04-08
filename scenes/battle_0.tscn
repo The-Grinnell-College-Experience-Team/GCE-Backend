@@ -171,7 +171,7 @@ shape = SubResource("CapsuleShape2D_43u4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
 position = Vector2(272, -95)
-scale = Vector2(4.4375, 3.53125)
+scale = Vector2(4.64988, 3.44626)
 sprite_frames = SubResource("SpriteFrames_r3rmo")
 animation = &"down"
 
