@@ -1,4 +1,4 @@
-[gd_scene load_steps=232 format=3 uid="uid://dl4brwf0w8duv"]
+[gd_scene load_steps=233 format=3 uid="uid://dl4brwf0w8duv"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_s4xu2"]
@@ -122,6 +122,7 @@
 [ext_resource type="Texture2D" uid="uid://snhjpc5dlqkj" path="res://assets/MapTiles/WallToGrass.png" id="102_76x0l"]
 [ext_resource type="Texture2D" uid="uid://dnegweqtmmf0j" path="res://assets/MapTiles/Window.png" id="103_74xh0"]
 [ext_resource type="Texture2D" uid="uid://cfmwis80kuff3" path="res://assets/MapTiles/WindowSmall.png" id="104_fs07k"]
+[ext_resource type="PackedScene" uid="uid://dfec75o6m87gb" path="res://scenes/npc_interact_3.tscn" id="123_ly7pt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_snldy"]
 texture = ExtResource("2_u8a0s")
@@ -942,21 +943,27 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="InteractNPC1" type="Node2D" parent="."]
-position = Vector2(-139, 436)
+position = Vector2(371, 356)
 
 [node name="NPC" parent="InteractNPC1" instance=ExtResource("17_lkpne")]
+position = Vector2(3, 3)
 
 [node name="BattleNPC1" type="Node2D" parent="."]
-position = Vector2(430, 506)
+position = Vector2(802, 272)
 
 [node name="NPC" parent="BattleNPC1" instance=ExtResource("17_lkpne")]
-position = Vector2(397, -237)
+position = Vector2(5, -3)
 script = ExtResource("18_82x2m")
 
 [node name="InteractNPC2" type="Node2D" parent="."]
-position = Vector2(168, 432)
+position = Vector2(-84, 262)
 
 [node name="NPC" parent="InteractNPC2" instance=ExtResource("19_tg5cn")]
-position = Vector2(-224, -216)
+position = Vector2(-2, 4)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="NPC" parent="Node2D" instance=ExtResource("123_ly7pt")]
+position = Vector2(426, 266)
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]
