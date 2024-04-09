@@ -62,8 +62,8 @@ func dialog():
 	dialog_state = 1
 	
 	# Show dialog popup
-	dialog_popup.message = "Hellooooo"
-	dialog_popup.response = "[C] Pretty Good  [B] Bad"
+	dialog_popup.message = "Welcome! Is this your first time to visit Grinnell?"
+	dialog_popup.response = "[Y] Yes!  [N] Nope:("
 	dialog_popup.open() #re-open to show next dialog
 	await get_tree().create_timer(0.5).timeout
 	fakeprocess()
@@ -75,23 +75,31 @@ var bPressed = false
 # this tree is for npc_interact_1
 func fakeprocess():
 	while true:
-		if dialog_state == 1 and Input.is_action_pressed('KEY_C'):
+		if dialog_state == 1 and Input.is_action_pressed('KEY_Y'):
 			# Update dialog tree state
 			dialog_state = 2
 			# Show dialog popup
-			dialog_popup.message = "Great! Hope you enjoy the days!"
-			dialog_popup.response = "[A] Bye"
+			dialog_popup.message = "Great! Where's your favorite place?"
+			dialog_popup.response = "[M] Mac Field [N] No where.."
 			fakeprocess()
 			break
-		elif dialog_state == 1 and Input.is_action_pressed('KEY_B'):
+		elif dialog_state == 2 and Input.is_action_pressed('KEY_N'):
 			# Update dialog tree state
 			dialog_state = 3
 			# Show dialog popup
-			dialog_popup.message = "Hope you find a good memory today."
-			dialog_popup.response = "[A] Bye"
+			dialog_popup.message = "Please take time to look around. This is such a amazing place!"
+			dialog_popup.response = "[A] Thanks, bye!"
 			fakeprocess()
 			break
-		elif dialog_state == 2 and Input.is_action_pressed('KEY_A'):
+		elif dialog_state == 2 and Input.is_action_pressed('KEY_M'):
+			# Update dialog tree state
+			dialog_state = 4
+			# Show dialog popup
+			dialog_popup.message = "MacField is a great place to play the frisbee. You should try it!"
+			dialog_popup.response = "[A] Thanks, bye!"
+			fakeprocess()
+			break
+		elif dialog_state == 2 and Input.is_action_pressed('KEY_N'):
 			# Update dialog tree state
 			dialog_state = 1
 			# Close dialog popup
@@ -99,6 +107,14 @@ func fakeprocess():
 			# Set NPC's animation back to "idle"
 			animation_sprite.play("idle_down")
 		elif dialog_state == 3 and Input.is_action_pressed('KEY_A'):
+			# Update dialog tree state
+			dialog_state = 1
+			# Close dialog popup
+			dialog_popup.close()
+			# Set NPC's animation back to "idle"
+			animation_sprite.play("idle_down")
+			break
+		elif dialog_state == 4 and Input.is_action_pressed('KEY_A'):
 			# Update dialog tree state
 			dialog_state = 1
 			# Close dialog popup
