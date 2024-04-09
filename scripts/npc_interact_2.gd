@@ -9,7 +9,7 @@ extends CharacterBody2D
 var dialog_state = 0
 
 # npc name
-@export var npc_name = ""
+@export var npc_name = "random fox"
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -40.0
@@ -39,8 +39,6 @@ func _physics_process(delta):
 		# make it stop moving
 		velocity.y = 0
 		
-		
-
 	move_and_slide()
 
 var runDialog = false
