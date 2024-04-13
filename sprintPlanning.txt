@@ -18,9 +18,10 @@ Date: Apr 12, 2024
 2. Goals
 	- Build the Save System (File, Stats)
 	- UI Design (Pausing and Saving Buttons)
-	- Implement camera zoom 
+	- Implement Camera Zoom 
 	- Develop Combat System (Stat Effects)
-	- Map Design (Mac Field, Lamp Post)
+	- Character Stats Preservation
+	- Map Design (Mac Field, Lamp Post, Collisions)
 3. Task Breakdown
 	a. Build the Save System (File, Stats) (4 hrs): 
 		- Build the file(game) and battle scene stats save system.
@@ -28,11 +29,14 @@ Date: Apr 12, 2024
 		- Create the new buttons for pausing/saving the game.
 	c. Implement camera zoom (4 hrs):
 		- Implement the camera zoom in/out based on the campus map size.
-	d. Develop Combat System (Stat Effects) (5 hrs):
-		- In yhe battle scene, add stat effects (HP, skill, etc.) to main character and combat NPC(s).
+	d. Develop Combat System (Stat Effects) (3 hrs):
+		- In the battle scene, add stat effects (HP, skill, etc.) to main character and combat NPC(s).
 		- After finishing this task, the player can use multiple attack skills, and the scene shows statistical result.
-	e. Map Design (Mac Field, Lamp Post) (5 hrs):
+	e. Character Stats Preservation (2 hrs):
+		- Ensure that the main character's stats are tracked and updated as the game progresses.
+	f. Map Design (Mac Field, Lamp , Collisions) (5 hrs):
 		- Continue designing the campus map in pixel size.
+		- Ensure that the player cannot just walk through the map.
 4. Assignment
 	- Moiz: Implement camera zoom
 	- Alex: Develop Combat System (Stat Effects)
