@@ -1,7 +1,6 @@
-[gd_scene load_steps=233 format=3 uid="uid://dl4brwf0w8duv"]
+[gd_scene load_steps=232 format=3 uid="uid://dl4brwf0w8duv"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
-[ext_resource type="Script" path="res://scripts/camera.gd" id="1_s4xu2"]
 [ext_resource type="Texture2D" uid="uid://bs1cw0c3spy1l" path="res://assets/MapTiles/BrickPath1.png" id="2_u8a0s"]
 [ext_resource type="Texture2D" uid="uid://c06j3e8iveqik" path="res://assets/textures/characters/animated/sprite_03.png" id="4_6ilo3"]
 [ext_resource type="Texture2D" uid="uid://0vnk0xp3woo1" path="res://assets/MapTiles/BSTR1.png" id="4_r1kp8"]
@@ -851,7 +850,6 @@ _data = {
 }
 
 [node name="Player" type="Area2D"]
-script = ExtResource("1_s4xu2")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_lbakv")
@@ -874,6 +872,16 @@ layer_6/tile_data = PackedInt32Array(393230, 90, 0, 393234, 90, 0, 393238, 90, 0
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(681, 298)
 script = ExtResource("13_ry33a")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_240al")
