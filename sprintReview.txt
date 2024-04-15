@@ -1,11 +1,74 @@
 # Sprint Review
 
+Git tag for the commit containing our demo code:  first_demo2
+
 The purpose of this sprint review is to record what our team has completed in each sprint 
 in terms of experimentation, setup, and product development.
 
 Each sprint review answers to the questions below:
     1. How has your product improved or progressed from a customer perspective?
     2. What progress have you made that is not visible to a common user?
+
+# Sprint Review 4
+Date: Apr 05, 2024
+0. Git tag for the first demo: first_demo
+1. After this sprint, the customers now can ...
+    - start the game from the main menu. (For now, only Start Game and Quit buttons are available.)
+    - walk around the part of the campus (JRC) and experience the Grinnell campus.
+    - have a conversation with multiple NPCs.
+    - start a battle when they meet combat NPC.
+2. In this sprint, we ...
+    - created more interaction NPC objects (for conversation) and combat NPC object (for the battle scene).
+    - added the pixel arts for JRC map.
+    - created main menu scene and added the music source.
+    - created the battle scene and built a simple battle system (Attack and Quit buttons).
+    - added the instruction for how to build/test/run the entire system to README.
+3. For each operational user-facing feature ...
+    3-1. Salif's use case: to see Grinnell in a pixelated style
+        - Run the system by following README.
+        - Click 'Start Game' to start the new game.
+        - You can see 8th Avenue with pixel art in the first demo.
+
+    3-2. Nick's use case: to battle against hypothetical people in college.
+        - Run the system by following README.
+        - Click 'Start Game' to start the new game.
+        - Use arrow keys in your keyboard to move your main character.
+        - Find the combat NPC among the NPCs in the game. 
+          (In the first demo, interaction and combat NPCs look the same.)
+          If you get closer to the NPC, it might run away. 
+          So, if you get closer to the NPC, please stop, and find the best location to start the conversation!
+        - To make the NPC jump, press the SPACE key.
+        - To start the conversation, press the ENTER key. Then, the dialogue window will pop up.
+        - If you meet battle NPC (if it asks to start the battle), press the proper input key as shown in the dialogue.
+          (In the first demo, the key is 'C' in your keyboard.)
+        - In the first demo, you can use two keys: Attack and Run.
+          If you click Attack button, the battle NPC's HP decreases. 
+          After that, NPC attacks you, so your HP decreases.
+          After clicking the Attack button, wait for the button to be enabled.
+          If the combat NPC loses all HP, the battle scene automatically shut down and you go back to the main map.
+          Since we have not build the save system yet, the game starts all over again.
+        - If you click Run button in the battle scene, the battle scene automatically shut down and you go back to the main map.
+    
+    3-3. Jerry's use case: to interact with funny hypothetical people and objects throughout the map.
+        - Run the system by following README.
+        - Click 'Start Game' to start the new game.
+        - Use arrow keys in your keyboard to move your main character.
+        - Find the interaction NPC among the NPCs in the game. 
+          (In the first demo, interaction and combat NPCs look the same.)
+          If you get closer to the NPC, it might run away. 
+          So, if you get closer to the NPC, please stop, and find the best location to start the conversation!
+        - To make the NPC jump, press the SPACE key.
+        - To start the conversation, press the ENTER key. Then, the dialogue window will pop up.
+        - If you meet interaction NPC (if it asks to start the general conversation), 
+          press the proper input key as shown in the dialogue to continue the conversation.
+          (In the first demo, the keys are A, B, or C in your keyboard.)
+        - After the conversation finished, the dialogue will automatically disappear.
+    
+    3-4. Lucie's use case: to use an intuitive control system for movement.
+        - Run the system by following README.
+        - Click 'Start Game' to start the new game.
+        - Use arrow keys in your keyboard to move your main character.
+          The walk-cycle is animated, providing a sense of flow within the character's movement.
 
 # Sprint Review 3
 Date: Mar 12, 2024

@@ -29,7 +29,7 @@ func response_set(new_value):
 # ------------------- Processing ---------------------------------
 # no input on hidden
 func _ready():
-	npc = get_node("../../../SpawnedNPC/NPC")
+	npc = get_node("../../../InteractNPC2/NPC")
 	set_process_input(true)
 	print(npc)
 

@@ -56,7 +56,7 @@ func dialog():
 	dialog_state = 1
 	
 	# Show dialog popup
-	dialog_popup.message = "Howdy Partner. I haven't seen anybody round these parts in quite a while. How's it going these days?"
+	dialog_popup.message = "Welcome, pioneer! How's it going these days?"
 	dialog_popup.response = "[C] Pretty Good  [B] Bad"
 	dialog_popup.open() #re-open to show next dialog
 	await get_tree().create_timer(0.5).timeout
@@ -71,8 +71,8 @@ func fakeprocess():
 			# Update dialog tree state
 			dialog_state = 2
 			# Show dialog popup
-			dialog_popup.message = "Great! Hope you enjoy the days!"
-			dialog_popup.response = "[A] Bye"
+			dialog_popup.message = "Did you know Grinnell goes down below 0'F in winter?"
+			dialog_popup.response = "[Y] Yes  [N] No"
 			fakeprocess()
 			break
 		elif dialog_state == 1 and Input.is_action_pressed('KEY_B'):
@@ -83,14 +83,39 @@ func fakeprocess():
 			dialog_popup.response = "[A] Bye"
 			fakeprocess()
 			break
-		elif dialog_state == 2 and Input.is_action_pressed('KEY_A'):
+		elif dialog_state == 2 and Input.is_action_pressed('KEY_Y'):
+			# Update dialog tree state
+			dialog_state = 4
+			# Show dialog popup
+			dialog_popup.message = "You'd better to pack tons of winter clothes to get survived."
+			dialog_popup.response = "[A] Bye"
+			fakeprocess()
+			break
+		elif dialog_state == 2 and Input.is_action_pressed('KEY_N'):
+			# Update dialog tree state
+			dialog_state = 5
+			# Show dialog popup
+			dialog_popup.message = "You will get an unforgettable memory."
+			dialog_popup.response = "[A] Bye"
+			fakeprocess()
+			break
+		elif dialog_state == 3 and Input.is_action_pressed('KEY_A'):
 			# Update dialog tree state
 			dialog_state = 1
 			# Close dialog popup
 			dialog_popup.close()
 			# Set NPC's animation back to "idle"
 			animation_sprite.play("idle_down")
-		elif dialog_state == 3 and Input.is_action_pressed('KEY_A'):
+			break
+		elif dialog_state == 4 and Input.is_action_pressed('KEY_A'):
+			# Update dialog tree state
+			dialog_state = 1
+			# Close dialog popup
+			dialog_popup.close()
+			# Set NPC's animation back to "idle"
+			animation_sprite.play("idle_down")
+			break
+		elif dialog_state == 5 and Input.is_action_pressed('KEY_A'):
 			# Update dialog tree state
 			dialog_state = 1
 			# Close dialog popup
