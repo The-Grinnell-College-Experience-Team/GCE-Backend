@@ -1,6 +1,6 @@
 # Sprint Review
 
-Git tag for the commit containing our demo code:  first_demo
+Git tag for the commit containing our demo code:  first_demo2
 
 The purpose of this sprint review is to record what our team has completed in each sprint 
 in terms of experimentation, setup, and product development.
@@ -24,7 +24,7 @@ Date: Apr 05, 2024
     - created the battle scene and built a simple battle system (Attack and Quit buttons).
     - added the instruction for how to build/test/run the entire system to README.
 3. For each operational user-facing feature ...
-    3-1. Salif's use case: ot see Grinnell in a pixelated style
+    3-1. Salif's use case: to see Grinnell in a pixelated style
         - Run the system by following README.
         - Click 'Start Game' to start the new game.
         - You can see 8th Avenue with pixel art in the first demo.

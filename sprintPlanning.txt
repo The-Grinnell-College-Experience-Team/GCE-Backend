@@ -8,6 +8,50 @@ Each sprint planning answers to the questions below:
 	4. Assignment: What will each team member do this sprint?
 	5. Issue Tracker: How can your instructor view the results of your sprint planning using your issue tracker?
 
+# Sprint Planning 5
+Date: Apr 12, 2024
+1. Capacity
+	- Moiz: Less than last sprint; 4 hrs
+	- Alex: The same as last sprint; 5 hrs
+	- Jasper: Less than last sprint; 5 hrs
+	- Autumn: The same as last sprint; 5 hrs
+2. Goals
+	- Build the Save System (File, Stats)
+	- UI Design (Pausing and Saving Buttons)
+	- Implement Camera Zoom 
+	- Develop Combat System (Stat Effects)
+	- Character Stats Preservation
+	- Map Design (Mac Field, Lamp Post, Collisions)
+3. Task Breakdown
+	a. Build the Save System (File, Stats) (4 hrs): 
+		- Build the file(game) and battle scene stats save system.
+	b. UI Design (Pausing and Saving Buttons) (1 hrs): 
+		- Create the new buttons for pausing/saving the game.
+	c. Implement camera zoom (4 hrs):
+		- Implement the camera zoom in/out based on the campus map size.
+	d. Develop Combat System (Stat Effects) (3 hrs):
+		- In the battle scene, add stat effects (HP, skill, etc.) to main character and combat NPC(s).
+		- After finishing this task, the player can use multiple attack skills, and the scene shows statistical result.
+	e. Character Stats Preservation (2 hrs):
+		- Ensure that the main character's stats are tracked and updated as the game progresses.
+	f. Map Design (Mac Field, Lamp , Collisions) (5 hrs):
+		- Continue designing the campus map in pixel size.
+		- Ensure that the player cannot just walk through the map.
+4. Assignment
+	- Moiz: Implement camera zoom
+	- Alex: Develop Combat System (Stat Effects)
+	- Jasper: Map Design (Mac Field, Lamp Post)
+	- Autumn: Build the Save System (File, Stats), UI Design (Pausing and Saving Buttons)
+5. Issue Tracker
+	- You can see all remaining issues from:
+	  https://github.com/The-Grinnell-College-Experience-Team/GCE-Backend/issues
+	- For each sprint, you can see our work progress from:
+	  https://github.com/orgs/The-Grinnell-College-Experience-Team/projects/6
+	  The issues for this sprint are in the "Sprint To Do" board
+	  and will be moved to "In Progress" board if we start to work on the issue.
+	  The board "Done" contains the issues that we have done.
+	  The board "To Do" contains the remaining issues.
+
 # Sprint Planning 4
 Date: Mar 15, 2024
 1. Capacity

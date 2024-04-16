@@ -1,0 +1,12 @@
+Adding to the tilemap:
+- Create a 32 by 32 pixel png
+- download the png and add it to your MapTiles folder
+- In Godot select the tilemap node in the top left
+- At the bottom of the window select Tileset
+- Find your new png in the files, drag it over into the tile set, and click yes
+- Click on tile map and then your png in the bottom window to select it 
+- Choose the layer on the top left of the tilemap window and add your png to its spot on the tile map. 
+
+IF YOU HAVE EDITED A SCENE:
+You must save scene
+
