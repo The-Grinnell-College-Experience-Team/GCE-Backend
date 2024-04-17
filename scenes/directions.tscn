@@ -29,4 +29,4 @@ position = Vector2(315, 480)
 rotation = -4.71239
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("1_h6yxq")
-action = "move_up"
+action = "move_down"
