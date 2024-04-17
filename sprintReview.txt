@@ -1,6 +1,6 @@
 # Sprint Review
 
-Git tag for the commit containing our demo code:  first_demo
+Git tag for the commit containing our demo code:  first_demo2
 
 The purpose of this sprint review is to record what our team has completed in each sprint 
 in terms of experimentation, setup, and product development.
@@ -8,6 +8,21 @@ in terms of experimentation, setup, and product development.
 Each sprint review answers to the questions below:
     1. How has your product improved or progressed from a customer perspective?
     2. What progress have you made that is not visible to a common user?
+
+# Sprint Review 5
+Date: Apr 16, 2024
+1. After this sprint, the customers now can ...
+    - save and load their main character's location.
+    - walk around the Mac Field.
+    - can use the map that camera zoom-in is applied.
+2. In this sprint, we ...
+    - implemented zoom in feature for camera object.
+    - added more pixel art design (Mac Field and north side of the campus).
+    - implemented the basic save/load system. (For now, we can save/load char level, speed, and position.)
+    - implemented touch screen controls and added battle scene stats/effects.
+    - wrote user-facing documentation that includes some instruction of each operational feature.
+    - completed Internal Documentation lab and included meaningful file header/comments in commits and live document.
+    - had stakeholder meetings and got their feedback about our documentation and game.
 
 # Sprint Review 4
 Date: Apr 05, 2024
@@ -24,7 +39,7 @@ Date: Apr 05, 2024
     - created the battle scene and built a simple battle system (Attack and Quit buttons).
     - added the instruction for how to build/test/run the entire system to README.
 3. For each operational user-facing feature ...
-    3-1. Salif's use case: ot see Grinnell in a pixelated style
+    3-1. Salif's use case: to see Grinnell in a pixelated style
         - Run the system by following README.
         - Click 'Start Game' to start the new game.
         - You can see 8th Avenue with pixel art in the first demo.
