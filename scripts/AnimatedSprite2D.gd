@@ -1,12 +1,17 @@
 extends CharacterBody2D
 
+# Paths to save game data
+var save_file_path = "user://save/"
+var save_file_name = "PlayerSave.tres"
+var playerData = PlayerData.new()
+
 # Node references
 @onready var animation_sprite = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var ray_cast = $RayCast2D
 
-# this will determine the player's speed
-var speed = 200
+## this will determine the player's speed
+#var speed = 200
 
 # animation constants
 var animation_right = "right"
@@ -24,7 +29,26 @@ var isMoved = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	# check if the file path to save data exists
+	verify_save_directory(save_file_path)
+
+# check if path exists
+func verify_save_directory(path: String):
+	DirAccess.make_dir_absolute(path)
+	
+# load the data from the file system
+func load_data():
+	playerData = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
+	on_start_load()
+	print("loaded")
+
+# save the data to the file system	
+func save():
+	ResourceSaver.save(playerData, save_file_path + save_file_name)
+	print("save")
+	
+func on_start_load():
+	self.position = playerData.SavePos
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -35,6 +59,13 @@ func _process(delta):
 	var moveLeft = Input.is_action_pressed('move_left')
 	var moveUp = Input.is_action_pressed('move_up')
 	var moveDown = Input.is_action_pressed('move_down')
+	
+	# handle save and load data
+	# for now, save = key 9, load = key 0
+	if Input.is_action_just_pressed("save"):
+		save()
+	if Input.is_action_just_pressed("load"):
+		load_data()
 	
 	# apply movement and appropriate animation
 	if moveRight:
@@ -83,12 +114,14 @@ func _process(delta):
 					$AnimatedSprite2D.play(animation_down)
 					
 	# this normalizes the motion vector and multiplies it by the speed we want
-	motion = motion.normalized() * speed
+	motion = motion.normalized() * playerData.speed
 	position += motion * delta	
 	
 	# reset our animation boolean for the next iteration of _process
 	isMoved = false
 	pass
+	
+	playerData.UpdatePos(self.position)
 
 func _input(event):
 	#interact with world        
