@@ -1,7 +1,6 @@
-[gd_scene load_steps=256 format=3 uid="uid://dl4brwf0w8duv"]
+[gd_scene load_steps=255 format=3 uid="uid://dl4brwf0w8duv"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
-[ext_resource type="Script" path="res://scripts/camera.gd" id="1_s4xu2"]
 [ext_resource type="Texture2D" uid="uid://bs1cw0c3spy1l" path="res://assets/MapTiles/BrickPath1.png" id="2_u8a0s"]
 [ext_resource type="Texture2D" uid="uid://c06j3e8iveqik" path="res://assets/textures/characters/animated/sprite_03.png" id="4_6ilo3"]
 [ext_resource type="Texture2D" uid="uid://0vnk0xp3woo1" path="res://assets/MapTiles/BSTR1.png" id="4_r1kp8"]
@@ -22,34 +21,34 @@
 [ext_resource type="Texture2D" uid="uid://crt7hqpx18p00" path="res://assets/textures/characters/animated/sprite_06.png" id="10_s7pah"]
 [ext_resource type="Texture2D" uid="uid://swpiogc20rp1" path="res://assets/MapTiles/BSTRUL.png" id="11_0l0px"]
 [ext_resource type="Texture2D" uid="uid://dan3c4v80q4b6" path="res://assets/textures/characters/animated/sprite_07.png" id="11_7n810"]
-[ext_resource type="Texture2D" uid="uid://dwi5ruyjk8nnx" path="res://assets/MapTiles/pathangl.png" id="11_swjhb"]
-[ext_resource type="Texture2D" uid="uid://d3c4ipvjl6kpm" path="res://assets/MapTiles/pathanglangl.png" id="12_5rpd4"]
+[ext_resource type="Texture2D" path="res://assets/MapTiles/pathangl.png" id="11_swjhb"]
+[ext_resource type="Texture2D" path="res://assets/MapTiles/pathanglangl.png" id="12_5rpd4"]
 [ext_resource type="Texture2D" uid="uid://dua7ltv28a6eg" path="res://assets/textures/characters/animated/sprite_04.png" id="12_iqbpj"]
 [ext_resource type="Texture2D" uid="uid://73l368emtnce" path="res://assets/MapTiles/BSTRUR.png" id="12_uj8gt"]
 [ext_resource type="Texture2D" uid="uid://bo2mptkc2iwvl" path="res://assets/MapTiles/CleanPath.png" id="13_moftl"]
 [ext_resource type="Script" path="res://scripts/AnimatedSprite2D.gd" id="13_ry33a"]
 [ext_resource type="Texture2D" uid="uid://cry0adchexxjs" path="res://assets/textures/characters/animated/sprite_05.png" id="13_v873d"]
-[ext_resource type="Texture2D" uid="uid://b7ol1q83wg5y0" path="res://assets/MapTiles/pathanglangljunction.png" id="13_ykkgd"]
+[ext_resource type="Texture2D" path="res://assets/MapTiles/pathanglangljunction.png" id="13_ykkgd"]
 [ext_resource type="Texture2D" uid="uid://n2u3gegr6hy7" path="res://assets/MapTiles/CleanPathCornerGrass.png" id="14_5voly"]
-[ext_resource type="Texture2D" uid="uid://curfg3elfrd8j" path="res://assets/MapTiles/pathanglbot.png" id="14_iai20"]
+[ext_resource type="Texture2D" path="res://assets/MapTiles/pathanglbot.png" id="14_iai20"]
 [ext_resource type="Texture2D" uid="uid://wshnstio01ae" path="res://assets/textures/characters/animated/sprite_08.png" id="14_jjjpa"]
 [ext_resource type="Texture2D" uid="uid://6cc2kftyk0vs" path="res://assets/textures/characters/animated/sprite_09.png" id="15_l0h5t"]
 [ext_resource type="Texture2D" uid="uid://dqwqcigsc6by6" path="res://assets/MapTiles/CleanPathCornerToGrass.png" id="15_xquap"]
 [ext_resource type="Texture2D" uid="uid://rp4tswd64l5d" path="res://assets/MapTiles/CleanPathSideGrass.png" id="16_exjeh"]
-[ext_resource type="Texture2D" uid="uid://bqogx0lpbpwoo" path="res://assets/MapTiles/pathangltop.png" id="16_kby0x"]
+[ext_resource type="Texture2D" path="res://assets/MapTiles/pathangltop.png" id="16_kby0x"]
 [ext_resource type="Script" path="res://scripts/DialogPopup.gd" id="16_x5ruq"]
 [ext_resource type="Texture2D" uid="uid://ckucpm5iovgr" path="res://assets/MapTiles/BrickPath1ToSidewalk.png" id="17_e6ye8"]
 [ext_resource type="PackedScene" uid="uid://d345ul3s1c7le" path="res://scenes/npc_interact_1.tscn" id="17_lkpne"]
-[ext_resource type="Texture2D" uid="uid://due71qxypi1ve" path="res://assets/MapTiles/pathanglturn.png" id="17_vq2km"]
-[ext_resource type="Texture2D" uid="uid://ewdfxhj637ui" path="res://assets/MapTiles/pathstr.png" id="18_6chh6"]
+[ext_resource type="Texture2D" path="res://assets/MapTiles/pathanglturn.png" id="17_vq2km"]
+[ext_resource type="Texture2D" path="res://assets/MapTiles/pathstr.png" id="18_6chh6"]
 [ext_resource type="Script" path="res://scripts/npc_battle_example.gd" id="18_82x2m"]
 [ext_resource type="Texture2D" uid="uid://bmuh1rdrel7ut" path="res://assets/MapTiles/CrackedPath.png" id="18_ktbav"]
-[ext_resource type="Texture2D" uid="uid://cfbrplghbyqqm" path="res://assets/MapTiles/pathstrangljunction.png" id="19_kovqo"]
+[ext_resource type="Texture2D" path="res://assets/MapTiles/pathstrangljunction.png" id="19_kovqo"]
 [ext_resource type="Texture2D" uid="uid://d0qhqk1nanyye" path="res://assets/MapTiles/CrackedPathCornerGrass.png" id="19_omrml"]
 [ext_resource type="PackedScene" uid="uid://brvha0kahamw8" path="res://scenes/npc_interact_2.tscn" id="19_tg5cn"]
-[ext_resource type="Texture2D" uid="uid://be60an38j3kxs" path="res://assets/MapTiles/pathturn.png" id="20_pfmbp"]
+[ext_resource type="Texture2D" path="res://assets/MapTiles/pathturn.png" id="20_pfmbp"]
 [ext_resource type="Texture2D" uid="uid://d0u4agmkjwswt" path="res://assets/MapTiles/CrackedPathCornerToGrass.png" id="20_wqbij"]
-[ext_resource type="Texture2D" uid="uid://0abaamgn2x0p" path="res://assets/MapTiles/GrassBetter.png" id="21_gdneq"]
+[ext_resource type="Texture2D" path="res://assets/MapTiles/GrassBetter.png" id="21_gdneq"]
 [ext_resource type="Texture2D" uid="uid://bavg02d2m2pq2" path="res://assets/MapTiles/CrackedPathInCorner.png" id="21_j5ju3"]
 [ext_resource type="Texture2D" uid="uid://dxwbl1u8qe16c" path="res://assets/MapTiles/CrackedPathSideGrass.png" id="22_45a0u"]
 [ext_resource type="Texture2D" uid="uid://pd44flniq6rc" path="res://assets/MapTiles/CrackedPathVertGrass.png" id="23_j4sg1"]
@@ -934,7 +933,6 @@ _data = {
 }
 
 [node name="Player" type="Area2D"]
-script = ExtResource("1_s4xu2")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_lbakv")
@@ -972,6 +970,16 @@ libraries = {
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
 target_position = Vector2(0, 23)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
 
 [node name="UI" type="CanvasLayer" parent="CharacterBody2D"]
 
