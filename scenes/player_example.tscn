@@ -1,4 +1,4 @@
-[gd_scene load_steps=255 format=3 uid="uid://dl4brwf0w8duv"]
+[gd_scene load_steps=256 format=3 uid="uid://dl4brwf0w8duv"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Texture2D" uid="uid://bs1cw0c3spy1l" path="res://assets/MapTiles/BrickPath1.png" id="2_u8a0s"]
@@ -133,6 +133,7 @@
 [ext_resource type="Texture2D" uid="uid://snhjpc5dlqkj" path="res://assets/MapTiles/WallToGrass.png" id="102_76x0l"]
 [ext_resource type="Texture2D" uid="uid://dnegweqtmmf0j" path="res://assets/MapTiles/Window.png" id="103_74xh0"]
 [ext_resource type="Texture2D" uid="uid://cfmwis80kuff3" path="res://assets/MapTiles/WindowSmall.png" id="104_fs07k"]
+[ext_resource type="PackedScene" uid="uid://6uwhthy36llt" path="res://scenes/directions.tscn" id="134_ghhrf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_snldy"]
 texture = ExtResource("2_u8a0s")
@@ -1050,5 +1051,7 @@ position = Vector2(168, 432)
 
 [node name="NPC" parent="InteractNPC2" instance=ExtResource("19_tg5cn")]
 position = Vector2(-224, -216)
+
+[node name="Directions" parent="." instance=ExtResource("134_ghhrf")]
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]
