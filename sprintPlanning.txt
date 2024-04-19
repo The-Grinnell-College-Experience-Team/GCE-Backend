@@ -29,6 +29,7 @@ Date: Apr 19, 2024
 		- Fix NPC collision bugs
 	c. Map Design (Mac Field, Collisions) (6 hrs):
 		- Continue designing the campus map in pixel size.
+		- Update the game UI.
 		- Ensure that the player cannot just walk through the map.
 4. Assignment
 	- Moiz: Rework the NPC dialog system
