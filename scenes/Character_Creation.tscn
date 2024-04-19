@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxuymnjmnpmuc"]
+
+[ext_resource type="Texture2D" uid="uid://cxxyjru8r0fvd" path="res://assets/Maps/Character Creation Scene.png" id="1_ws8ae"]
+
+[node name="CharacterCreation" type="Node2D"]
+
+[node name="CharacterCreationScene" type="Sprite2D" parent="."]
+position = Vector2(178, 98)
+texture = ExtResource("1_ws8ae")
+
+[node name="Continue" type="Button" parent="CharacterCreationScene"]
+offset_left = 94.0
+offset_top = 61.0
+offset_right = 173.0
+offset_bottom = 92.0
+text = "Continue"
