@@ -8,6 +8,43 @@ Each sprint planning answers to the questions below:
 	4. Assignment: What will each team member do this sprint?
 	5. Issue Tracker: How can your instructor view the results of your sprint planning using your issue tracker?
 
+# Sprint Planning 6
+Date: Apr 19, 2024
+1. Capacity
+	- Moiz: More than last sprint; 6 hrs
+	- Alex: The same as last sprint; 5 hrs
+	- Jasper: More than last sprint; 6 hrs
+	- Autumn: Less than last sprint; 4 hrs
+2. Goals
+	- Complete the Save system
+	- Rework the NPC dialog system
+	- Map Design (Mac Field, Collisions)
+3. Task Breakdown
+	a. Complete the Save system (4 hrs): 
+		- Connect the existing save system to main menu and battle scene.
+		- Add HP and extra battle skills stats to the main character and battle NPCs.
+	b. Rework the NPC dialog system (5 hrs * 2):
+		- Fix the NPC dialog tree (more efficiently)
+		- Make more NPC objects
+		- Fix NPC collision bugs
+	c. Map Design (Mac Field, Collisions) (6 hrs):
+		- Continue designing the campus map in pixel size.
+		- Ensure that the player cannot just walk through the map.
+4. Assignment
+	- Moiz: Rework the NPC dialog system
+	- Alex: Rework the NPC dialog system
+	- Jasper: Map Design
+	- Autumn: Complete the Save system
+5. Issue Tracker
+	- You can see all remaining issues from:
+	  https://github.com/The-Grinnell-College-Experience-Team/GCE-Backend/issues
+	- For each sprint, you can see our work progress from:
+	  https://github.com/orgs/The-Grinnell-College-Experience-Team/projects/6
+	  The issues for this sprint are in the "Sprint To Do" board
+	  and will be moved to "In Progress" board if we start to work on the issue.
+	  The board "Done" contains the issues that we have done.
+	  The board "To Do" contains the remaining issues.
+
 # Sprint Planning 5
 Date: Apr 12, 2024
 1. Capacity
