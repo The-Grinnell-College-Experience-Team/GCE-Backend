@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name MainChar
+
 # Paths to save game data
 var save_file_path = "user://save/"
 var save_file_name = "PlayerSave.tres"
@@ -9,6 +11,7 @@ var playerData = PlayerData.new()
 @onready var animation_sprite = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var ray_cast = $RayCast2D
+@onready var side_menu = preload("res://scenes/side_menu.tscn")
 
 ## this will determine the player's speed
 #var speed = 200
@@ -30,7 +33,11 @@ var isMoved = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# check if the file path to save data exists
-	verify_save_directory(save_file_path)
+	var exists = verify_save_directory(save_file_path)
+	#if exists == true:
+		#pass
+	#else:
+		#playerData = PlayerData.new()
 
 # check if path exists
 func verify_save_directory(path: String):
@@ -38,14 +45,22 @@ func verify_save_directory(path: String):
 	
 # load the data from the file system
 func load_data():
-	playerData = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
-	on_start_load()
-	print("loaded")
+	var exists = ResourceLoader.exists(save_file_path + save_file_name)
+	if exists == true:
+		playerData = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
+		on_start_load()
+		print("loaded")
+	else:
+		print("Error loading game")
+	return playerData
 
 # save the data to the file system	
 func save():
-	ResourceSaver.save(playerData, save_file_path + save_file_name)
-	print("save")
+	var error =ResourceSaver.save(playerData, save_file_path + save_file_name)
+	if error == OK:
+		print("save")
+	else:
+		print("Error saving game")
 	
 func on_start_load():
 	self.position = playerData.SavePos
@@ -59,13 +74,6 @@ func _process(delta):
 	var moveLeft = Input.is_action_pressed('move_left')
 	var moveUp = Input.is_action_pressed('move_up')
 	var moveDown = Input.is_action_pressed('move_down')
-	
-	# handle save and load data
-	# for now, save = key 9, load = key 0
-	if Input.is_action_just_pressed("save"):
-		save()
-	if Input.is_action_just_pressed("load"):
-		load_data()
 	
 	# apply movement and appropriate animation
 	if moveRight:
@@ -124,7 +132,7 @@ func _process(delta):
 	playerData.UpdatePos(self.position)
 
 func _input(event):
-	#interact with world        
+	#interact with NPCs        
 	if event.is_action_pressed("ui_interact"):
 		var target = ray_cast.get_collider()
 		if target != null and target.is_in_group("NPC"):
@@ -132,3 +140,22 @@ func _input(event):
 			target.dialog()
 	else:
 		pass
+		
+	## open the side menu        
+	#if event.is_action_pressed("ui_menu"):
+		#if not has_node("SideMenu"):
+			#var sideMenu = side_menu.instance()
+			#add_child(sideMenu)
+			#get_tree().paused = true
+	
+	# handle save and load data
+	# for now, save = key 9, load = key 0
+	if Input.is_action_just_pressed("save"):
+		save()
+	if Input.is_action_just_pressed("load"):
+		load_data()
+	
+
+# if press side menu button, open the side menu window
+func _on_menu_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/side_menu.tscn")
