@@ -1,4 +1,4 @@
-[gd_scene load_steps=305 format=3 uid="uid://dl4brwf0w8duv"]
+[gd_scene load_steps=304 format=3 uid="uid://dl4brwf0w8duv"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Texture2D" uid="uid://bs1cw0c3spy1l" path="res://assets/MapTiles/BrickPath1.png" id="2_u8a0s"]
@@ -158,7 +158,6 @@
 [ext_resource type="Texture2D" uid="uid://dnegweqtmmf0j" path="res://assets/MapTiles/Window.png" id="103_74xh0"]
 [ext_resource type="Texture2D" uid="uid://cfmwis80kuff3" path="res://assets/MapTiles/WindowSmall.png" id="104_fs07k"]
 [ext_resource type="PackedScene" uid="uid://bacqwdjbs4h8l" path="res://scenes/directions.tscn" id="134_ghhrf"]
-[ext_resource type="Texture2D" uid="uid://drwsdglheka2u" path="res://assets/Main Menu/side menu icon.png" id="159_rxomd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_snldy"]
 texture = ExtResource("2_u8a0s")
@@ -1223,12 +1222,4 @@ position = Vector2(-224, -216)
 
 [node name="Directions" parent="." instance=ExtResource("134_ghhrf")]
 
-[node name="MenuButton" type="MenuButton" parent="."]
-offset_left = 971.0
-offset_top = 46.0
-offset_right = 1029.0
-offset_bottom = 104.0
-icon = ExtResource("159_rxomd")
-
 [connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]
-[connection signal="pressed" from="MenuButton" to="CharacterBody2D" method="_on_menu_button_pressed"]

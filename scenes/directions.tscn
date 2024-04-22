@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bacqwdjbs4h8l"]
+[gd_scene load_steps=4 format=3 uid="uid://bacqwdjbs4h8l"]
 
 [ext_resource type="Texture2D" uid="uid://cwkj4lvp22af5" path="res://assets/StyleBoxes/right-arrow-button.svg" id="1_h6yxq"]
+[ext_resource type="Texture2D" uid="uid://drwsdglheka2u" path="res://assets/Main Menu/side menu icon.png" id="2_bjhtf"]
+[ext_resource type="Script" path="res://scripts/SideMenuButton.gd" id="3_c6kw6"]
 
 [node name="Directions" type="CanvasLayer"]
 
@@ -30,3 +32,13 @@ rotation = -4.71239
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("1_h6yxq")
 action = "move_down"
+
+[node name="SideMenuButton" type="MenuButton" parent="."]
+offset_left = 1308.0
+offset_top = 26.0
+offset_right = 1366.0
+offset_bottom = 84.0
+icon = ExtResource("2_bjhtf")
+script = ExtResource("3_c6kw6")
+
+[connection signal="pressed" from="SideMenuButton" to="SideMenuButton" method="_on_menu_pressed"]

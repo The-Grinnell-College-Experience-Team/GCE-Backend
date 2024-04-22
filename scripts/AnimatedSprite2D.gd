@@ -11,7 +11,6 @@ var playerData = PlayerData.new()
 @onready var animation_sprite = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var ray_cast = $RayCast2D
-@onready var side_menu = preload("res://scenes/side_menu.tscn")
 
 ## this will determine the player's speed
 #var speed = 200
@@ -154,8 +153,3 @@ func _input(event):
 		save()
 	if Input.is_action_just_pressed("load"):
 		load_data()
-	
-
-# if press side menu button, open the side menu window
-func _on_menu_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/side_menu.tscn")

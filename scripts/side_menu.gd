@@ -1,6 +1,7 @@
 extends ColorRect
 
 var selected_menu = 0
+var playerData = MainChar.new()
 
 func change_menu_color():
 	$SaveButton/ColorRect.color = Color("ffd0a0")
@@ -54,8 +55,12 @@ func _on_load_button_pressed():
 # When the user presses the restart button, 
 # a new game begins with the example scene.
 func _on_restart_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/player_example.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 # Pressing Quit Game, quits the game.
 func _on_quit_button_pressed():
 	get_tree().quit()
+
+func _on_exit_menu_button_pressed():
+	playerData.load_data()
+	get_tree().change_scene_to_file("res://scenes/player_example.tscn")
