@@ -52,10 +52,30 @@ Date: Apr 23, 2024
 5. For each operational user-facing feature ...
     
     5-1. Turn-Based Combat System
+        - Launch the game
+        - Move around and talk to NPCs until you have opted to battle an NPC
+        - Choose the 'attack' button to hurt the NPC, or the 'flirt' button to lower the NPC's attack stat
+        - wait for the NPC to use their attack
+        - repeat until either you or the NPC has lost all health.
     5-2. Save System
+        - Launch the game
+        - Move around, battle NPCs, etc
+        - Click the menu icon in the top right corner after you have made changes
+        - Choose the save button to save
+        - You can come back and choose the load button on the menu whenever you want to load the previous save
     5-3. Movement around the space: Grinnell College campus
+        - Launch the game
+        - use either WASD keys for movement or use touch screen buttons
     5-4. Support for Android
+        - We've officially tested operation on Android devices and confirm that it works exactly as intended
+        - Plug in Android phone to computer
+        - Build on Godot for Android as an APK
+        - Click on the app that appears on Android to play
     5-5. Interaction with NPCs
+        - Launch the game
+        - Move around and press the 'enter' key to speak to NPCs
+        - Use the keyboard button associated with dialogue options to choose which dialogue to continue with
+        - When not in dialogue, use the spacebar key to have the NPC perform a little jump
 
 
 # Sprint Review 5
