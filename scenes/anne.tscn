@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx4jqbfxp3xyc"]
+
+[ext_resource type="PackedScene" uid="uid://chy461aogoauq" path="res://scenes/cindy.tscn" id="1_uwpfr"]
+[ext_resource type="Script" path="res://anne.gd" id="2_o7jmg"]
+
+[node name="NPC" instance=ExtResource("1_uwpfr")]
+script = ExtResource("2_o7jmg")
+npc_name = "President Anne Harris"
