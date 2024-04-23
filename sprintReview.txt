@@ -9,6 +9,55 @@ Each sprint review answers to the questions below:
     1. How has your product improved or progressed from a customer perspective?
     2. What progress have you made that is not visible to a common user?
 
+
+# Sprint Review 6
+Date: Apr 23, 2024
+1. After this sprint, the customers now can ...
+    - load/save/restart/quit the game by accessing the side menu or keyboard keys.
+    - can move the main character by mobile control in Android.
+    - can walk around some parts of north campus.
+    - can interact with more NPCs.
+
+2. In this sprint, we ...
+    - created the side menu scene and load/save/restart/quit buttons.
+    - implemented mobile control.
+    - reworked (updated) dialog system and dialog contents tree.
+    - added more pixel arts (Mac Field and north campus).
+    - reviewed our code to check for code quality and correctness.
+    - shared suggestions about the code and recorded them as comments in GitHub.
+
+3. Our Minimum Viable Product (MVP)
+    According to the Milestone 1, we have 5 major features to implement.
+
+    [ Major Features (MVP) ]
+    1. Character Customization
+    2. Turn-Based Combat System
+    3. Save System 
+    4. Movement around the space: Grinnell College campus
+    5. Support for both iOS and Android
+
+    For the 2nd demo, #2 ~ #5 features are operational (only Android for #5).
+    As an extra feature, NPC system is also operational.
+    The new product features are #2 and #5.
+
+4. Work remains toward delivering our MVP
+    There are some features remained, and we plan to complete them before our final demo.
+
+    - We need to create main character customization scene.
+    - We need to add more features to the combat system (skills, levels, etc.).
+    - We need to link save/load system to each screen button (for now, we can save/load the game via keyboard keys).
+    - We need to add more campus pixel arts.
+    - We need to support for iOS.
+
+5. For each operational user-facing feature ...
+    
+    5-1. Turn-Based Combat System
+    5-2. Save System
+    5-3. Movement around the space: Grinnell College campus
+    5-4. Support for Android
+    5-5. Interaction with NPCs
+
+
 # Sprint Review 5
 Date: Apr 16, 2024
 1. After this sprint, the customers now can ...
