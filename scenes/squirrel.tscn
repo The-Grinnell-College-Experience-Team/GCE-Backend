@@ -1,0 +1,154 @@
+[gd_scene load_steps=14 format=3 uid="uid://c2ymvje8nuhfc"]
+
+[ext_resource type="PackedScene" uid="uid://dx4jqbfxp3xyc" path="res://scenes/anne.tscn" id="1_fqmql"]
+[ext_resource type="Texture2D" uid="uid://cvrf1fee7b17t" path="res://PineTools.com_2024-04-21_20h01m35s/PineTools.com_files/row-1-column-1.png" id="2_h7ucw"]
+[ext_resource type="Texture2D" uid="uid://c4geyume0c4v5" path="res://PineTools.com_2024-04-21_20h01m35s/PineTools.com_files/row-2-column-1.png" id="3_ukha6"]
+[ext_resource type="Texture2D" uid="uid://bgynccommuiwv" path="res://PineTools.com_2024-04-21_20h01m35s/PineTools.com_files/row-3-column-1.png" id="4_g845i"]
+[ext_resource type="Texture2D" uid="uid://8nmgxyf0k0ch" path="res://PineTools.com_2024-04-21_20h01m35s/PineTools.com_files/row-4-column-1.png" id="5_3xdoj"]
+[ext_resource type="Texture2D" uid="uid://blltfi7hkgwuc" path="res://PineTools.com_2024-04-21_20h01m35s/PineTools.com_files/row-5-column-1.png" id="6_ndsju"]
+[ext_resource type="Texture2D" uid="uid://buick0mgutvlq" path="res://Flipped/image (1).png" id="8_23h01"]
+[ext_resource type="Texture2D" uid="uid://iiuqo1h4wpvk" path="res://Flipped/image (2).png" id="9_te84x"]
+[ext_resource type="Texture2D" uid="uid://bpjhfr5lvrisj" path="res://Flipped/image (3).png" id="10_d6xga"]
+[ext_resource type="Texture2D" uid="uid://cjrkvhvjcbxsb" path="res://Flipped/image (4).png" id="11_nhllt"]
+[ext_resource type="Texture2D" uid="uid://bnh8gqkgvaoim" path="res://Flipped/image.png" id="12_7xsej"]
+
+[sub_resource type="GDScript" id="GDScript_12cry"]
+script/source = "extends CharacterBody2D
+
+# Node references
+@onready var dialog_popup = get_node(\"/root/Player/CharacterBody2D/UI/DialogPopup\")
+@onready var player = get_tree().root.get_node(\".\")
+@onready var animation_sprite = $AnimatedSprite2D
+
+# dialog states
+var dialog_state = 0
+
+# npc name
+@export var npc_name = \"Campo Steve\"
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -40.0
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+
+var time = 0
+
+# initialize variables
+func _ready():
+	animation_sprite.play(\"idle_down\")
+
+
+func _physics_process(delta):
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		# get it moving upward
+		velocity.y = JUMP_VELOCITY
+		# timer for half a second
+		await get_tree().create_timer(0.5).timeout
+		# get it moving downward
+		velocity.y = 0 - JUMP_VELOCITY
+		# timer for half a second
+		await get_tree().create_timer(0.5).timeout
+		# make it stop moving
+		velocity.y = 0
+		
+	move_and_slide()
+
+var runDialog = false
+
+#dialog tree    
+func dialog():
+	runDialog = true
+	# Set our NPC's animation to \"talk\"
+	animation_sprite.play(\"idle_down\")   
+	# Set dialog_popup npc to be referencing this npc
+	dialog_popup.npc = self
+	# Update dialog tree state
+	dialog_state = 1
+	
+	# Show dialog popup
+	dialog_popup.message = \"I went to Grinnell, and now I am famous and have a six pack? Have you seen the pictures of my six pack?\"
+	dialog_popup.response = \"[C] Bye\"
+	dialog_popup.open() #re-open to show next dialog
+	await get_tree().create_timer(0.5).timeout
+	fakeprocess()
+
+var aPressed = false
+var bPressed = false
+
+func fakeprocess():
+	while true:
+		if dialog_state == 1 and Input.is_action_pressed('KEY_C'):
+			# Update dialog tree state
+			dialog_state = 1
+			# Close dialog popup
+			dialog_popup.close()
+			# Set NPC's animation back to \"idle\"
+			animation_sprite.play(\"idle_down\")
+		await get_tree().create_timer(0.01).timeout
+
+func _process(delta):
+	time += delta
+
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rsu2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h7ucw")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h7ucw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ukha6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g845i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3xdoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ndsju")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_23h01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_te84x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d6xga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nhllt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7xsej")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[node name="NPC" instance=ExtResource("1_fqmql")]
+script = SubResource("GDScript_12cry")
+npc_name = "Campo Steve"
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_6rsu2")
+animation = &"walk_right"
