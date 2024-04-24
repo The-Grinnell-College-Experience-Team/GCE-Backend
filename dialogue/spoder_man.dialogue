@@ -1,0 +1,9 @@
+~ start
+
+Mysterious figure: BAAAAAAAAAKAAAAAAAAAAA! You dare battle a sugoi otaku like me?!?!?!?
+- yea 
+	do get_tree().change_scene_to_file("res://scenes/battle_0.tscn")
+- No I'm too scared
+	Of course you are! Watashi wa, I am the weebkage!
+	
+=> END

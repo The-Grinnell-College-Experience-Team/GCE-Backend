@@ -130,6 +130,18 @@ func _process(delta):
 	
 	playerData.UpdatePos(self.position)
 
+@onready var actionable_finder: Area2D = $Marker2D/ActionableFinder
+
+func _unhandled_input(_event: InputEvent):
+	if Input.is_action_just_pressed("ui_accept"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		
+		if actionables.size() > 0:
+			actionables[0].action()
+			pass
+		
+	pass
+
 func _input(event):
 	#interact with NPCs        
 	if event.is_action_pressed("ui_interact"):
