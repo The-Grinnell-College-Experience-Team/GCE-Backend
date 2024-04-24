@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://uu2tcrxg48ng"
+path="res://.godot/imported/spoder_man.dialogue-660aba9f663b9ad323aa84c9112500e9.tres"
+
+[deps]
+
+source_file="res://dialogue/spoder_man.dialogue"
+dest_files=["res://.godot/imported/spoder_man.dialogue-660aba9f663b9ad323aa84c9112500e9.tres"]
+
+[params]
+
+defaults=true

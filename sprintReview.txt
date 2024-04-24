@@ -9,6 +9,75 @@ Each sprint review answers to the questions below:
     1. How has your product improved or progressed from a customer perspective?
     2. What progress have you made that is not visible to a common user?
 
+
+# Sprint Review 6
+Date: Apr 23, 2024
+1. After this sprint, the customers now can ...
+    - load/save/restart/quit the game by accessing the side menu or keyboard keys.
+    - can move the main character by mobile control in Android.
+    - can walk around some parts of north campus.
+    - can interact with more NPCs.
+
+2. In this sprint, we ...
+    - created the side menu scene and load/save/restart/quit buttons.
+    - implemented mobile control.
+    - reworked (updated) dialog system and dialog contents tree.
+    - added more pixel arts (Mac Field and north campus).
+    - reviewed our code to check for code quality and correctness.
+    - shared suggestions about the code and recorded them as comments in GitHub.
+
+3. Our Minimum Viable Product (MVP)
+    According to the Milestone 1, we have 5 major features to implement.
+
+    [ Major Features (MVP) ]
+    1. Character Customization
+    2. Turn-Based Combat System
+    3. Save System 
+    4. Movement around the space: Grinnell College campus
+    5. Support for both iOS and Android
+
+    For the 2nd demo, #2 ~ #5 features are operational (only Android for #5).
+    As an extra feature, NPC system is also operational.
+    The new product features are #2 and #5.
+
+4. Work remains toward delivering our MVP
+    There are some features remained, and we plan to complete them before our final demo.
+
+    - We need to create main character customization scene.
+    - We need to add more features to the combat system (skills, levels, etc.).
+    - We need to link save/load system to each screen button (for now, we can save/load the game via keyboard keys).
+    - We need to add more campus pixel arts.
+    - We need to support for iOS.
+
+5. For each operational user-facing feature ...
+    
+    5-1. Turn-Based Combat System
+        - Launch the game
+        - Move around and talk to NPCs until you have opted to battle an NPC
+        - Choose the 'attack' button to hurt the NPC, or the 'flirt' button to lower the NPC's attack stat
+        - wait for the NPC to use their attack
+        - repeat until either you or the NPC has lost all health.
+    5-2. Save System
+        - Launch the game
+        - Move around, battle NPCs, etc
+        - Click the menu icon in the top right corner after you have made changes
+        - Choose the save button to save
+        - You can come back and choose the load button on the menu whenever you want to load the previous save
+    5-3. Movement around the space: Grinnell College campus
+        - Launch the game
+        - use either WASD keys for movement or use touch screen buttons
+    5-4. Support for Android
+        - We've officially tested operation on Android devices and confirm that it works exactly as intended
+        - Plug in Android phone to computer
+        - Build on Godot for Android as an APK
+        - Click on the app that appears on Android to play
+    5-5. Interaction with NPCs
+        - Launch the game
+        - Move around and press the 'enter' key to speak to NPCs
+        - Use the keyboard button associated with dialogue options to choose which dialogue to continue with
+        - When not in dialogue, use the spacebar key to have the NPC perform a little jump
+
+
 # Sprint Review 5
 Date: Apr 16, 2024
 1. After this sprint, the customers now can ...

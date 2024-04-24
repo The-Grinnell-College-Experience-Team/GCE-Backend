@@ -132,9 +132,12 @@ func _on_npc_attack():
 	# end the game if the player loses all health
 	if current_player_health <= 0:
 		get_tree().change_scene_to_file("res://scenes/player_example.tscn")
+		finishedBattle = true
 		pass
 		
-	await get_tree().create_timer(timewait).timeout
+	# if the battle hasn't finished, then we signal the NPC's attack
+	if not finishedBattle:
+		await get_tree().create_timer(timewait).timeout
 	
 	# re-enable the player's attack for their turn
 	$Panel/AttackButton.disabled = false

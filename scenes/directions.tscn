@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://6uwhthy36llt"]
+[gd_scene load_steps=6 format=3 uid="uid://bacqwdjbs4h8l"]
 
 [ext_resource type="Texture2D" uid="uid://cwkj4lvp22af5" path="res://assets/StyleBoxes/right-arrow-button.svg" id="1_h6yxq"]
+[ext_resource type="Texture2D" uid="uid://drwsdglheka2u" path="res://assets/Main Menu/side menu icon.png" id="2_bjhtf"]
+[ext_resource type="Script" path="res://scripts/SideMenuButton.gd" id="3_c6kw6"]
+[ext_resource type="Texture2D" uid="uid://nk3eywjkym2j" path="res://assets/textures/menus/Key_B.png" id="5_056u6"]
+[ext_resource type="Texture2D" uid="uid://bptvj267jdt3h" path="res://assets/textures/menus/Key_A.png" id="6_4jbc2"]
 
 [node name="Directions" type="CanvasLayer"]
 
@@ -30,3 +34,27 @@ rotation = -4.71239
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("1_h6yxq")
 action = "move_down"
+
+[node name="SideMenuButton" type="MenuButton" parent="."]
+offset_left = 1308.0
+offset_top = 26.0
+offset_right = 1366.0
+offset_bottom = 84.0
+icon = ExtResource("2_bjhtf")
+script = ExtResource("3_c6kw6")
+
+[node name="B" type="TouchScreenButton" parent="."]
+position = Vector2(1140, 526)
+rotation = -6.28319
+scale = Vector2(0.12875, 0.12625)
+texture_normal = ExtResource("5_056u6")
+action = "KEY_B"
+
+[node name="C2" type="TouchScreenButton" parent="."]
+position = Vector2(1267, 440)
+rotation = -6.28319
+scale = Vector2(0.12875, 0.12625)
+texture_normal = ExtResource("6_4jbc2")
+action = "ui_accept"
+
+[connection signal="pressed" from="SideMenuButton" to="SideMenuButton" method="_on_menu_pressed"]

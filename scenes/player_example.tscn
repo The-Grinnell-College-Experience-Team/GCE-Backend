@@ -157,13 +157,17 @@
 [ext_resource type="Texture2D" uid="uid://snhjpc5dlqkj" path="res://assets/MapTiles/WallToGrass.png" id="102_76x0l"]
 [ext_resource type="Texture2D" uid="uid://dnegweqtmmf0j" path="res://assets/MapTiles/Window.png" id="103_74xh0"]
 [ext_resource type="Texture2D" uid="uid://cfmwis80kuff3" path="res://assets/MapTiles/WindowSmall.png" id="104_fs07k"]
-[ext_resource type="PackedScene" uid="uid://6uwhthy36llt" path="res://scenes/directions.tscn" id="134_ghhrf"]
+
+[ext_resource type="PackedScene" uid="uid://bacqwdjbs4h8l" path="res://scenes/directions.tscn" id="134_ghhrf"]
+[ext_resource type="Texture2D" uid="uid://cr16n37mgo3mx" path="res://assets/textures/characters/NPCs/sample_battle_npc.png" id="159_strkb"]
+[ext_resource type="PackedScene" uid="uid://cvhbmmx3hofmv" path="res://scenes/actionable.tscn" id="160_m2vkx"]
 [ext_resource type="PackedScene" uid="uid://chy461aogoauq" path="res://scenes/cindy.tscn" id="158_2ddwa"]
 [ext_resource type="Texture2D" uid="uid://c2d6pb3ds0iue" path="res://cindy.png" id="159_s1y03"]
 [ext_resource type="PackedScene" uid="uid://dx4jqbfxp3xyc" path="res://scenes/anne.tscn" id="161_5gf26"]
 [ext_resource type="PackedScene" uid="uid://bqfbydcjsen47" path="res://scenes/robert.tscn" id="162_262cu"]
 [ext_resource type="PackedScene" uid="uid://bnhixqkpt2hon" path="res://scenes/kumail.tscn" id="163_5xdxg"]
 [ext_resource type="PackedScene" uid="uid://cqeuj8308xjv1" path="res://scenes/steve.tscn" id="164_xtpsj"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_snldy"]
 texture = ExtResource("2_u8a0s")
@@ -1107,6 +1111,12 @@ _data = {
 "typewriter": SubResource("Animation_5gcso")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ifx4"]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8v2u1"]
+radius = 23.0217
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_7khlx"]
 animations = [{
 "frames": [{
@@ -1219,6 +1229,14 @@ text = "Answer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D"]
+
+[node name="ActionableFinder" type="Area2D" parent="CharacterBody2D/Marker2D"]
+collision_mask = 2147483648
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Marker2D/ActionableFinder"]
+shape = SubResource("CircleShape2D_3ifx4")
+
 [node name="InteractNPC1" type="Node2D" parent="."]
 position = Vector2(-139, 436)
 
@@ -1253,6 +1271,21 @@ sprite_frames = SubResource("SpriteFrames_7khlx")
 
 [node name="Directions" parent="." instance=ExtResource("134_ghhrf")]
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(902, 265)
+
+[node name="SampleBattleNpc" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("159_strkb")
+
+[node name="Actionable" parent="StaticBody2D" instance=ExtResource("160_m2vkx")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Actionable"]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_8v2u1")
+
+[connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]
+[connection signal="battle" from="StaticBody2D/Actionable" to="StaticBody2D/Actionable" method="_on_battle"]
+
 [node name="InteractNPC5" type="Node2D" parent="."]
 
 [node name="NPC" parent="InteractNPC5" instance=ExtResource("161_5gf26")]
@@ -1276,3 +1309,4 @@ position = Vector2(740, 268)
 [connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]
 
 [editable path="InteractNPC4/NPC"]
+
