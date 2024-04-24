@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqfbydcjsen47"]
+
+[ext_resource type="PackedScene" uid="uid://dx4jqbfxp3xyc" path="res://scenes/anne.tscn" id="1_jyurq"]
+[ext_resource type="Script" path="res://robert.gd" id="2_4mexl"]
+[ext_resource type="Texture2D" uid="uid://uvdh03rep6ju" path="res://pixil-frame-0.png" id="3_5uaav"]
+[ext_resource type="Texture2D" uid="uid://bl3j1bqkshwm6" path="res://pixil-frame-0 (1).png" id="4_tgon1"]
+[ext_resource type="Texture2D" uid="uid://cl1i3m1kxh1lr" path="res://pixil-frame-0 (2).png" id="5_j6550"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqsg6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5uaav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tgon1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j6550")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tgon1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5uaav")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}]
+
+[node name="NPC" instance=ExtResource("1_jyurq")]
+script = ExtResource("2_4mexl")
+npc_name = "The Ghost of Robert Noyce"
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_uqsg6")
+animation = &"idle_down"
+frame_progress = 0.12436
