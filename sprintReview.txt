@@ -14,8 +14,8 @@ Each sprint review answers to the questions below:
 Date: Apr 23, 2024
 1. After this sprint, the customers now can ...
     - load/save/restart/quit the game by accessing the side menu or keyboard keys.
-    - can move the main character by mobile control in Android.
-    - can walk around some parts of north campus.
+    - can enjoy the game in Android devices.
+    - can walk around more parts of north campus.
     - can interact with more NPCs.
 
 2. In this sprint, we ...
@@ -52,17 +52,19 @@ Date: Apr 23, 2024
 5. For each operational user-facing feature ...
     
     5-1. Turn-Based Combat System
-        - Launch the game
+        - Launch the game (see README to install the game)
         - Move around and talk to NPCs until you have opted to battle an NPC
         - Choose the 'attack' button to hurt the NPC, or the 'flirt' button to lower the NPC's attack stat
         - wait for the NPC to use their attack
         - repeat until either you or the NPC has lost all health.
     5-2. Save System
         - Launch the game
-        - Move around, battle NPCs, etc
+        - Move around, battle NPCs, etc (see other feature instructions)
+        - [Save] Click the keyboard button '9' to save the main character's current position
+        - [Load] Click the keyboard button '0' whenever you want to load the previous save
         - Click the menu icon in the top right corner after you have made changes
-        - Choose the save button to save
-        - You can come back and choose the load button on the menu whenever you want to load the previous save
+        - [Restart] Choose the 'restart' button to restart the game and go back to the main menu
+        - [Quit] Choose the 'quit' button to quit the game and close the window
     5-3. Movement around the space: Grinnell College campus
         - Launch the game
         - use either WASD keys for movement or use touch screen buttons
