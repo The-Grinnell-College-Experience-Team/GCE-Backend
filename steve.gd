@@ -3,7 +3,7 @@ extends CharacterBody2D
 # Node references
 @onready var dialog_popup = get_node("/root/Player/CharacterBody2D/UI/DialogPopup")
 @onready var player = get_tree().root.get_node(".")
-@onready var animation_sprite = $AnimatedSprite2D
+@onready var animation_sprite = $AnimatedSprite2D # Created by Alex with the help of Jasper
 
 # dialog states
 var dialog_state = 0
@@ -53,8 +53,9 @@ func dialog():
 	# Update dialog tree state
 	dialog_state = 1
 	
-	# Show dialog popup
+	# Show dialog popup written by Jasper
 	dialog_popup.message = "Hi! The kids call me Campo Steve. I hope you enjoy Grinnell! If you need a ride in my golf cart, let me know."
+	# Dialog response option for user
 	dialog_popup.response = "[C] Bye"
 	dialog_popup.open() #re-open to show next dialog
 	await get_tree().create_timer(0.5).timeout
@@ -64,9 +65,10 @@ var aPressed = false
 var bPressed = false
 
 func fakeprocess():
+	# Continously run fake process
 	while true:
 		if dialog_state == 1 and Input.is_action_pressed('KEY_C'):
-			# Update dialog tree state
+			# Update dialog tree state with key press
 			dialog_state = 1
 			# Close dialog popup
 			dialog_popup.close()
@@ -77,3 +79,5 @@ func fakeprocess():
 func _process(delta):
 	time += delta
 
+# In this NPC file of Alex's, Jasper rewrote the dialogue tree to be 1 line, and Jasper showed Alex how to
+# create and implement the animated sprite for Campo Steve.
