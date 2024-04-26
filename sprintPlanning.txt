@@ -8,6 +8,47 @@ Each sprint planning answers to the questions below:
 	4. Assignment: What will each team member do this sprint?
 	5. Issue Tracker: How can your instructor view the results of your sprint planning using your issue tracker?
 
+# Sprint Planning 7
+Date: Apr 24, 2024
+1. Capacity
+	- Moiz: More than last sprint; 8-10 hrs
+	- Alex: More than last sprint; 6-8 hrs
+	- Jasper: The same as last sprint; 6 hrs
+	- Autumn: More than last sprint; 7 hrs
+2. Goals
+	- Link the save system to touch screen buttons
+	- Create the character customization scene
+	- Map Design: Dorm signs, Grinnellians Do sign, HSSC
+	- Rework on the NPC system and fix the bugs
+3. Task Breakdown
+	a. Link the save system to touch screen buttons (7 hrs): 
+		- Connect the existing save system to main menu and battle scene.
+		- Fix the bugs: cannot reload the next scene properly when the user press the LOAD button
+	b. Rework on the NPC system and fix the bugs (8-10 hrs):
+		- Fix NPC collision bugs: after colliding NPC objects, the NPC sticks to the main character
+		- Fix input key bugs: cannot load the imported assets properly and quit the game abnormally
+	c. Map Design (6-8 hrs):
+		- Continue designing the campus map in pixel size: HSSC, dorm signs.
+		- Update the game UI.
+		- Ensure that the player cannot just walk through the map.
+	d. Create the character customization scene (6 hrs)
+		- Create the basic layout of character customization scene.
+		- Add useful character items (e.g. major, class year, etc.)
+4. Assignment
+	- Moiz: Rework the NPC dialog system
+	- Alex: Map Design
+	- Jasper: Create the character customization scene
+	- Autumn: Link the save system to touch screen buttons
+5. Issue Tracker
+	- You can see all remaining issues from:
+	  https://github.com/The-Grinnell-College-Experience-Team/GCE-Backend/issues
+	- For each sprint, you can see our work progress from:
+	  https://github.com/orgs/The-Grinnell-College-Experience-Team/projects/6
+	  The issues for this sprint are in the "Sprint To Do" board
+	  and will be moved to "In Progress" board if we start to work on the issue.
+	  The board "Done" contains the issues that we have done.
+	  The board "To Do" contains the remaining issues.
+
 # Sprint Planning 6
 Date: Apr 19, 2024
 1. Capacity
