@@ -1,4 +1,4 @@
-[gd_scene load_steps=315 format=3 uid="uid://dl4brwf0w8duv"]
+[gd_scene load_steps=318 format=3 uid="uid://begk08slb0dsu"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Texture2D" uid="uid://bs1cw0c3spy1l" path="res://assets/MapTiles/BrickPath1.png" id="2_u8a0s"]
@@ -41,7 +41,6 @@
 [ext_resource type="PackedScene" uid="uid://d345ul3s1c7le" path="res://scenes/npc_interact_1.tscn" id="17_lkpne"]
 [ext_resource type="Texture2D" uid="uid://due71qxypi1ve" path="res://assets/MapTiles/pathanglturn.png" id="17_vq2km"]
 [ext_resource type="Texture2D" uid="uid://ewdfxhj637ui" path="res://assets/MapTiles/pathstr.png" id="18_6chh6"]
-[ext_resource type="Script" path="res://scripts/npc_battle_example.gd" id="18_82x2m"]
 [ext_resource type="Texture2D" uid="uid://bmuh1rdrel7ut" path="res://assets/MapTiles/CrackedPath.png" id="18_ktbav"]
 [ext_resource type="Texture2D" uid="uid://cfbrplghbyqqm" path="res://assets/MapTiles/pathstrangljunction.png" id="19_kovqo"]
 [ext_resource type="Texture2D" uid="uid://d0qhqk1nanyye" path="res://assets/MapTiles/CrackedPathCornerGrass.png" id="19_omrml"]
@@ -158,14 +157,18 @@
 [ext_resource type="Texture2D" uid="uid://dnegweqtmmf0j" path="res://assets/MapTiles/Window.png" id="103_74xh0"]
 [ext_resource type="Texture2D" uid="uid://cfmwis80kuff3" path="res://assets/MapTiles/WindowSmall.png" id="104_fs07k"]
 [ext_resource type="PackedScene" uid="uid://bacqwdjbs4h8l" path="res://scenes/directions.tscn" id="134_ghhrf"]
-[ext_resource type="PackedScene" uid="uid://chy461aogoauq" path="res://scenes/cindy.tscn" id="158_2ddwa"]
-[ext_resource type="Texture2D" uid="uid://c2d6pb3ds0iue" path="res://cindy.png" id="159_s1y03"]
+[ext_resource type="Texture2D" uid="uid://c2d6pb3ds0iue" path="res://assets/textures/characters/NPCs/cindy.png" id="159_s1y03"]
 [ext_resource type="Texture2D" uid="uid://cr16n37mgo3mx" path="res://assets/textures/characters/NPCs/sample_battle_npc.png" id="159_strkb"]
-[ext_resource type="PackedScene" uid="uid://cvhbmmx3hofmv" path="res://scenes/actionable.tscn" id="160_m2vkx"]
-[ext_resource type="PackedScene" uid="uid://dx4jqbfxp3xyc" path="res://scenes/anne.tscn" id="161_5gf26"]
+[ext_resource type="PackedScene" uid="uid://603lyj0expsw" path="res://scenes/actionable.tscn" id="160_m2vkx"]
+[ext_resource type="Script" path="res://scripts/actionable_cindy.gd" id="161_farwx"]
 [ext_resource type="PackedScene" uid="uid://bqfbydcjsen47" path="res://scenes/robert.tscn" id="162_262cu"]
-[ext_resource type="PackedScene" uid="uid://bnhixqkpt2hon" path="res://scenes/kumail.tscn" id="163_5xdxg"]
-[ext_resource type="PackedScene" uid="uid://cqeuj8308xjv1" path="res://scenes/steve.tscn" id="164_xtpsj"]
+[ext_resource type="Texture2D" uid="uid://u7riqvs71vi0" path="res://assets/textures/characters/NPCs/anne.png" id="162_nhp2k"]
+[ext_resource type="Script" path="res://scripts/actionable_anne.gd" id="163_s5qbe"]
+[ext_resource type="Script" path="res://scripts/actionable_robert.gd" id="164_jo245"]
+[ext_resource type="Texture2D" uid="uid://bwephn852d453" path="res://assets/textures/characters/NPCs/kumail.png" id="164_lsjqc"]
+[ext_resource type="Script" path="res://scripts/actionable_kumail.gd" id="165_46xwt"]
+[ext_resource type="Texture2D" uid="uid://bvmy16cqsbsan" path="res://assets/textures/characters/NPCs/steve.png" id="166_gduby"]
+[ext_resource type="Script" path="res://scripts/actionable_steve.gd" id="167_blqt1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_snldy"]
 texture = ExtResource("2_u8a0s")
@@ -1112,19 +1115,11 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ifx4"]
 radius = 13.0
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7khlx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("159_s1y03")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_8v2u1"]
 radius = 23.0217
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pg3m"]
+size = Vector2(32, 35)
 
 [node name="Player" type="Area2D"]
 
@@ -1148,6 +1143,7 @@ layer_6/tile_data = PackedInt32Array(393230, 90, 0, 393234, 90, 0, 393238, 90, 0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(681, 298)
+collision_mask = 2
 script = ExtResource("13_ry33a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -1235,17 +1231,27 @@ collision_mask = 2147483648
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Marker2D/ActionableFinder"]
 shape = SubResource("CircleShape2D_3ifx4")
 
+[node name="BattleNPC1" type="StaticBody2D" parent="."]
+position = Vector2(902, 265)
+collision_layer = 2
+
+[node name="SampleBattleNpc" type="Sprite2D" parent="BattleNPC1"]
+texture = ExtResource("159_strkb")
+
+[node name="Actionable" parent="BattleNPC1" instance=ExtResource("160_m2vkx")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleNPC1/Actionable"]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_8v2u1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="BattleNPC1"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2pg3m")
+
 [node name="InteractNPC1" type="Node2D" parent="."]
 position = Vector2(-139, 436)
 
 [node name="NPC" parent="InteractNPC1" instance=ExtResource("17_lkpne")]
-
-[node name="BattleNPC1" type="Node2D" parent="."]
-position = Vector2(430, 506)
-
-[node name="NPC" parent="BattleNPC1" instance=ExtResource("17_lkpne")]
-position = Vector2(397, -237)
-script = ExtResource("18_82x2m")
 
 [node name="InteractNPC2" type="Node2D" parent="."]
 position = Vector2(168, 432)
@@ -1259,49 +1265,102 @@ position = Vector2(168, 432)
 [node name="NPC" parent="InteractNPC3" instance=ExtResource("19_tg5cn")]
 position = Vector2(-224, -216)
 
-[node name="InteractNPC4" type="Node2D" parent="."]
-position = Vector2(168, 432)
-
-[node name="NPC" parent="InteractNPC4" instance=ExtResource("158_2ddwa")]
-
-[node name="AnimatedSprite2D" parent="InteractNPC4/NPC" index="0"]
-sprite_frames = SubResource("SpriteFrames_7khlx")
-
 [node name="Directions" parent="." instance=ExtResource("134_ghhrf")]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(902, 265)
+[node name="InteractNPC4" type="StaticBody2D" parent="."]
+position = Vector2(689, 369)
+collision_layer = 2
 
-[node name="SampleBattleNpc" type="Sprite2D" parent="StaticBody2D"]
-texture = ExtResource("159_strkb")
+[node name="SampleBattleNpc" type="Sprite2D" parent="InteractNPC4"]
+texture = ExtResource("159_s1y03")
 
-[node name="Actionable" parent="StaticBody2D" instance=ExtResource("160_m2vkx")]
+[node name="Actionable" parent="InteractNPC4" instance=ExtResource("160_m2vkx")]
+script = ExtResource("161_farwx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Actionable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNPC4/Actionable"]
 position = Vector2(0, 13)
 shape = SubResource("CircleShape2D_8v2u1")
 
-[node name="InteractNPC5" type="Node2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="InteractNPC4"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2pg3m")
 
-[node name="NPC" parent="InteractNPC5" instance=ExtResource("161_5gf26")]
-position = Vector2(531, 265)
+[node name="InteractNPC5" type="StaticBody2D" parent="."]
+position = Vector2(561, 260)
+collision_layer = 2
 
-[node name="InteractNPC6" type="Node2D" parent="."]
+[node name="SampleBattleNpc" type="Sprite2D" parent="InteractNPC5"]
+texture = ExtResource("162_nhp2k")
+
+[node name="Actionable" parent="InteractNPC5" instance=ExtResource("160_m2vkx")]
+script = ExtResource("163_s5qbe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNPC5/Actionable"]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_8v2u1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="InteractNPC5"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2pg3m")
+
+[node name="InteractNPC6" type="StaticBody2D" parent="."]
+position = Vector2(593, 349)
+collision_layer = 2
 
 [node name="NPC" parent="InteractNPC6" instance=ExtResource("162_262cu")]
-position = Vector2(557, 360)
+position = Vector2(0, 9)
 
-[node name="InteractNPC7" type="Node2D" parent="."]
+[node name="Actionable" parent="InteractNPC6" instance=ExtResource("160_m2vkx")]
+script = ExtResource("164_jo245")
 
-[node name="NPC" parent="InteractNPC7" instance=ExtResource("163_5xdxg")]
-position = Vector2(776, 336)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNPC6/Actionable"]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_8v2u1")
 
-[node name="InteractNPC8" type="Node2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="InteractNPC6"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2pg3m")
 
-[node name="NPC" parent="InteractNPC8" instance=ExtResource("164_xtpsj")]
-position = Vector2(740, 268)
+[node name="InteractNPC7" type="StaticBody2D" parent="."]
+position = Vector2(805, 327)
+collision_layer = 2
+
+[node name="SampleBattleNpc" type="Sprite2D" parent="InteractNPC7"]
+texture = ExtResource("164_lsjqc")
+
+[node name="Actionable" parent="InteractNPC7" instance=ExtResource("160_m2vkx")]
+script = ExtResource("165_46xwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNPC7/Actionable"]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_8v2u1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="InteractNPC7"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2pg3m")
+
+[node name="InteractNPC8" type="StaticBody2D" parent="."]
+position = Vector2(769, 261)
+collision_layer = 2
+
+[node name="SampleBattleNpc" type="Sprite2D" parent="InteractNPC8"]
+texture = ExtResource("166_gduby")
+
+[node name="Actionable" parent="InteractNPC8" instance=ExtResource("160_m2vkx")]
+script = ExtResource("167_blqt1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNPC8/Actionable"]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_8v2u1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="InteractNPC8"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2pg3m")
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]
-[connection signal="battle" from="StaticBody2D/Actionable" to="StaticBody2D/Actionable" method="_on_battle"]
-
-[editable path="InteractNPC4/NPC"]
+[connection signal="battle" from="BattleNPC1/Actionable" to="BattleNPC1/Actionable" method="_on_battle"]
+[connection signal="battle" from="InteractNPC4/Actionable" to="InteractNPC4/Actionable" method="_on_battle"]
+[connection signal="battle" from="InteractNPC5/Actionable" to="InteractNPC5/Actionable" method="_on_battle"]
+[connection signal="battle" from="InteractNPC6/Actionable" to="InteractNPC6/Actionable" method="_on_battle"]
+[connection signal="battle" from="InteractNPC7/Actionable" to="InteractNPC7/Actionable" method="_on_battle"]
+[connection signal="battle" from="InteractNPC8/Actionable" to="InteractNPC8/Actionable" method="_on_battle"]
