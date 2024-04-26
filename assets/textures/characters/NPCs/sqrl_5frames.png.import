@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvmy16cqsbsan"
-path="res://.godot/imported/steve.png-1487265587bace0dc0e0149c1037928a.ctex"
+uid="uid://da2f0nvopsc8q"
+path="res://.godot/imported/sqrl_5frames.png-adf2f17a56e390c922593cddfcc79e01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://steve.png"
-dest_files=["res://.godot/imported/steve.png-1487265587bace0dc0e0149c1037928a.ctex"]
+source_file="res://assets/textures/characters/NPCs/sqrl_5frames.png"
+dest_files=["res://.godot/imported/sqrl_5frames.png-adf2f17a56e390c922593cddfcc79e01.ctex"]
 
 [params]
 

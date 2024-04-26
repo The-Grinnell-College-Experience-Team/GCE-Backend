@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://bqfbydcjsen47"]
 
 [ext_resource type="PackedScene" uid="uid://dx4jqbfxp3xyc" path="res://scenes/anne.tscn" id="1_jyurq"]
-[ext_resource type="Script" path="res://robert.gd" id="2_4mexl"]
-[ext_resource type="Texture2D" uid="uid://uvdh03rep6ju" path="res://pixil-frame-0.png" id="3_5uaav"]
-[ext_resource type="Texture2D" uid="uid://bl3j1bqkshwm6" path="res://pixil-frame-0 (1).png" id="4_tgon1"]
-[ext_resource type="Texture2D" uid="uid://cl1i3m1kxh1lr" path="res://pixil-frame-0 (2).png" id="5_j6550"]
+[ext_resource type="Script" path="res://scripts/animation_robert.gd" id="2_4mexl"]
+[ext_resource type="Texture2D" uid="uid://uvdh03rep6ju" path="res://assets/textures/characters/NPCs/pixil-frame-0.png" id="3_5uaav"]
+[ext_resource type="Texture2D" uid="uid://bl3j1bqkshwm6" path="res://assets/textures/characters/NPCs/pixil-frame-0 (1).png" id="4_tgon1"]
+[ext_resource type="Texture2D" uid="uid://cl1i3m1kxh1lr" path="res://assets/textures/characters/NPCs/pixil-frame-0 (2).png" id="5_j6550"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uqsg6"]
 animations = [{

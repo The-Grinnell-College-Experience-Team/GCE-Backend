@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://chy461aogoauq"]
 
 [ext_resource type="PackedScene" uid="uid://d345ul3s1c7le" path="res://scenes/npc_interact_1.tscn" id="1_fru8r"]
-[ext_resource type="Script" path="res://scenes/cindy.gd" id="2_6rm05"]
-[ext_resource type="Texture2D" uid="uid://u7riqvs71vi0" path="res://anne.png" id="3_ihvjg"]
+[ext_resource type="Script" path="res://scripts/cindy.gd" id="2_6rm05"]
+[ext_resource type="Texture2D" uid="uid://u7riqvs71vi0" path="res://assets/textures/characters/NPCs/anne.png" id="3_ihvjg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yj23w"]
 animations = [{

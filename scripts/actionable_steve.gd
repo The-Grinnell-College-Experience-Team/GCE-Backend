@@ -5,7 +5,7 @@ signal battle()
 @export var dialogue_start: String = 'start'
 
 func action():
-	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/spoder_man.dialogue"), dialogue_start)
+	DialogueManager.show_example_dialogue_balloon( load("res://dialogue/steve.dialogue"), dialogue_start)
 	pass
 # DialogueManager.show_example_dialogue_balloon(load("res://dialogue/spoder_man.dialogue"), "start")
 

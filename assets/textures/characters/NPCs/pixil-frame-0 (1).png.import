@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u7riqvs71vi0"
-path="res://.godot/imported/anne.png-3b804b421563a506c89c0af444f88404.ctex"
+uid="uid://bl3j1bqkshwm6"
+path="res://.godot/imported/pixil-frame-0 (1).png-f68203c32dc9b8ff10dc327e8576ed38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://anne.png"
-dest_files=["res://.godot/imported/anne.png-3b804b421563a506c89c0af444f88404.ctex"]
+source_file="res://assets/textures/characters/NPCs/pixil-frame-0 (1).png"
+dest_files=["res://.godot/imported/pixil-frame-0 (1).png-f68203c32dc9b8ff10dc327e8576ed38.ctex"]
 
 [params]
 
