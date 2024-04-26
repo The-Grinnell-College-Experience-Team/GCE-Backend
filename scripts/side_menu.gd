@@ -1,7 +1,9 @@
 extends ColorRect
+# This scene serves as the new window for the side menu.
+# It provides four options: save, load, restart, and quit.
 
 var selected_menu = 0
-var playerData = MainChar.new()
+var mainChar = MainChar.new()
 
 func change_menu_color():
 	$SaveButton/ColorRect.color = Color("ffd0a0")
@@ -21,36 +23,16 @@ func change_menu_color():
 
 			
 func _input(_event):
-	# if press "Down"
-	if Input.is_action_just_pressed("ui_down"):
-		selected_menu = (selected_menu + 1) % 4
-		change_menu_color()
-	# if press "Up"
-	elif Input.is_action_just_pressed("ui_up"):
-		if selected_menu > 0:
-			selected_menu = selected_menu - 1
-		else:
-			selected_menu = 3
-		change_menu_color()
-	# if press "Enter"
-	elif Input.is_action_just_pressed("ui_accept"):
-		match selected_menu:
-			0:
-				print("Save")
-			1:
-				print("Load")
-			2:
-				print("Restart")
-			3:
-				get_tree().quit()
+	pass
 
 # When press save button, save the ongoing game.
 func _on_save_button_pressed():
-	pass # Replace with function body.
+	mainChar.save()
 
 # When press load button, load the saved game.
 func _on_load_button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/player_example.tscn")
+	mainChar.load_data()
 
 # When the user presses the restart button, 
 # a new game begins with the example scene.
@@ -62,5 +44,5 @@ func _on_quit_button_pressed():
 	get_tree().quit()
 
 func _on_exit_menu_button_pressed():
-	playerData.load_data()
 	get_tree().change_scene_to_file("res://scenes/player_example.tscn")
+	mainChar.load_data()

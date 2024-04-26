@@ -99,21 +99,21 @@ scale = Vector2(2, 2)
 layout_mode = 2
 alignment = 1
 
-[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer" groups=["mainButtons"]]
 layout_mode = 2
 theme = SubResource("Theme_tlgvk")
 theme_override_fonts/font = ExtResource("3_g51kt")
 theme_override_font_sizes/font_size = 20
 text = "Start Game"
 
-[node name="Load" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Load" type="Button" parent="MarginContainer/VBoxContainer" groups=["mainButtons"]]
 layout_mode = 2
 theme = SubResource("Theme_o8dej")
 theme_override_fonts/font = ExtResource("3_g51kt")
 theme_override_font_sizes/font_size = 20
 text = "Load Game"
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" groups=["mainButtons"]]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_g51kt")
 theme_override_font_sizes/font_size = 20
