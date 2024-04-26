@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqeuj8308xjv1"]
 
 [ext_resource type="PackedScene" uid="uid://dx4jqbfxp3xyc" path="res://scenes/anne.tscn" id="1_xkq2l"]
-[ext_resource type="Script" path="res://steve.gd" id="2_rgs1b"]
-[ext_resource type="Texture2D" uid="uid://bvmy16cqsbsan" path="res://steve.png" id="3_ybgs3"]
+[ext_resource type="Script" path="res://scripts/steve.gd" id="2_rgs1b"]
+[ext_resource type="Texture2D" uid="uid://bvmy16cqsbsan" path="res://assets/textures/characters/NPCs/steve.png" id="3_ybgs3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7c814"]
 animations = [{

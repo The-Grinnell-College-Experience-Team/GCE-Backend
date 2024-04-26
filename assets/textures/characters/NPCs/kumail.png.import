@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da2f0nvopsc8q"
-path="res://.godot/imported/sqrl_5frames.png-acbe3a1353f2c065327eab51d4be0133.ctex"
+uid="uid://bwephn852d453"
+path="res://.godot/imported/kumail.png-15ac2f07316ce3f6d6b8c622e06b5d39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sqrl_5frames.png"
-dest_files=["res://.godot/imported/sqrl_5frames.png-acbe3a1353f2c065327eab51d4be0133.ctex"]
+source_file="res://assets/textures/characters/NPCs/kumail.png"
+dest_files=["res://.godot/imported/kumail.png-15ac2f07316ce3f6d6b8c622e06b5d39.ctex"]
 
 [params]
 

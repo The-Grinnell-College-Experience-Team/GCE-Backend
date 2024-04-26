@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cr7pu7vjky5fm"
+path="res://.godot/imported/cindy.dialogue-d9c9d4c7146e394e492308a1d9a14331.tres"
+
+[deps]
+
+source_file="res://dialogue/cindy.dialogue"
+dest_files=["res://.godot/imported/cindy.dialogue-d9c9d4c7146e394e492308a1d9a14331.tres"]
+
+[params]
+
+defaults=true

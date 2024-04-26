@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c27mt7s753a1g"
+path="res://.godot/imported/kumail.dialogue-b0c941eeb098de1f214eb1f882365115.tres"
+
+[deps]
+
+source_file="res://dialogue/kumail.dialogue"
+dest_files=["res://.godot/imported/kumail.dialogue-b0c941eeb098de1f214eb1f882365115.tres"]
+
+[params]
+
+defaults=true

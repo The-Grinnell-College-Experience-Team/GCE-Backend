@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2d6pb3ds0iue"
-path="res://.godot/imported/cindy.png-11995e2395581bb909d6fd92df74ab56.ctex"
+path="res://.godot/imported/cindy.png-58f0c2d6603fc7afb4f3ed4049ddf2b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cindy.png"
-dest_files=["res://.godot/imported/cindy.png-11995e2395581bb909d6fd92df74ab56.ctex"]
+source_file="res://assets/textures/characters/NPCs/cindy.png"
+dest_files=["res://.godot/imported/cindy.png-58f0c2d6603fc7afb4f3ed4049ddf2b8.ctex"]
 
 [params]
 

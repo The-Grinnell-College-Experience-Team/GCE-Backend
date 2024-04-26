@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://5kggtr62rlss"
+path="res://.godot/imported/steve.dialogue-71a9c203b74380a652f9fe2b1cf7be85.tres"
+
+[deps]
+
+source_file="res://dialogue/steve.dialogue"
+dest_files=["res://.godot/imported/steve.dialogue-71a9c203b74380a652f9fe2b1cf7be85.tres"]
+
+[params]
+
+defaults=true

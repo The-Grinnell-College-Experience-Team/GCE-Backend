@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://d22luxkg3opu4"
+path="res://.godot/imported/anne.dialogue-f6a6515931699a261590d5519c79d555.tres"
+
+[deps]
+
+source_file="res://dialogue/anne.dialogue"
+dest_files=["res://.godot/imported/anne.dialogue-f6a6515931699a261590d5519c79d555.tres"]
+
+[params]
+
+defaults=true

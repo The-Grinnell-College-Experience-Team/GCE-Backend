@@ -29,6 +29,13 @@ enum idle_state {RIGHT, LEFT, UP, DOWN}
 var movedDir = idle_state.DOWN
 var isMoved = false
 
+func _physics_process(delta):
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		if collision.get_collider().is_in_group("NPCs"):
+			velocity = Vector2.ZERO  # stop the player when they run into NPC
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# check if the file path to save data exists

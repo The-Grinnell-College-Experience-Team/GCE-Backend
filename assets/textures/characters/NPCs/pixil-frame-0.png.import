@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wv50qtpwwsew"
-path="res://.godot/imported/sqrl_5frames-removebg-preview.png-4bd14cb97b48d9f8997d02355c0e2759.ctex"
+uid="uid://uvdh03rep6ju"
+path="res://.godot/imported/pixil-frame-0.png-d3e0b8aee95081f05ff437a84777fe47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sqrl_5frames-removebg-preview.png"
-dest_files=["res://.godot/imported/sqrl_5frames-removebg-preview.png-4bd14cb97b48d9f8997d02355c0e2759.ctex"]
+source_file="res://assets/textures/characters/NPCs/pixil-frame-0.png"
+dest_files=["res://.godot/imported/pixil-frame-0.png-d3e0b8aee95081f05ff437a84777fe47.ctex"]
 
 [params]
 
