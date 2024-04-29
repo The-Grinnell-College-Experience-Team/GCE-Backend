@@ -1,4 +1,4 @@
-[gd_scene load_steps=318 format=3 uid="uid://begk08slb0dsu"]
+[gd_scene load_steps=324 format=3 uid="uid://begk08slb0dsu"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Texture2D" uid="uid://bs1cw0c3spy1l" path="res://assets/MapTiles/BrickPath1.png" id="2_u8a0s"]
@@ -100,6 +100,8 @@
 [ext_resource type="Texture2D" uid="uid://mt2jwihu6i5r" path="res://assets/MapTiles/JRCSTR2BL.png" id="46_ukvd7"]
 [ext_resource type="Texture2D" uid="uid://dbuuk1okg0t7w" path="res://assets/MapTiles/JRCSTR2BR.png" id="47_yqwfr"]
 [ext_resource type="Texture2D" uid="uid://b3cesils5sluq" path="res://assets/MapTiles/JRCSTR2UL.png" id="48_2obql"]
+[ext_resource type="Texture2D" uid="uid://ejt32b3dcj6r" path="res://assets/MapTiles/touch.png" id="48_5emfr"]
+[ext_resource type="Texture2D" uid="uid://cn42su5ymvc76" path="res://assets/MapTiles/pee.png" id="49_02jeq"]
 [ext_resource type="Texture2D" uid="uid://k7r67wixftwf" path="res://assets/MapTiles/JRCSTR2UR.png" id="49_q62tb"]
 [ext_resource type="Texture2D" uid="uid://btjt8ami3wrpk" path="res://assets/MapTiles/BrickPath4.png" id="50_jxord"]
 [ext_resource type="Texture2D" uid="uid://5a617kff8pmk" path="res://assets/MapTiles/JRCSTR3BL.png" id="51_ktuil"]
@@ -169,6 +171,8 @@
 [ext_resource type="Script" path="res://scripts/actionable_kumail.gd" id="165_46xwt"]
 [ext_resource type="Texture2D" uid="uid://bvmy16cqsbsan" path="res://assets/textures/characters/NPCs/steve.png" id="166_gduby"]
 [ext_resource type="Script" path="res://scripts/actionable_steve.gd" id="167_blqt1"]
+[ext_resource type="Script" path="res://scripts/actionable_touch..gd" id="170_ggkp7"]
+[ext_resource type="Script" path="res://scripts/actionable_pee.gd" id="173_5fwdm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_snldy"]
 texture = ExtResource("2_u8a0s")
@@ -402,6 +406,16 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6sr7b"]
 texture = ExtResource("11_0l0px")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bfa2a"]
+texture = ExtResource("48_5emfr")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xecjg"]
+texture = ExtResource("49_02jeq")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
@@ -1010,6 +1024,8 @@ sources/136 = SubResource("TileSetAtlasSource_1lhbd")
 sources/137 = SubResource("TileSetAtlasSource_axqa8")
 sources/138 = SubResource("TileSetAtlasSource_fvfvh")
 sources/139 = SubResource("TileSetAtlasSource_g27dj")
+sources/140 = SubResource("TileSetAtlasSource_bfa2a")
+sources/141 = SubResource("TileSetAtlasSource_xecjg")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_240al"]
 
@@ -1116,7 +1132,7 @@ _data = {
 radius = 13.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8v2u1"]
-radius = 23.0217
+radius = 24.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2pg3m"]
 size = Vector2(32, 35)
@@ -1135,7 +1151,7 @@ layer_2/tile_data = PackedInt32Array(458773, 97, 0, 458772, 97, 0, 458771, 97, 0
 layer_3/name = "player"
 layer_3/tile_data = PackedInt32Array()
 layer_4/name = "foreground"
-layer_4/tile_data = PackedInt32Array(393229, 57, 0, 393230, 57, 0, 393231, 57, 0, 393232, 41, 0, 393233, 57, 0, 393234, 57, 0, 393235, 57, 0, 393236, 41, 0, 393237, 57, 0, 393238, 57, 0, 393239, 57, 0, 393240, 41, 0, 393241, 57, 0, 393243, 57, 0, 393242, 57, 0, 327696, 64, 0, 327700, 64, 0, 327704, 64, 0, 327708, 64, 0, 262172, 65, 0, 262168, 65, 0, 262164, 65, 0, 262160, 65, 0, 196636, 66, 0, 196632, 66, 0, 196633, 66, 0, 196634, 66, 0, 196635, 66, 0, 262171, 60, 0, 262170, 60, 0, 262169, 60, 0, 262167, 60, 0, 262166, 60, 0, 262165, 60, 0, 262163, 60, 0, 262162, 60, 0, 262161, 60, 0, 262158, 60, 0, 262159, 60, 0, 393228, 41, 0, 327692, 64, 0, 262156, 65, 0, 262157, 60, 0, 196631, 4, 0, 196630, 4, 0, 196629, 4, 0, 196628, 4, 0, 196627, 4, 0, 196626, 4, 0, 196625, 4, 0, 196624, 4, 0, 196623, 4, 0, 196622, 4, 0, 196621, 4, 0, 196620, 4, 0, 65548, 62, 0, 65549, 62, 0, 65550, 62, 0, 65551, 62, 0, 65552, 62, 0, 65553, 62, 0, 65554, 62, 0, 65555, 62, 0, 65556, 62, 0, 65557, 62, 0, 65558, 62, 0, 65559, 62, 0, 131084, 4, 0, 131085, 4, 0, 131086, 4, 0, 131087, 4, 0, 131088, 4, 0, 131089, 4, 0, 131090, 4, 0, 131091, 4, 0, 131092, 4, 0, 131093, 4, 0, 131094, 4, 0, 131095, 4, 0, 393244, 41, 0, 65547, 101, 0, 11, 101, 0, 10, 101, 0, 196613, 65, 0, 196612, 60, 0, 196611, 60, 0, 262149, 64, 0, 327685, 64, 0, 196610, 60, 0, 458747, 56, 0, 458746, 56, 0, 458745, 56, 0, 458744, 56, 0, 458743, 56, 0, 458742, 55, 0, 851984, 103, 0, 851985, 103, 0, 851989, 103, 0, 851990, 103, 0, 851981, 103, 0, -1114140, 128, 0, -1179676, 129, 0, -1179677, 130, 0, -1179675, 131, 0, -1245212, 132, 0, -1245213, 133, 0, -1245211, 134, 0, -327704, 133, 0, -262168, 130, 0, -327703, 132, 0, -262167, 129, 0, -196631, 128, 0, -327702, 134, 0, -262166, 131, 0, -262175, 133, 0, -196639, 130, 0, -262174, 132, 0, -196638, 129, 0, -131102, 128, 0, -262173, 134, 0, -196637, 131, 0, -27, 133, 0, 65509, 130, 0, -26, 132, 0, 65510, 129, 0, 131046, 128, 0, -25, 134, 0, 65511, 131, 0, -917537, 133, 0, -852001, 130, 0, -917536, 132, 0, -852000, 129, 0, -786464, 128, 0, -917535, 134, 0, -851999, 131, 0, -1179685, 133, 0, -1114149, 130, 0, -1179684, 132, 0, -1114148, 129, 0, -1048612, 128, 0, -1179683, 134, 0, -1114147, 131, 0, 262120, 126, 0, -65563, 126, 0, 65514, 126, 0, 327651, 126, 0, 327652, 127, 0, 262121, 127, 0, 65515, 127, 0, -65562, 127, 0, -1310741, 135, 0, -1310740, 136, 0, -1376277, 137, 0, -1376276, 92, 0, -1310739, 90, 0, -1376275, 91, 0, -1441811, 94, 0, -1441812, 95, 0, -1441810, 96, 0, -1376274, 93, 0)
+layer_4/tile_data = PackedInt32Array(393229, 57, 0, 393230, 57, 0, 393231, 57, 0, 393232, 41, 0, 393233, 57, 0, 393234, 57, 0, 393235, 57, 0, 393236, 41, 0, 393237, 57, 0, 393238, 57, 0, 393239, 57, 0, 393240, 41, 0, 393241, 57, 0, 393243, 57, 0, 393242, 57, 0, 327696, 64, 0, 327700, 64, 0, 327704, 64, 0, 327708, 64, 0, 262172, 65, 0, 262168, 65, 0, 262164, 65, 0, 262160, 65, 0, 196636, 66, 0, 196632, 66, 0, 196633, 66, 0, 196634, 66, 0, 196635, 66, 0, 262171, 60, 0, 262170, 60, 0, 262169, 60, 0, 262167, 60, 0, 262166, 60, 0, 262165, 60, 0, 262163, 60, 0, 262162, 60, 0, 262161, 60, 0, 262158, 60, 0, 262159, 60, 0, 393228, 41, 0, 327692, 64, 0, 262156, 65, 0, 262157, 60, 0, 196631, 4, 0, 196630, 4, 0, 196629, 4, 0, 196628, 4, 0, 196627, 4, 0, 196626, 4, 0, 196625, 4, 0, 196624, 4, 0, 196623, 4, 0, 196622, 4, 0, 196621, 4, 0, 196620, 4, 0, 65548, 62, 0, 65549, 62, 0, 65550, 62, 0, 65551, 62, 0, 65552, 62, 0, 65553, 62, 0, 65554, 62, 0, 65555, 62, 0, 65556, 62, 0, 65557, 62, 0, 65558, 62, 0, 65559, 62, 0, 131084, 4, 0, 131085, 4, 0, 131086, 4, 0, 131087, 4, 0, 131088, 4, 0, 131089, 4, 0, 131090, 4, 0, 131091, 4, 0, 131092, 4, 0, 131093, 4, 0, 131094, 4, 0, 131095, 4, 0, 393244, 41, 0, 65547, 101, 0, 11, 101, 0, 10, 101, 0, 196613, 65, 0, 196612, 60, 0, 196611, 60, 0, 262149, 64, 0, 327685, 64, 0, 196610, 60, 0, 458747, 56, 0, 458746, 56, 0, 458745, 56, 0, 458744, 56, 0, 458743, 56, 0, 458742, 55, 0, 851984, 103, 0, 851985, 103, 0, 851989, 103, 0, 851990, 103, 0, 851981, 103, 0, -1114140, 128, 0, -1179676, 129, 0, -1179677, 130, 0, -1179675, 131, 0, -1245212, 132, 0, -1245213, 133, 0, -1245211, 134, 0, -327704, 133, 0, -262168, 130, 0, -327703, 132, 0, -262167, 129, 0, -196631, 128, 0, -327702, 134, 0, -262166, 131, 0, -262175, 133, 0, -196639, 130, 0, -262174, 132, 0, -196638, 129, 0, -131102, 128, 0, -262173, 134, 0, -196637, 131, 0, -27, 133, 0, 65509, 130, 0, -26, 132, 0, 65510, 129, 0, 131046, 128, 0, -25, 134, 0, 65511, 131, 0, -917537, 133, 0, -852001, 130, 0, -917536, 132, 0, -852000, 129, 0, -786464, 128, 0, -917535, 134, 0, -851999, 131, 0, -1179685, 133, 0, -1114149, 130, 0, -1179684, 132, 0, -1114148, 129, 0, -1048612, 128, 0, -1179683, 134, 0, -1114147, 131, 0, 262120, 126, 0, -65563, 126, 0, 65514, 126, 0, 327651, 126, 0, 327652, 127, 0, 262121, 127, 0, 65515, 127, 0, -65562, 127, 0, -1310741, 135, 0, -1310740, 136, 0, -1376277, 137, 0, -1376276, 92, 0, -1310739, 90, 0, -1376275, 91, 0, -1441811, 94, 0, -1441812, 95, 0, -1441810, 96, 0, -1376274, 93, 0, 524305, 140, 0, 851952, 141, 0)
 layer_5/name = "wall"
 layer_5/tile_data = PackedInt32Array(131094, 100, 0, 131090, 100, 0, 131086, 100, 0)
 layer_6/name = "foward foil"
@@ -1286,7 +1302,7 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_2pg3m")
 
 [node name="InteractNPC5" type="StaticBody2D" parent="."]
-position = Vector2(561, 260)
+position = Vector2(616, 264)
 collision_layer = 2
 
 [node name="SampleBattleNpc" type="Sprite2D" parent="InteractNPC5"]
@@ -1357,6 +1373,46 @@ shape = SubResource("CircleShape2D_8v2u1")
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_2pg3m")
 
+[node name="InteractNPC9" type="StaticBody2D" parent="."]
+position = Vector2(560, 296)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractNPC9"]
+position = Vector2(0, 8)
+texture = ExtResource("9_gjmh6")
+
+[node name="Actionable" parent="InteractNPC9/Sprite2D" instance=ExtResource("160_m2vkx")]
+position = Vector2(-31, 3)
+script = ExtResource("170_ggkp7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNPC9/Sprite2D/Actionable"]
+position = Vector2(31, -3)
+shape = SubResource("CircleShape2D_8v2u1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="InteractNPC9"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_2pg3m")
+
+[node name="InteractNPC10" type="StaticBody2D" parent="."]
+position = Vector2(-496, 424)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractNPC10"]
+position = Vector2(0, 8)
+texture = ExtResource("9_gjmh6")
+
+[node name="Actionable" parent="InteractNPC10/Sprite2D" instance=ExtResource("160_m2vkx")]
+position = Vector2(-31, 3)
+script = ExtResource("173_5fwdm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractNPC10/Sprite2D/Actionable"]
+position = Vector2(31, -3)
+shape = SubResource("CircleShape2D_8v2u1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="InteractNPC10"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_2pg3m")
+
 [connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]
 [connection signal="battle" from="BattleNPC1/Actionable" to="BattleNPC1/Actionable" method="_on_battle"]
 [connection signal="battle" from="InteractNPC4/Actionable" to="InteractNPC4/Actionable" method="_on_battle"]
@@ -1364,3 +1420,5 @@ shape = SubResource("RectangleShape2D_2pg3m")
 [connection signal="battle" from="InteractNPC6/Actionable" to="InteractNPC6/Actionable" method="_on_battle"]
 [connection signal="battle" from="InteractNPC7/Actionable" to="InteractNPC7/Actionable" method="_on_battle"]
 [connection signal="battle" from="InteractNPC8/Actionable" to="InteractNPC8/Actionable" method="_on_battle"]
+[connection signal="battle" from="InteractNPC9/Sprite2D/Actionable" to="InteractNPC9/Sprite2D/Actionable" method="_on_battle"]
+[connection signal="battle" from="InteractNPC10/Sprite2D/Actionable" to="InteractNPC10/Sprite2D/Actionable" method="_on_battle"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c7rfgelpr36ll"
+path="res://.godot/imported/pee.dialogue-5562cca2233cdf36aa4060c72483413b.tres"
+
+[deps]
+
+source_file="res://dialogue/pee.dialogue"
+dest_files=["res://.godot/imported/pee.dialogue-5562cca2233cdf36aa4060c72483413b.tres"]
+
+[params]
+
+defaults=true
