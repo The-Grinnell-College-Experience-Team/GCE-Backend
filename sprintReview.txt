@@ -10,6 +10,27 @@ Each sprint review answers to the questions below:
     2. What progress have you made that is not visible to a common user?
 
 
+# Sprint Review 7
+Date: Apr 30, 2024
+1. After this sprint, the customers now can ...
+    - load the proper character position data in main/side menu.
+    - not climb the campus buildings.
+    - not throw the NPCs.
+    - can find more NPC dialogues.
+    - can find more campus lampposts.
+
+2. In this sprint, we ...
+    - fixed three bugs in NPC system, asset installation, and Save system.
+    - wrote bug reports and journals for each bug. 
+      All bugs are labeled as 'bug' in GitHub issue tab: 
+      https://github.com/The-Grinnell-College-Experience-Team/GCE-Backend/issues?q=label%3Abug+is%3Aclosed
+    - added collision to campus map objects.
+    - added collisions to NPC objects.
+    - created more NPC dialogues.
+    - designed more campus map objects.
+    - designed the character creation scene template (did not add to the actual game yet).
+
+
 # Sprint Review 6
 Date: Apr 23, 2024
 1. After this sprint, the customers now can ...
