@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://5eelt2kuu13a"
+path="res://.godot/imported/touch.dialogue-3e07e467ba25d7256cfa11ef9fec55d8.tres"
+
+[deps]
+
+source_file="res://dialogue/touch.dialogue"
+dest_files=["res://.godot/imported/touch.dialogue-3e07e467ba25d7256cfa11ef9fec55d8.tres"]
+
+[params]
+
+defaults=true
