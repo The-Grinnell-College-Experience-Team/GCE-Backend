@@ -5,7 +5,6 @@ class_name MainChar
 # Paths to save game data
 var save_file_path = "user://save/"
 var save_file_name = "PlayerSave.tres"
-var playerData = PlayerData.new()
 
 # Node references
 @onready var animation_sprite = $AnimatedSprite2D
@@ -14,6 +13,8 @@ var playerData = PlayerData.new()
 
 ## this will determine the player's speed
 #var speed = 200
+var paused = false
+var playerData = PlayerData.new()
 
 # animation constants
 var animation_right = "right"
@@ -40,10 +41,13 @@ func _physics_process(delta):
 func _ready():
 	# check if the file path to save data exists
 	var exists = verify_save_directory(save_file_path)
-	#if exists == true:
-		#pass
-	#else:
-		#playerData = PlayerData.new()
+	# load the previously saved data
+	print(Global.isSaved)
+	print(Global.isLoaded)
+	if Global.isSaved == true:
+		save()
+	if Global.isLoaded == true:
+		load_data()
 
 # check if path exists
 func verify_save_directory(path: String):
@@ -136,6 +140,9 @@ func _process(delta):
 	pass
 	
 	playerData.UpdatePos(self.position)
+	
+	#if menuButton._on_menu_pressed():
+		#pause_menu()
 
 @onready var actionable_finder: Area2D = $Marker2D/ActionableFinder
 
@@ -158,17 +165,12 @@ func _input(event):
 			target.dialog()
 	else:
 		pass
-		
-	## open the side menu        
-	#if event.is_action_pressed("ui_menu"):
-		#if not has_node("SideMenu"):
-			#var sideMenu = side_menu.instance()
-			#add_child(sideMenu)
-			#get_tree().paused = true
 	
 	# handle save and load data
 	# for now, save = key 9, load = key 0
 	if Input.is_action_just_pressed("save"):
 		save()
+		Global.isSaved = false
 	if Input.is_action_just_pressed("load"):
 		load_data()
+		Global.isLoaded = false
