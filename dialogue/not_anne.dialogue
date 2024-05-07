@@ -1,0 +1,7 @@
+~ start
+
+???: For legal reasons, I am unnamed. I bear no resemblance to any specific member of Grinnell's Senior Leadership team.
+???: That being said, I'm still evil. Fight me. You get no choice
+do get_tree().change_scene_to_file("res://scenes/battle_1.tscn")
+
+=> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://blcdo5so1uhgn"
+path="res://.godot/imported/not_anne.dialogue-0262fdf4a08016188832865d21bb4dce.tres"
+
+[deps]
+
+source_file="res://dialogue/not_anne.dialogue"
+dest_files=["res://.godot/imported/not_anne.dialogue-0262fdf4a08016188832865d21bb4dce.tres"]
+
+[params]
+
+defaults=true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=328 format=3 uid="uid://begk08slb0dsu"]
+[gd_scene load_steps=330 format=3 uid="uid://begk08slb0dsu"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Texture2D" uid="uid://bs1cw0c3spy1l" path="res://assets/MapTiles/BrickPath1.png" id="2_u8a0s"]
@@ -164,7 +164,9 @@
 [ext_resource type="Texture2D" uid="uid://c2d6pb3ds0iue" path="res://assets/textures/characters/NPCs/cindy.png" id="159_s1y03"]
 [ext_resource type="Texture2D" uid="uid://cr16n37mgo3mx" path="res://assets/textures/characters/NPCs/sample_battle_npc.png" id="159_strkb"]
 [ext_resource type="PackedScene" uid="uid://603lyj0expsw" path="res://scenes/actionable.tscn" id="160_m2vkx"]
+[ext_resource type="Texture2D" uid="uid://canksmtve1541" path="res://assets/textures/characters/NPCs/not_anne.png" id="161_e2216"]
 [ext_resource type="Script" path="res://scripts/actionable_cindy.gd" id="161_farwx"]
+[ext_resource type="Script" path="res://scripts/actionable_not_anne.gd" id="162_4ie8v"]
 [ext_resource type="PackedScene" uid="uid://bqfbydcjsen47" path="res://scenes/robert.tscn" id="162_262cu"]
 [ext_resource type="Texture2D" uid="uid://u7riqvs71vi0" path="res://assets/textures/characters/NPCs/anne.png" id="162_nhp2k"]
 [ext_resource type="Script" path="res://scripts/actionable_anne.gd" id="163_s5qbe"]
@@ -211,6 +213,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pskwx"]
 texture = ExtResource("7_yotvg")
@@ -931,6 +934,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -10.5, -10.75, -10.5, -10.5, 16, 11, 16, 11, -11.25, 16, -11.25, 16.5, -18.25, -16, -16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b00ab"]
 texture = ExtResource("68_iygp4")
@@ -938,6 +942,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uewwb"]
 texture = ExtResource("69_hntyv")
@@ -945,6 +950,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(9.75, -5.5, 16, -5.5, 16, 16, -16, 16, -16, 0, 9, -0.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5ct4"]
 texture = ExtResource("70_djq28")
@@ -952,6 +958,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0.5, 16, 0, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaga4"]
 texture = ExtResource("71_nnwqh")
@@ -959,6 +966,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.25, -16, -10, 0.5, 16, 0.75, 16, 16, -16, 16, -16, -16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2xtpr"]
 texture = ExtResource("72_r7j84")
@@ -974,6 +982,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.25, -16, -9.25, 16, -16, 16, -16, -16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1vx4v"]
 texture = ExtResource("74_agciq")
@@ -985,6 +994,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, -10.75, -10.5, 10, 10.5, 11, 11, -10)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uuxl1"]
 texture = ExtResource("76_t46fn")
@@ -992,6 +1002,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.5, -16, -10.5, 16, 10.5, 16, 10.5, -16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ha3jn"]
 texture = ExtResource("77_ipe2h")
@@ -999,6 +1010,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qdqa"]
 texture = ExtResource("78_y6j1c")
@@ -1006,6 +1018,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, 0.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlnk1"]
 texture = ExtResource("79_u4dxw")
@@ -1013,6 +1026,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qofvr"]
 texture = ExtResource("80_idtyi")
@@ -1020,6 +1034,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jt1n4"]
 texture = ExtResource("81_a866q")
@@ -1027,6 +1042,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0.5, 16, 16, 16, 16, 16, -16, -16, -16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2sqkp"]
 texture = ExtResource("82_5ef7u")
@@ -1178,6 +1194,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qk2sl"]
 texture = ExtResource("104_fs07k")
@@ -1571,6 +1588,24 @@ shape = SubResource("CircleShape2D_8v2u1")
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_2pg3m")
 
+[node name="BattleNPC2" type="StaticBody2D" parent="."]
+position = Vector2(291, -3433)
+collision_layer = 2
+
+[node name="SampleBattleNpc" type="Sprite2D" parent="BattleNPC2"]
+texture = ExtResource("161_e2216")
+
+[node name="Actionable" parent="BattleNPC2" instance=ExtResource("160_m2vkx")]
+script = ExtResource("162_4ie8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleNPC2/Actionable"]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_8v2u1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="BattleNPC2"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2pg3m")
+
 [node name="InteractNPC1" type="Node2D" parent="."]
 position = Vector2(-139, 436)
 
@@ -1722,6 +1757,7 @@ shape = SubResource("RectangleShape2D_2pg3m")
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]
 [connection signal="battle" from="BattleNPC1/Actionable" to="BattleNPC1/Actionable" method="_on_battle"]
+[connection signal="battle" from="BattleNPC2/Actionable" to="BattleNPC2/Actionable" method="_on_battle"]
 [connection signal="battle" from="InteractNPC4/Actionable" to="InteractNPC4/Actionable" method="_on_battle"]
 [connection signal="battle" from="InteractNPC5/Actionable" to="InteractNPC5/Actionable" method="_on_battle"]
 [connection signal="battle" from="InteractNPC6/Actionable" to="InteractNPC6/Actionable" method="_on_battle"]
