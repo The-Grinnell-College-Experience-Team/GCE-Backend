@@ -1,4 +1,4 @@
-[gd_scene load_steps=330 format=3 uid="uid://begk08slb0dsu"]
+[gd_scene load_steps=331 format=3 uid="uid://begk08slb0dsu"]
 
 [ext_resource type="Texture2D" uid="uid://d2lmq2n7hac6l" path="res://assets/textures/MapTiles/shitty.png" id="1_8vt3i"]
 [ext_resource type="Texture2D" uid="uid://bs1cw0c3spy1l" path="res://assets/MapTiles/BrickPath1.png" id="2_u8a0s"]
@@ -177,6 +177,7 @@
 [ext_resource type="Script" path="res://scripts/actionable_steve.gd" id="167_blqt1"]
 [ext_resource type="Script" path="res://scripts/actionable_touch..gd" id="170_ggkp7"]
 [ext_resource type="Script" path="res://scripts/actionable_pee.gd" id="173_5fwdm"]
+[ext_resource type="Texture2D" uid="uid://er2qpuuicpcq" path="res://assets/Maps/HSSC.png" id="178_giucw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_snldy"]
 texture = ExtResource("2_u8a0s")
@@ -1754,6 +1755,10 @@ shape = SubResource("CircleShape2D_8v2u1")
 [node name="Hitbox" type="CollisionShape2D" parent="InteractNPC10"]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_2pg3m")
+
+[node name="Hssc" type="Sprite2D" parent="."]
+position = Vector2(-1482, 871)
+texture = ExtResource("178_giucw")
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimationPlayer" to="CharacterBody2D/UI/DialogPopup" method="_on_animation_player_animation_finished"]
 [connection signal="battle" from="BattleNPC1/Actionable" to="BattleNPC1/Actionable" method="_on_battle"]
