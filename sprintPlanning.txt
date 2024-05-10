@@ -8,6 +8,40 @@ Each sprint planning answers to the questions below:
 	4. Assignment: What will each team member do this sprint?
 	5. Issue Tracker: How can your instructor view the results of your sprint planning using your issue tracker?
 
+# Sprint Planning 9
+Date: May 10, 2024
+1. Capacity
+	- Moiz: Less last sprint; 2-3 hrs
+	- Alex: Less last sprint; 2-3 hrs
+	- Jasper: Less than last sprint; 2-3 hrs
+	- Autumn: Less than last sprint; 2-3 hrs
+2. Goals
+	- Work on the milestone 12 (code clean up, documentation, license, blog post)
+	- If we have an extra time, work on more arts
+3. Task Breakdown
+	a. Wrap-up work (6-8 hrs): 
+		- Clean up the code and make it concise
+		- Finish code documentation (header, inline comments)
+		- Discuss product license
+	b. Blog post (3 hrs):
+		- Make a post on softarchitech.cs.grinnell.edu
+	c. More art works (optional)
+4. Assignment
+	- Moiz: Clean up/Document combat system and dialog scripts
+	- Alex: Clean up/Document dialog scripts, blog post
+	- Jasper: Art works
+	- Autumn: Clean up/Document save/load system, blog post
+5. Issue Tracker
+	- You can see all remaining issues from:
+	  https://github.com/The-Grinnell-College-Experience-Team/GCE-Backend/issues
+	- For each sprint, you can see our work progress from:
+	  https://github.com/orgs/The-Grinnell-College-Experience-Team/projects/6
+	  The issues for this sprint are in the "Sprint To Do" board
+	  and will be moved to "In Progress" board if we start to work on the issue.
+	  The board "Done" contains the issues that we have done.
+	  The board "To Do" contains the remaining issues.
+
+
 # Sprint Planning 8
 Date: May 03, 2024
 1. Capacity
