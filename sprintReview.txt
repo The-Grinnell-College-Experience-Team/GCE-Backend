@@ -10,6 +10,23 @@ Each sprint review answers to the questions below:
     2. What progress have you made that is not visible to a common user?
 
 
+# Sprint Review 8
+Date: May 09, 2024
+1. After this sprint, the customers now can ...
+    - properly go back to the previous position after closing the side menu
+    - explore HSSC, Noyce, and Bear buildings.
+
+2. In this sprint, we ...
+    - fixed save/load system bugs.
+      (could not properly go back to the current position as we expected after closing the side menu window.)
+    - designed more campus map objects.
+    - added collision to new campus map objects.
+    - discussed our product's current status, adoption plan, and future plan.
+    - wrote our discussion in the living document.
+    - shared our project's reflections.
+    - prepared the presentation slides for our final demo.
+
+
 # Sprint Review 7
 Date: Apr 30, 2024
 1. After this sprint, the customers now can ...
