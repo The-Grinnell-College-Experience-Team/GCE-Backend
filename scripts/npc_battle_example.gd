@@ -16,16 +16,13 @@ const JUMP_VELOCITY = -40.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
 var time = 0
 
 # initialize variables
 func _ready():
 	animation_sprite.play("idle_down")
 
-
 func _physics_process(delta):
-
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		# get it moving upward
@@ -38,8 +35,6 @@ func _physics_process(delta):
 		await get_tree().create_timer(0.5).timeout
 		# make it stop moving
 		velocity.y = 0
-		
-		
 
 	move_and_slide()
 
@@ -64,16 +59,13 @@ func dialog():
 var aPressed = false
 var bPressed = false
 
-
 func fakeprocess():
 	while true:
 		if dialog_state == 1 and Input.is_action_pressed('KEY_C'):
 			# Update dialog tree state
 			dialog_state = 0
 			dialog_popup.close()
-			
 			get_tree().change_scene_to_file("res://scenes/battle_0.tscn")
-
 			break
 		elif dialog_state == 1 and Input.is_action_pressed('KEY_B'):
 			# Update dialog tree state

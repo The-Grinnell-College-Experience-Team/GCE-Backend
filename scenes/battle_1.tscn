@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://drtlpj3hrifep"]
+[gd_scene load_steps=32 format=3 uid="uid://cvlnbfy1to7yf"]
 
 [ext_resource type="Script" path="res://scripts/battleHealth0.gd" id="1_2hrpa"]
 [ext_resource type="Texture2D" uid="uid://bp4dktbimyaw7" path="res://assets/Maps/BattleSceneForest.png" id="2_ug13k"]

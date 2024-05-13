@@ -19,7 +19,6 @@ var enemy_hotness = 20
 var timewait = 0.75
 var finishedBattle = false
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# we initialize our health bars for the enemy and player
@@ -83,7 +82,6 @@ func subtract_player_health(difference):
 func _process(delta):
 	pass
 
-
 signal npc_attack
 
 # a function to subtract the enemy health by the player's strength upon pressing the attack button
@@ -121,8 +119,7 @@ func _on_flirt_button_pressed():
 	if not finishedBattle:
 		await get_tree().create_timer(timewait).timeout
 		npc_attack.emit()
-	
-	pass 
+
 
 # a function to subtract the player health by the enemy's strength upon getting the signal for it
 func _on_npc_attack():
@@ -141,5 +138,3 @@ func _on_npc_attack():
 	
 	# re-enable the player's attack for their turn
 	$Panel/AttackButton.disabled = false
-	
-	pass 

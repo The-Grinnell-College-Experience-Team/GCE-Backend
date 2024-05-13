@@ -13,7 +13,7 @@ const main_scene_path = "res://scenes/player_example.tscn"
 var loading_status : int
 var progress : Array[float]
 
-# This function is called once when the current scene is instantiated.
+# Called when the node enters the scene tree for the first time.
 func _ready():
 	# Plays the fade animation at the beginning.
 	transition.play("fade")

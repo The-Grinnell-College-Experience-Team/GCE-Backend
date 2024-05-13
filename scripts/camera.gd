@@ -3,11 +3,6 @@ extends Area2D
 # this will determine the camera's speed
 var speed = 200
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var motion = Vector2()
@@ -27,5 +22,3 @@ func _process(delta):
 	
 	# update the position
 	position += motion * delta	
-	
-	pass
