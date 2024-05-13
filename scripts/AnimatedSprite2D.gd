@@ -170,8 +170,6 @@ func _process(delta):
 	playerData.UpdateCurPos(self.position)
 	save(1)
 	
-	#if menuButton._on_menu_pressed():
-		#pause_menu()
 
 @onready var actionable_finder: Area2D = $Marker2D/ActionableFinder
 

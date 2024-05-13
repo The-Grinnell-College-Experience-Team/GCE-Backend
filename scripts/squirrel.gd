@@ -8,7 +8,6 @@ var min_walk_time = 1
 var max_walk_time = 5
 var walk_speed = 1000
 
-
 func _ready():
 	set_process(true)
 

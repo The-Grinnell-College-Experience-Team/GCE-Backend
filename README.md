@@ -3,10 +3,26 @@
 ### 1. Idea and Goals
 We want to create a video game that uses 32x32 pixels textures to recreate Grinnell College in a virtualized setting. We wish to utilize this in a fashion to be able to run this game on mobile devices, including iOS and Android. We ended up swapping to the Godot Engine for this game, for convenience in compiling to iOS.
 
-### 2. Layout
-As of right now, our repository layout consists mostly of the Godot Engine files and the `assets`, `scripts`, and `scenes` folders. We will likely add many things and the scrips will either be in GDScript or C#, most likely. We may potentially also add C++, but that is unlikely. However, if we switch to an established game engine, then this will change completely to match the git requirements of the project code for the respective game engine.
+We designed this project to remember our college life (like a time capsule) and to spread Grinnell's joy & spirit to other external/prospective students.
 
-We currently plan on utilizing a 43x20 grid system displayed on the phone, consisting of 32x32 textures.
+
+### 2. Layout
+Our repository layout consists mostly of the Godot Engine files and the `addons`, `assets`, `dialogue`, `scenes`, and `scripts` folders. We currently plan on utilizing a 43x20 grid system displayed on the phone, consisting of 32x32 textures.
+
+**addons** <br>
+This folder contains external plugin resources.
+
+**assets** <br>
+This folder contains all pixel art resources. Most pixel art was designed at [Pixilart](https://www.pixilart.com/).
+
+**dialogue** <br>
+This folder contains the dialogue contents for each NPC object.
+
+**scenes** <br>
+This folder contains all the scenes of the game. The game starts from the `menu.tscn`, and the main scene is `player_example.tscn`.
+
+**scripts** <br>
+This folder contains all scripts for each scene. You can check each script is attached to the relevant scenes (nodes).
 
 ### 3. Issue Tracker
 You can check our entire issues from `Issues` tab. Click [here](https://github.com/The-Grinnell-College-Experience-Team/GCE-Backend/issues) to go to the page directly. <br>
@@ -38,8 +54,17 @@ The weekly sprint planning report is updated between Wednesday and Friday.
 Each sprint review report can be found in `sprintReview.txt` in this repository. <br>
 The weekly sprint planning report is updated every Tuesday.
 
-### 5. Operational Use Cases
-So far, all 4 use cases (Salif, Nick, Jerry, Lucie) are operational.
+### 5. Operational Features (Use Cases)
+So far, you can experience 6 operational features.
+
+* Intuitive control system for users
+* Move around the pixelated Grinnell campus map
+* Interact with multiple NPCs
+* Play the battles with NPCs
+* Save and load the game data
+* Play the game on Android devices
+
+In detail, our team discussed 4 use cases below during the class.
 
 **5-1. Salif's use case** <br> 
 Salif's use case (seeing Grinnell in a pixelated style) is somewhat operational, as the first demo recreates 8th Avenue with pixel art, but more of the map will be created soon. 
@@ -59,7 +84,7 @@ To Build the project, you need to install Godot 4.2.1 (.NET Version). Follow the
 After the installation, open Godot 4.2.1 (.NET Version). Select the `import` tab, then open the folder that leads to this project. Next, select this project (labeled  `TheGrinnellCollegeExperience`), then choose the `edit` tab on the right side. Once the project loads, choose the hammer icon on the top right corner to build the project.
 
 ### 7. Testing the System
-For Testing, we originally planned on using Unit testing, but we quickly realized that Unit testing isn't very feasible for the vast majority of our project. We plan on using Manual Testing and generally this is the common practice for testing most video games in the industry (see https://en.wikipedia.org/wiki/Game_testing). In our case, we do not have a QA team we can use to help us, so we will need to do the testing ourselves. This will likely be difficult and time-consuming, but necessary for the type of project we have. We may end up with a few bugs, but our largest goal is to have no major or game-breaking glitches. Automation is heavily limited for this kind of project, but this is a necessary trade-off that we'll manually account for.
+For Testing, we originally planned on using Unit testing, but we quickly realized that Unit testing isn't very feasible for the vast majority of our project. We plan on using Manual Testing and generally, this is the common practice for testing most video games in the industry (see [here](https://en.wikipedia.org/wiki/Game_testing)). In our case, we do not have a QA team we can use to help us, so we will need to do the testing ourselves. This will likely be difficult and time-consuming, but necessary for the type of project we have. We may end up with a few bugs, but our largest goal is to have no major or game-breaking glitches. Automation is heavily limited for this kind of project, but this is a necessary trade-off that we'll manually account for.
 
 ### 8. Running the System
 To Run the project, open Godot 4.2.1 (.NET Version). Once, you've built the project, select this project (labeled  `TheGrinnellCollegeExperience`), then choose the `run` tab on the right side. Alternatively, if you're already in the `edit` mode for Godot, click the play icon next to the hammer to run the project.
