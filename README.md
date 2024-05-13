@@ -28,7 +28,7 @@ You can check our entire issues from `Issues` tab. Click [here](https://github.c
 We organized the same backlogs in `Project` tab. Click [here](https://github.com/orgs/The-Grinnell-College-Experience-Team/projects/6) to go to the page directly. <br>
 Thanks to GitHub Issues, here we will be able to communicate and track any issues that may arise.
 
-Below is the brief description for each board in our issue tracker in `Project` tab:
+Below is the brief description of each board in our issue tracker in `Project` tab:
 
 **Sprint To Do** <br>
 This board contains the issues that are assigned to the current sprint. <br>
@@ -78,12 +78,23 @@ Jerry's use case (interacting with funny hypothetical people and objects through
 Lucie's use case (wanting an intuitive control system for movement) is operational. The player can move up, down, left, and right using the common, default inputs (the classic arrow keys with this demo). The walk-cycle is animated, providing a sense of flow within the character's movement.   
 
 ### 6. Building the System
-To Build the project, you need to install Godot 4.2.1 (.NET Version). Follow the [link](https://godotengine.org/download/windows/) to download the game engine.
-
-After the installation, open Godot 4.2.1 (.NET Version). Select the `import` tab, then open the folder that leads to this project. Next, select this project (labeled  `TheGrinnellCollegeExperience`), then choose the `edit` tab on the right side. Once the project loads, choose the hammer icon on the top right corner to build the project.
+1. To Build the project, you need to install Godot 4.2.1 (.NET Version). Follow the [link](https://godotengine.org/download/windows/) to download the game engine.
+2. Download **The Grinnell College Experience** source code with the link above.
+3. After finishing steps 1 and 2, open Godot 4.2.1 (.NET Version).
+4. Select the `import` tab, then open the folder that leads to this project.
+5. Select this project (labeled  `TheGrinnellCollegeExperience`), then choose the `edit` tab on the right side.
+6. Once the project loads, choose the hammer icon on the top right corner to build the project.
 
 ### 7. Testing the System
 For Testing, we originally planned on using Unit testing, but we quickly realized that Unit testing isn't very feasible for the vast majority of our project. We plan on using Manual Testing and generally, this is the common practice for testing most video games in the industry (see [here](https://en.wikipedia.org/wiki/Game_testing)). In our case, we do not have a QA team we can use to help us, so we will need to do the testing ourselves. This will likely be difficult and time-consuming, but necessary for the type of project we have. We may end up with a few bugs, but our largest goal is to have no major or game-breaking glitches. Automation is heavily limited for this kind of project, but this is a necessary trade-off that we'll manually account for.
 
 ### 8. Running the System
-To Run the project, open Godot 4.2.1 (.NET Version). Once, you've built the project, select this project (labeled  `TheGrinnellCollegeExperience`), then choose the `run` tab on the right side. Alternatively, if you're already in the `edit` mode for Godot, click the play icon next to the hammer to run the project.
+1. To Run the project, open Godot 4.2.1 (.NET Version).
+2. Once, you've built the project, select this project (labeled  `TheGrinnellCollegeExperience`), then choose the `run` tab on the right side.
+3. Alternatively, if you're already in the `edit` mode for Godot, click the play icon next to the hammer to run the project.
+
+### 9. Future Development
+* Character customization scene
+* More Grinnell campus map
+* Updated combat system
+* Support for iOS
