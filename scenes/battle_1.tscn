@@ -1,4 +1,3 @@
-[gd_scene load_steps=32 format=3 uid="uid://cvlnbfy1to7yf"]
 
 [ext_resource type="Script" path="res://scripts/battleHealth0.gd" id="1_2hrpa"]
 [ext_resource type="Texture2D" uid="uid://bp4dktbimyaw7" path="res://assets/Maps/BattleSceneForest.png" id="2_ug13k"]
@@ -18,6 +17,8 @@
 [ext_resource type="Script" path="res://scripts/battleSetup0.gd" id="15_iyapn"]
 [ext_resource type="StyleBox" uid="uid://cnag1n833vuvt" path="res://assets/StyleBoxes/attackButtonRed.tres" id="16_lbvgi"]
 [ext_resource type="Texture2D" uid="uid://bs1cw0c3spy1l" path="res://assets/MapTiles/BrickPath1.png" id="17_fj73p"]
+[ext_resource type="AudioStream" uid="uid://1wmbpc63bu8v" path="res://music and sound/Charon.mp3" id="19_dvhsy"]
+[ext_resource type="AudioStream" uid="uid://cxuoilqaq2sjf" path="res://music and sound/RIZZ Sound Effect-[AudioTrimmer.com].mp3" id="20_r75d1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_43u4b"]
 radius = 23.0
@@ -256,6 +257,15 @@ show_percentage = false
 [node name="BrickPath1" type="Sprite2D" parent="."]
 position = Vector2(252, 823)
 texture = ExtResource("17_fj73p")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_dvhsy")
+autoplay = true
+
+[node name="flirt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_r75d1")
+
+[node name="attack" type="AudioStreamPlayer" parent="."]
 
 [connection signal="npc_attack" from="." to="." method="_on_npc_attack"]
 [connection signal="pressed" from="Panel/AttackButton" to="." method="_on_attack_button_pressed"]

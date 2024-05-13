@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfk7a83e3w27e"
+path="res://.godot/imported/neptune.mp3-80b1cee8036cd2ce7d5474afb38d2b68.mp3str"
+
+[deps]
+
+source_file="res://music and sound/neptune.mp3"
+dest_files=["res://.godot/imported/neptune.mp3-80b1cee8036cd2ce7d5474afb38d2b68.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
