@@ -3,6 +3,9 @@
 ### 1. Idea and Goals
 We want to create a video game that uses 32x32 pixels textures to recreate Grinnell College in a virtualized setting. We wish to utilize this in a fashion to be able to run this game on mobile devices, including iOS and Android. We ended up swapping to the Godot Engine for this game, for convenience in compiling to iOS.
 
+We designed this project to remember our college life (like a time capsule) and to spread Grinnell's joy & spirit to other external/prospective students.
+
+
 ### 2. Layout
 Our repository layout consists mostly of the Godot Engine files and the `addons`, `assets`, `dialogue`, `scenes`, and `scripts` folders. We currently plan on utilizing a 43x20 grid system displayed on the phone, consisting of 32x32 textures.
 
