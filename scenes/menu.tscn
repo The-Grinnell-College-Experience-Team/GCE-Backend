@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_3suh0"]
 [ext_resource type="Texture2D" uid="uid://c3vfebjjwg7yf" path="res://assets/Main Menu/pxArt.png" id="2_f8vhg"]
 [ext_resource type="FontFile" uid="uid://bw6w243ojwjn6" path="res://assets/Main Menu/pixelmix.ttf" id="3_g51kt"]
-[ext_resource type="AudioStream" uid="uid://cvwdeh2r4mhqw" path="res://assets/Main Menu/Kingdom Hearts Dearly Beloved (Original Version).mp3" id="4_5mn8m"]
+[ext_resource type="AudioStream" uid="uid://dfk7a83e3w27e" path="res://music and sound/neptune.mp3" id="4_tfohw"]
 
 [sub_resource type="Animation" id="Animation_gi0qb"]
 length = 0.001
@@ -131,7 +131,7 @@ theme_override_fonts/normal_font = ExtResource("3_g51kt")
 text = "The Grinnell College Experience"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_5mn8m")
+stream = ExtResource("4_tfohw")
 autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dslcjp4bl3jjb"]
+[gd_scene load_steps=34 format=3 uid="uid://dslcjp4bl3jjb"]
 
 [ext_resource type="Script" path="res://scripts/battleSetup0.gd" id="1_jl0vj"]
 [ext_resource type="Texture2D" uid="uid://cr16n37mgo3mx" path="res://assets/textures/characters/NPCs/sample_battle_npc.png" id="2_novav"]
@@ -17,6 +17,9 @@
 [ext_resource type="Script" path="res://scripts/battleHealth0.gd" id="15_2t05x"]
 [ext_resource type="Texture2D" uid="uid://bp4dktbimyaw7" path="res://assets/Maps/BattleSceneForest.png" id="16_xty1h"]
 [ext_resource type="Texture2D" uid="uid://bs1cw0c3spy1l" path="res://assets/MapTiles/BrickPath1.png" id="17_j1ifi"]
+[ext_resource type="AudioStream" uid="uid://cg275v3sl53ih" path="res://music and sound/Pluto.mp3" id="18_nfij6"]
+[ext_resource type="AudioStream" uid="uid://cxuoilqaq2sjf" path="res://music and sound/RIZZ Sound Effect-[AudioTrimmer.com].mp3" id="19_bo111"]
+[ext_resource type="AudioStream" uid="uid://3mqryrsdbcv7" path="res://music and sound/Vine boom sound effect.mp3" id="20_ybl4n"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_43u4b"]
 radius = 23.0
@@ -252,6 +255,16 @@ show_percentage = false
 [node name="BrickPath1" type="Sprite2D" parent="."]
 position = Vector2(252, 823)
 texture = ExtResource("17_j1ifi")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_nfij6")
+autoplay = true
+
+[node name="flirt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_bo111")
+
+[node name="attack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_ybl4n")
 
 [connection signal="npc_attack" from="." to="." method="_on_npc_attack"]
 [connection signal="pressed" from="Panel/AttackButton" to="." method="_on_attack_button_pressed"]

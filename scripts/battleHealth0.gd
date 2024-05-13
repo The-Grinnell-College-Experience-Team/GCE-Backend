@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var attack = $attack
+@onready var flirt = $flirt
+
 # set up our battle ststs for both the enemy and player
 var max_enemy_health = 354
 var current_enemy_health  = 354
@@ -91,7 +94,8 @@ signal npc_attack
 func _on_attack_button_pressed():
 	# attack the enemy
 	subtract_enemy_health(current_player_strength)
-	
+	# play sound effect
+	attack.play()
 	# end the game if the enemy loses all health
 	if current_enemy_health <= 0:
 		get_tree().change_scene_to_file("res://scenes/player_example.tscn")
@@ -113,7 +117,8 @@ func _on_attack_button_pressed():
 func _on_flirt_button_pressed():
 	# attack the enemy
 	subtract_enemy_strength(player_hotness)
-	
+	# play sound effect
+	flirt.play()
 	# disable the attack button until the enemy has attacked
 	$Panel/AttackButton.disabled = true
 	
@@ -128,7 +133,7 @@ func _on_flirt_button_pressed():
 func _on_npc_attack():
 	# attack the player
 	subtract_player_health(current_enemy_strength)
-	
+	attack.play()
 	# end the game if the player loses all health
 	if current_player_health <= 0:
 		get_tree().change_scene_to_file("res://scenes/player_example.tscn")

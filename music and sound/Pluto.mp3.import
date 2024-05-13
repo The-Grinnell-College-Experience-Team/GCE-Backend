@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cg275v3sl53ih"
+path="res://.godot/imported/Pluto.mp3-a77cf4b757f9986af6eef66e422fa0fb.mp3str"
+
+[deps]
+
+source_file="res://music and sound/Pluto.mp3"
+dest_files=["res://.godot/imported/Pluto.mp3-a77cf4b757f9986af6eef66e422fa0fb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
