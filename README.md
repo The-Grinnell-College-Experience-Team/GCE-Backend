@@ -1,10 +1,9 @@
 # The Grinnell College Experience
 
 ### 1. Idea and Goals
-We want to create a video game that uses 32x32 pixels textures to recreate Grinnell College in a virtualized setting. We wish to utilize this in a fashion to be able to run this game on mobile devices, including iOS and Android. We ended up swapping to the Godot Engine for this game, for convenience in compiling to iOS.
+**The Grinnell College Experience** is a top-down 2D Role-Playing Game (RPG) mobile game in the setting of Grinnell College. This project started from the idea of remembering our college life (like a time capsule) and spreading Grinnell's joy & spirit to other external/prospective students.
 
-We designed this project to remember our college life (like a time capsule) and to spread Grinnell's joy & spirit to other external/prospective students.
-
+**The Grinnell College Experience** uses 32x32 pixels textures to recreate Grinnell College in a virtualized setting. Users can customize their character, explore, Grinnell, and fight epic battles on the campus. We wish to utilize this in a fashion to be able to run this game on mobile devices, including iOS and Android. We ended up swapping to the Godot Engine for this game, for convenience in compiling to iOS.
 
 ### 2. Layout
 Our repository layout consists mostly of the Godot Engine files and the `addons`, `assets`, `dialogue`, `scenes`, and `scripts` folders. We currently plan on utilizing a 43x20 grid system displayed on the phone, consisting of 32x32 textures.
